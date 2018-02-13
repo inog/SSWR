@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SSWR</string>
+    <string name="str_intro">Zur Berechnung der aktuellen Schwangerschaftswoche geben Sie bitte den errechneten Geburtstermin (E.T.) ein.</string>
+    <string name="str_intro_timemachinemode">Achtung! Zeitmaschinenmodus. !\nSie haben das heutige Datum verändert.</string>
+    <string name="str_today_label">Heute ist der</string>
+    <string name="str_et_label">errechneter Geburtstermin (E.T.)</string>
+    <string name="dateDisplay">n.A.</string>
+    <string name="str_daysToBirth_label">Tage bis zum E.T.</string>
+    <string name="str_daysUntilNow_label">Tage geschafft</string>
+    <string name="str_weekPlusDays_label">Eintrag im Mutterpass</string>
+    <string name="str_xteWeek_label">Sie sind in der</string>
+    <string name="str_xteWeek_suffix">. Woche</string>
+    <string name="str_xteMonth_label">Das entspricht</string>
+    <string name="str_xteMonth_suffix">. Monat</string>
+    
+    <string name="main_btnEtDate">E.T. ändern</string>
+    <string name="pickDateFirstUse">E.T. eintragen</string>
+    <string name="main_btnWeekInfo">Info aktuelle Woche</string>
+    <string name="main_btnTimemachine">Zeitmaschine</string>
+    <string name="errorTitle">Fehler!</string>
+    <string name="errorIllegalDate_d1TooSmall">\    	
+    	Der von Ihnen eingegebene Entbindungstermin kann nicht zur Berechnung der Schwangerschaftswoche herangezogen werden, 
+    	da er zu weit in der Vergangenheit liegt.
+    </string>
+    <string name="errorIllegalDate_d2TooBig">\    	
+    	Der von Ihnen eingegebene Entbindungstermin kann nicht zur Berechnung der Schwangerschaftswoche herangezogen werden, 
+    	da er zu weit in der Zukunft liegt.
+    </string>
+    <string name="errorNoDate">Bitte geben Sie zuerst den errechneten Termin (E.T.) ein.</string>
+    
+    <string name="alertboxTimemachine_title">Zeitmaschine</string> 
+    <string name="alertboxTimemachine_text">Wie schwanger sind Sie an Weihnachten? Oder Ostern? Nutzen Sie die Zeitmaschine und drehen Sie das heutige Datum vor oder zurück.</string>
+        
+    <string name="full_version_required">Vollversion notwendig</string>
+        
+
+    <!-- menu -->
+    <string name="menu_tellAFriend">Mit Freunden teilen</string>
+    <string name="menu_timemachine">Zeitmachine</string>
+    <string name="menu_weekinfo">Wocheninfo</string>
+    <string name="menu_editEt">Et. ändern</string>
+    <string name="menu_about">Über die App</string>
+    <string name="menu_feedback">Feedback senden</string>
+  
+   	    
+   	
+   	<!-- widget -->    
+	<string name="widget_intro">aktuelle SSW</string>
+	<string name="widget_default">E.T. eingeben</string>
+	    
+	<!-- About -->    
+    <string name="about_title">SSWR</string>
+    <string name="about_text">\
+    	SSWR: Schwangerschaftswochenrechner\n
+    	In welcher Schwangerschaftswoche befinden Sie sich? Was würde im Mutterpass stehen, bzw. was würde die Hebamme sagen?
+    	Errechnen Sie einfach durch Eingabe des
+    	errechneten Geburtstermin (E.T.) die aktuelle Schwangerschaftswoche.\n	 
+    </string>
+    <string name="about_linedelimiter">-----------------</string>
+    <string name="about_promo_nike">\
+   		Der SSWR wurde mit Hilfe meiner süßen Frau Nike (Hebamme) erstellt.\n
+    	<a href="http://www.hebamme-nike.de" target="_blank">http://www.hebamme-nike.de</a>\n
+    </string>
+    <string name="about_promo_nike_url">http://www.hebamme-nike.de</string> 
+    <string name="about_promo_robert">\
+    	Icon design by  Robert Hahmann <a href="mailto:info@robert-hahmann.de\">info@robert-hahmann.de</a>
+    </string>
+    <string name="about_promo_robert_email">info@robert-hahmann.de</string>
+    <string name="about_promo_robert_email_sub">Kontaktanfrage über SSWR</string>
+    <string name="about_promo_robert_email_txt">Hallo,\nich habe Ihr Design bei der App SSWR gesehen.\n</string>
+        
+    <string name="about_contact">\
+    	Bei Bugs oder Problemen würden wir uns über eine Email freuen.\n
+    	kontakt@ingo-reschke.de\n
+    	Ingo Reschke 
+    </string>
+    <string name="about_contact_email_Intent">Sende Email.</string>
+    <string name="about_contact_email">kontakt@ingo-reschke.de</string>
+    <string name="about_contact_email_sub">SSWR: Feedback</string>
+    <string name="about_contact_email_text">\
+        Hallo, \n
+        Ich möchte Ihnen ein Feedback senden.\n
+        Ich finde den SSWR:\n
+        \n\n
+        Ich wünsche mir folgende Funktion(nen):\n
+        \n\n
+        Ich habe eine Fehler (Bug) gefunden, nämlich:\n
+        \n\n
+    </string> 
+    <string name="about_btn_babyinmon1">Babygeräusche abspielen</string>
+    <string name="about_btn_babyinmon1_stop">Babygeräusche stoppen</string>
+    <string name="about_babysound_info">\
+        Hören Sie hier eine Aufnahme der kindlichen Herztöne an, so wie sie von der Hebamme mit einem Dopton abgehört werden können. 
+        Für optimale Klangqualität bitte maximale Lautstärke einstellen.
+    </string>
+         
+    <string name="tellAFriend_title">Mit Freunden teilen</string>
+    <string name="tellAFriendSubject">Ich bin Schwanger.</string>    
+ 	<string name="tellAFriendText">Aktuell bin ich in der </string> 
+ 	<string name="tellAFriendText2">\nUm Up to Date zu bleiben benutze ich den SSWR. \n</string>
+    <string name="tellAFriendLinkLight">https://market.android.com/details?id=de.ingoreschke.sswr.lite</string>
+    <string name="tellAFriendLinkFull">https://market.android.com/details?id=de.ingoreschke.sswr.full</string>
+</resources>

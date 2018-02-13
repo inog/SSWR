@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+  	
+
+	<item 
+		android:id="@+id/menu_tellAFriend"
+		android:icon="@android:drawable/ic_menu_share"
+		android:title="@string/menu_tellAFriend"
+		android:showAsAction="ifRoom|withText"
+		/>
+    <item android:id="@+id/menu_et_timemaschine"
+        android:icon="@drawable/ic_action_timemachine"
+        android:title="@string/menu_timemachine"
+        android:showAsAction="ifRoom|withText"
+        />
+    <item android:id="@+id/menu_weekinfo"
+        android:icon="@android:drawable/ic_menu_week"
+        android:title="@string/menu_weekinfo"
+        android:showAsAction="ifRoom|withText"
+        />    
+   
+    <item android:id="@+id/menu_et_date"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/menu_editEt"
+        />
+        
+	<item android:id="@+id/about"
+		android:icon="@android:drawable/ic_menu_info_details"
+		android:title="@string/menu_about"
+		/>
+	<item 
+		android:id="@+id/menu_feedback"
+		android:icon="@android:drawable/ic_menu_send"
+		android:title="@string/menu_feedback"
+		/>
+</menu>

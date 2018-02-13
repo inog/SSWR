@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+	
+	<TableLayout 
+	    android:id="@+id/main_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:stretchColumns="*"
+		android:shrinkColumns="0" 
+		android:layout_margin="8dip"
+	    android:gravity="center"
+	    android:layout_gravity="center"
+		>
+		
+		<!-- heute -->
+		<TableRow
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" >
+
+			<TextView
+			    style="@android:style/TextAppearance.Small"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="@string/str_today_label"
+			    />
+
+			<TextView
+			    android:id="@+id/currentDate"
+			    style="@android:style/TextAppearance.Theme"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:gravity="right" />
+				
+		</TableRow>
+		
+	    <!-- et -->
+
+		<TableRow
+		    android:id="@+id/main_et_row"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginBottom="10dp"
+		    android:onClick="onClick" >
+
+		    <TextView
+		        android:id="@+id/et_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:singleLine="true"
+		        android:text="@string/str_et_label" 
+		        />
+		  	
+		  	<TextView
+			    android:id="@+id/dateDisplay"
+			    android:gravity="right"
+			    android:text="@string/dateDisplay"
+			    style="@android:style/TextAppearance.Theme" 
+			    />
+
+		</TableRow>
+		
+		<View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+		
+		<!-- Woche -->
+    
+		<TableRow 
+		    android:id="@+id/main_xteWeek_row"
+		    android:layout_marginBottom="10dp"
+		    android:onClick="onClick">
+		    <TextView 
+	  			android:text="@string/str_xteWeek_label"
+	  			android:layout_gravity="bottom"
+	  			style="@android:style/TextAppearance.Small"/>
+		     	  		
+  			<TextView 
+	   			android:id="@+id/str_xteWeek"
+	   			android:layout_width="wrap_content"
+	   			android:layout_height="wrap_content"
+	  			android:gravity="right"
+	  			style="@android:style/TextAppearance.Large"
+	   			/>
+	  	</TableRow>
+
+		<!-- Monat -->
+		<TableRow android:layout_marginBottom="10dp">
+			<TextView
+	  		    android:text="@string/str_xteMonth_label"
+	  		    style="@android:style/TextAppearance.Small"
+			    />
+			<TextView  
+				android:id="@+id/str_xteMonth"
+			    android:text="@string/str_xteMonth_suffix"
+			    android:gravity="right"
+			    style="@android:style/TextAppearance.Theme"
+			    />
+		</TableRow>
+		
+		<!-- mutterpass -->		   
+		<TableRow android:layout_marginBottom="10dp">
+	   		<TextView 
+				android:text="@string/str_weekPlusDays_label"
+				style="@android:style/TextAppearance.Small"
+	  			/>
+	  		<TextView 
+	   			android:id="@+id/str_weekPlusDays"
+	  			android:gravity="right"
+	  			style="@android:style/TextAppearance.Theme"
+		  		/>
+		</TableRow>
+ 		<!-- tage bis zur geburt -->	
+		<TableRow android:layout_marginBottom="10dp">
+		   <TextView 
+		       android:text="@string/str_daysToBirth_label"
+		       style="@android:style/TextAppearance.Small"	/>
+			<TextView 
+				android:id="@+id/str_daysToBirth"
+	  			android:gravity="right"
+	  			style="@android:style/TextAppearance.Theme"
+	  			/>
+		</TableRow>
+	   <!-- tage geschafft -->
+		<TableRow android:layout_marginBottom="10dp">
+		   <TextView 
+		       android:text="@string/str_daysUntilNow_label"
+		       style="@android:style/TextAppearance.Small"/>
+		<TextView 
+			android:id="@+id/str_daysUntilNow"
+			android:gravity="right"
+			style="@android:style/TextAppearance.Theme"
+			/>	
+		</TableRow>
+	</TableLayout>				
+</merge>

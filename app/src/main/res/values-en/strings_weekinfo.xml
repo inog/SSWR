@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<!-- 
+  <string name="weekinfo_label">
+    SSWR what happens this week
+  </string>
+  <string name="info_title_week_1">
+    First - Second Week
+  </string>
+  <string name="info_text_week_1">
+    Of 200 million sperm reaches the egg in a fallopian tube and fertilized. 
+    The outermost layer of the egg gets hard now so that no other sperm can penetrate.
+  </string>
+  <string name="info_title_week_2">
+    First - Second Week
+  </string>
+  <string name="info_text_week_2">
+    Of 200 million sperm reaches the egg in a fallopian tube and fertilized. 
+    And is likely the genetic code of the embryo. Eye color, sex, character: a unique human being emerges. 
+    Cell division begins and the first pregnancy hormones.
+  </string>
+  <string name="info_title_week_3">
+    Third Week
+  </string>
+  <string name="info_text_week_3">
+    The egg has been divided several times and has grown into a small ball, which shares already in the placenta and baby.
+    This ball now migrates through the fallopian tubes to the uterus and grows there in the mucosa. Some women notice this process as a mild implantation bleeding.
+	By further cell divisions the cells to specialize and are already laying on organs, nervous system and brain. Also, the cardiovascular system, the spine, connective and muscle tissue and the reproductive organs can be created.
+	An embryo is formed.
+  </string>
+  <string name="info_title_week_4">
+    4th Week
+  </string>
+  <string name="info_text_week_4">
+    At the end of this week you may find that you are pregnant. 
+    The rule remains in circulation and the embryo has formed enough hormones that they are detectable with a pregnancy test.
+  </string>
+  <string name="info_title_week_5">
+    5th Week
+  </string>
+  <string name="info_text_week_5">
+  	The embryo is already about as big as a grain of rice.
+  	This week, the head, brain, blood cells and veins are forming.
+  	In the ultrasonic your baby looks like a small bright spot in a dark capsule, the amniotic sac .
+  	At the end of the 5th Week its tiny heart starts beating.
+  	The embryo is now connected to the placenta with a rudimentary umbilical cord.
+  	By now, pregnant women should stop (and not only reduce) their alcohol and cigarette consumption completely, because the embryo is very sensitive.
+  	Fortunately, most women develop a natural aversion to such toxins. Additionally it is now possible that first symptoms occur.
+  	The hormonal changes can cause nausea, severe olfactory sensibility, irritability , fatigue, constipation or bloating. 
+  </string>
+  <string name="info_title_week_6">
+    6th Week
+  </string>
+  <string name="info_text_week_6">
+    The embryo is now 15 mm long and has stretched. It looks like a small bean. 
+    Small buds, the future arms and legs are emerging from the embryo\'s body.
+    This wee the face is developing. Furthermore vital organs such as liver and intestines are beginning to grow.
+    The spinal cord is present and one can already see the eye sockets and mouth. 
+    The fetus moves gently swaying in the amniotic fluid. 
+    Some women feel in early pregnancy, an ache in his stomach like the onset of menstruation. 
+    This is due to stretching the ligaments and the uterus and is no reason to worry.
+  </string>
+  <string name="info_title_week_7">
+    7th Week
+  </string>
+  <string name="info_text_week_7">
+    The embryo is now growing very fastly, he gets larger about one millimeter every day. 
+    The size of the embryo is indicated in the crown-rump-length (CRL), the distance measured from the head to the buttocks. 
+    The digestive tract, heart, kidney, brain and lungs are in place and continue to develop now. This time is an important stage of development. 
+    Up to the 10th Week of pregnancy are all organ systems are ready and only need to mature and to be trained.
+  </string>
+  <string name="info_title_week_8">
+    8th Week
+  </string>
+  <string name="info_text_week_8">
+    The embryo now has a size of 9 to 16 mm (CRL). The heart of the unborn child is now beating 140 - to 150 times a minute. 
+    The spine is now mobile, because vertebral bodies have been formed around the spinal cord. 
+    The nerve cells of the embryo are now in a particularly sensitive phase and are therefore very vulnerable to toxins. 
+    Now substances such as drugs, alcohol or certain medicines are harmful, they can lead to serious damage later.
+  </string>
+  <string name="info_title_week_9">
+    9th Week
+  </string>
+  <string name="info_text_week_9">
+    The size of the embryo is now 17 to 24 mm (CRL). The arms, hands, legs and feet are now clearly visible. 
+    In boys, the testicles develop now. A distinction between the sexes by ultrasound is not yet possible. 
+    However if you have an ultrasound now you can clearly see your baby\'s movements.
+    It will take some time until you can feel them, too. 
+    An ultrasound examination between the 9th and the 12th Gestation determines whether the heart beats and the embryo moves properly. 
+    The uterus has now significantly gained size and can press on the bladder. 
+  </string>
+  <string name="info_title_week_10">
+    10th Week
+  </string>
+  <string name="info_text_week_10">
+    The size of the embryo is now  25 to 33 mm (CRL) and weighs less than 4g. 
+    On the ultrasound are strong movements to be seen. The face of the unborn can be seen more clearly now. 
+    The eyelids are still closed. The vital organs - liver, kidney, intestine, brain and lungs - are fully developed and functional. 
+    The head is half as big as the rest of the body. 
+    The forehead is bulging at the moment is strong and big oversized. 
+    The riskiest time of the pregnancy is now in the end. 
+    The risk of an abortion is reduced now rapidly. 
+    The fluctuating hormone levels make now especially noticeable in the mood of the pregnant women. Between absolute elation and tearful desperation, anything is possible. 
+    In the second third of the pregnancy these fluctuations come again somewhat into the equilibrium.
+  </string>
+  <string name="info_title_week_11">
+    11th Week
+  </string>
+  <string name="info_text_week_11">
+    The face of the unborn is now completely formed out, whereby the lids are further closed. 
+    The fetus now measures about 4 cm, the skin is covered by a soft fluff. 
+    The pregnancy is almost not to be detected from the outside. 
+    The breasts grew somewhat and it could be that the trousers pinch.
+    The heart of the mother must take account of the increased blood volume, more power. 
+    You may feel tired and a bit short of breath. 
+    Treat yourself now and an extra break. 
+    Movement is good for you, because the cycle can then supply the placenta with more oxygen. 
+    Avoid athletic performance.
+  </string>
+  <string name="info_title_week_12">
+    12th Week
+  </string>
+  <string name="info_text_week_12">
+    The fetus is now about 6 inches long and weighs 15 g. The small heart beats 120-160 times a minute. 
+    The muscles now enable elbow and wrist to be flexed. The hands can move. 
+    Spleen, liver and bone marrow develop an independent system of haematosis. With the end of the 12th week most women have passed the time of morning sickness. 
+    If you still suffer from severe sickness and you lose weight, talk to your doctor / health care professional about it. 
+    Pelvis, tendons and joints of the mother are becoming more soft and pliable through the pregnancy hormones. This also applies to the intervertebral discs.
+  </string>
+  <string name="info_title_week_13">
+    13th Week
+  </string>
+  <string name="info_text_week_13">
+    The weight of the fetus is about 30 g, the head diameter is 21 to 29 mm. 
+    The organs of the fetus have finished their development now and just need to grow. 
+    The first bones are starting to form from cartilage tissue. 
+    The baby is already able to move his or her lips, to frown and yawn. 
+    From now on, the size of the fetus is determined by measuring head, abdomen and femur bone. The placenta is now reaching its full function. 
+    It supplies the baby with nutrients and oxygen. At the same time it acts as a barrier against some harmful substances.
+  </string>
+  <string name="info_title_week_14">
+    14th Week
+  </string>
+  <string name="info_text_week_14">
+    The diameter of the fetal head is now between 25 to 32 mm, the weight is around 50 g. 
+    If you are really lucky, a doctor migt be able to determine your babies sex, as the genitals are developed clearly. 
+    All organ systems are functional now. For example, the baby practices breathing movements, though its oxygen is provided by the placenta.
+    Touch, taste, and sense of balance are well developed. In addition, the sucking reflex and the grasping reflex are already working.
+  </string>
+
+  <string name="info_title_week_15">
+    15th Week
+  </string>
+  <string name="info_text_week_15">
+    The head diameter of the fetus is now 28 to 37 mm, the weight is around 80 g and will growing fast. 
+    From now your baby can hear what is going on.
+	For osteogenesis of your baby you need enough calcium now.
+	The heart is almost full developed. The liver and the pancreas begin to work.
+	The risk infection of urinary tract is very high now. 
+	Be sure to drink enough and go to your doctor at the first sign of infections. 
+  </string>
+  <string name="info_title_week_16">
+    16th Week
+  </string>
+  <string name="info_text_week_16">
+    The head diameter of the child is now with 32 to 40 mm, it has a weight of approximately 110 G. The up to now rapid development of the organs is now so far final. Now it concerns above all that the small body at size and weight adds. The fetus begins itself to stretch now. Hair, lashes and brows grow. If you are older than 35 years, or have a increased risk a child with a chromosomal disorder to have, your physician/your lady doctor will speak with you about a fruit water testing (Amniocentesis). This can determine the chromosomes and possible disturbances of the unborn one.
+  </string>
+  <string name="info_title_week_17">
+    17th Week
+  </string>
+  <string name="info_text_week_17">
+    The child has now a head diameter from 35 to 44 mm and weighs approx. 150 g. Perhaps you can feel now already first tender child movements. Hands and tactile sense of the baby are now so far trained that it can grab for the navel cord. The unborn hears noises those from the outside penetrate now to it, like the pulse impact of the mother, its voice or music. The chance by ultrasonic the sex of the child to recognize is now particularly high.
+  </string>
+  <string name="info_title_week_18">
+    18th Week
+  </string>
+  <string name="info_text_week_18">
+    The head diameter is now with approximately 38 to 48 mm, the weight with approx. 200g. The unborn is approximately 18 cm largely. Child movements are now clearly perceptible. They will be able to clearly feel the difference between the dwell phases and the active phases of the Fetus. To feel particularly clear the movements are in the evening hours, if you come to the peace. Lack of calcium or the increased pressure of the uterus on the  pelvic vessels can cause cramps in the legs now. Cramp veins can emerge or worsen. The cervical won clearly at size. It reached and pushes nearly the height of the navel all organs somewhat upward. The belly clearly visibly grows. The tension of the belly skin leads to the Linea in such a way specified nigra, a dark line from the navel to the pubic bone.
+  </string>
+  <string name="info_title_week_19">
+    19th Week
+  </string>
+  <string name="info_text_week_19">
+    The head of the baby has a diameter from 42 to 51 mm, the weight amounts to approx. 260 g. The uterus expands by the increased liquid quantity daily more, which the baby ever more clearance of motion leaves. The eyes of the fetus move back and forth, the eyelids remain however up to the end 6. Pregnancy month closed. Now the correct time is to be made thoughts over the place of the birth. Also most birth preparatory courses begin at the 20. Week. These courses prepare beginning mothers and fathers competently for the large event.
+  </string>
+-->
+  
+<!-- 
+  <string name="info_title_week_20">
+    20th Week
+  </string>
+  <string name="info_text_week_20">
+    The head diameter is now about 46 to 55 mm, weight about 330 g. The fetus does not develop quite as fast anymore. 
+    Now, small fat deposits can be created that are necessary after birth for heat regulation. The baby feeds every day a small amount of amniotic fluid and excretes them through the urinary tract from again. 
+    Sun kidney and swallowing can be trained. The mother can now perceive quite strong fetal movements.
+  </string>
+  <string name="info_title_week_21">
+    21st Week
+  </string>
+  <string name="info_text_week_21">
+    The fetus will gain weight very quickly now. The vestibular organ is fully developed, the baby is now able to perceive itself. 
+    The skin of the fetus is covered with a fine downy hair, lanugo hairs to. It protects the skin and helps in the regulation of body temperature. 
+    A whitish, waxy layer covering the body of the fetus - the vernix. It protects the skin from the leaching and loss of heat. Sometimes a painless hardening of the uterus can be felt. 
+    These are Braxton Hicks contractions, virtually a preliminary exercise of the body for birth. If the contractions are painful, occur frequently and regularly, you should contact the prescribing physician. 
+    Perhaps it is then a real, pre-term labor.
+  </string>
+  <string name="info_title_week_22">
+    22nd Week
+  </string>
+  <string name="info_text_week_22">
+    "The head of the fetus now has a diameter of 52 to 62 mm, the child's weight is about 500 g. The baby develops a sound sleep-wake cycle. 
+    It is increasingly developing an awareness of his environment. If you feel from time to time rhythmic twitches in your belly is not a reason for concern. The baby has just hiccups. 
+    Train with special exercises the pelvic floor now. He must keep the pressure of the baby. You may now appear on the strong stretching, stretch marks. They no longer vanish, but are significantly paler after birth."
+  </string>
+  <string name="info_title_week_23">
+    23rd Week
+  </string>
+  <string name="info_text_week_23">
+    The head diameter of the baby measures now 58 to 69 mm, the weight is about 700 g. 
+    The quantity of the fruit takes water to grow and now contains dead cells, skin and hair grease. 
+    The baby is now with specific movements to sounds. The physician / doctor will monitor carefully from now on, the hemoglobin in the blood of the mother. 
+    This value gives information about the babys oxygen supply.
+  </string>
+  <string name="info_title_week_24">
+    24th Week
+  </string>
+  <string name="info_text_week_24">
+    The head diameter is now 61 to 72 mm, the weight is 800 g. The taste of the baby already well developed. 
+    It responds to strong stimuli from the outside world with violent movements and accelerated pulse. 
+    The fat depots of the fetus are far a way that the skin is taut and wrinkle-free.
+  </string>
+  <string name="info_title_week_25">
+    25th Week
+  </string>
+  <string name="info_text_week_25">
+    The head now has a diameter of 64 to 75 mm, the baby weighs about 900 g. The possible movements of the fetus are more and more restricted. 
+    The lungs continue to develop, but it brought no oxygen from the lungs into the bloodstream - this happens through the umbilical cord, which also transports the used blood back to the placenta. 
+    There, it is enriched with oxygen and recycled into the bloodstream of the child. The baby swallows amniotic fluid and continue to train so hard urinary tract and digestive system. For many pregnant women, the nights are now uncomfortable. 
+    First, the already large belly but now interferes with finding a comfortable sleeping position, on the other hand, the baby is just very active at night. Thoughts of the birth and the future can sometimes take your sleep.
+  </string>
+  <string name="info_title_week_26">
+    26th Week
+  </string>
+  <string name="info_text_week_26">
+    The head diameter is now at 66 to 77 mm, the weight is at about 1000 g. The eyes open now. If a light source directed at the abdomen, the baby responds with increased movement and heart beat faster. 
+    Babies from the 27th of Week of pregnancy are born too early a pretty good chance of survival. However, you need some time to be closely supervised by a doctor.
+  </string>
+  <string name="info_title_week_27">
+    27th Week
+  </string>
+  <string name="info_text_week_27">
+    The head diameter of the baby is now at 70 to 80 mm, the approximate weight of 1100 g. The maturity of the lungs is now almost completed, the baby could now breathe independently if it were born now. 
+    Many pregnant women have in recent months, a low hemoglobin level. The body iron stores are depleted. You may need additional iron to be supplied to ensure the oxygen supply to the child. 
+    Now begins the arduous period of pregnancy. The child needs more and more space. Typical symptoms for this part of the pregnancy heartburn, constipation, shortness of breath and increased urination. 
+    Even the spine is heavily loaded and often reacts with pain.
+  </string>
+  <string name="info_title_week_28">
+    28th Week
+  </string>
+  <string name="info_text_week_28">
+    The head diameter of the fetus measures about 72 to 83 mm, weight about 1250 g. Many babies go now into the optimal birthing position with the head down. 
+    The fetal position and placental function are now being carefully examined in the screening. The uterus now calibrates about 10 cm above the navel. In the ankle is now increasingly embedded tissue water. 
+    This edema is usually harmless and often disappear again the next morning. Put your legs up as often as possible.
+  </string>
+  <string name="info_title_week_29">
+    29th Week
+  </string>
+  <string name="info_text_week_29">
+    The head diameter of the baby measures now 74 to 86 mm, the weight is about 1400 g. From the 30th Week you are more likely to screening. 
+    The physician / doctor checked the heartbeat and the childs situation. The pregnancy is now usually very difficult and the fear slowly gives way before the birth of expectation on the day of birth.
+  </string>
+  <string name="info_title_week_30">
+    30th Week
+  </string>
+  <string name="info_text_week_30">
+    The head diameter of the child is now 76-88 mm, weight about 1600 g. The fetus is growing in this period by several inches and puts on weight rapidly. 
+    Braxton Hicks contractions are now often perceived. These are not painful, but uncomfortable. From the breast may occur from some whitish liquid. 
+    This colostrum (first milk) is rich in nutrients and is already in the pregnancy, and produced especially in the first days after birth.
+  </string>
+  <string name="info_title_week_31">
+    31st Week
+  </string>
+  <string name="info_text_week_31">
+    The head diameter is now 78-90 mm, weight 1800 g. The baby takes about a week now at 150 to 200 g weight. 
+    The movements of the child will now be slower and more leisurely, but very strong. Often they are observable from the outside. 
+    Almost all children are now in the optimal position for birth, with the head down. Now it is time to worry is the initial of the child. 
+    Get the latest now everything is still missing.
+  </string>
+  <string name="info_title_week_32">
+    32nd Week
+  </string>
+  <string name="info_text_week_32">
+    The head diameter measures now 80 to 93 mm, the weight is about 2000 g. In the next period will be lightening ensure that the baby head is fixed in the lower pelvis. 
+    If the child has not turned into the birth starting position with the head down, you can now try to turn the skull by an outer layer to produce.
+  </string>
+  <string name="info_title_week_33">
+    33rd Week
+  </string>
+  <string name="info_text_week_33">
+    The head diameter is now 82 to 95 mm, the baby weighs about 2200 g. Keep especially at this time to have enough calcium to eat, because the baby has an extremely high demand. 
+    Maybe the baby is now the signal for birth. Pack your bags and have the clinic to complete the preparations for the new earthlings. 
+    If now leave large amounts of amniotic fluid, you should immediately consult a doctor / a doctor because the infection risk is increased enormously.
+  </string>
+  <string name="info_title_week_34">
+    34th Week
+  </string>
+  <string name="info_text_week_34">
+    The head diameter is 84-97 mm, the baby weighs about 2400g. The lightening have ensured that the child is much deeper in the abdomen. This means for many pregnant women an enormous relief. 
+    You get better air again, heartburn and nausea to leave. Give yourself adequate rest periods in this phase of pregnancy. The additional weight and the belly are much arched forward very difficult.
+  </string>
+  <string name="info_title_week_35">
+    35th Week
+  </string>
+  <string name="info_text_week_35">
+    The head diameter is now. 86-99 mm, the baby weighs about 2650 g. Now begins the waiting game. For many expectant mothers, it is a balancing act between fear and feelings of enormous anticipation. 
+    The departure of a mucous plug, the bursting of the amniotic sac and the insertion of the birth of ways to terminate an early pregnancy due date. Talk about one of these events with the doctor or midwife.
+  </string>
+  <string name="info_title_week_36">
+    36th Week
+  </string>
+  <string name="info_text_week_36">
+    The head diameter is now 87-101 mm, weight of 2900 g. The childs fingernails and toenails of babies are now completely formed, and the hair can now have a considerable length of up to 5 cm. 
+    The mothers body prepares itself for breastfeeding. Through the placenta to flow 80 liters of blood every day now.
+  </string>
+  <string name="info_title_week_37">
+    37th Week
+  </string>
+  <string name="info_text_week_37">
+    The head diameter of the child is 89 to 102 mm, weight about 3100 g. The baby is now baby-ready in every respect. 
+    The cranial sutures at the head of the babies are only in the course of the first year of life completely ossify. 
+    This has the advantage of ease that they can be pushed together in the birth canal or something, and the birth.
+  </string>
+  <string name="info_title_week_38">
+    38th Week
+  </string>
+  <string name="info_text_week_38">
+    The head diameter is 90-103 mm in size now, the baby weighs about 3300 g. For the child it is now really tight in the womb. 
+    For movements not much space. If the child is awake, his eyes open all the time.
+  </string>
+  <string name="info_title_week_39">
+    39th Week
+  </string>
+  <string name="info_text_week_39">
+    The last days of pregnancy has begun. The wait is often unbearable. Many women feel now is the so-called "nesting instinct". You have virtually inexhaustible energy and a great start again cleaning and grooming. 
+    Nevertheless, it is important that you allow yourself enough rest breaks now. You will need a lot of strength for the birth.
+  </string>
+  <string name="info_title_week_40">
+    40th Week
+  </string>
+  <string name="info_text_week_40">
+    10 of 100 pregnancies beyond the due date. The woman physician / gynecologist at short intervals will test whether the placenta provides the baby still enough oxygen and nutrients. 
+    Most calculation errors are the reason for exceeding the birth date. Under certain circumstances, the birth is now also introduced artificially in order to prevent transmission. 
+    The great day of birth will come in this time and for you to start a new life.
+  </string>
+  <string name="info_title_week_41">
+    41st Week
+  </string>
+  <string name="info_text_week_41">
+    10 of 100 pregnancies beyond the due date. The woman physician / gynecologist at short intervals will test whether the placenta provides the baby still enough oxygen and nutrients. 
+    Most calculation errors are the reason for exceeding the birth date. Under certain circumstances, the birth is now also introduced artificially in order to prevent transmission. 
+    The great day of birth will come in this time and for you to start a new life.
+  </string>
+  <string name="info_title_week_42">
+    42nd Week
+  </string>
+  <string name="info_text_week_42">
+    Most calculation errors are the reason for exceeding the birth date. Under certain circumstances, the birth is now also introduced artificially in order to prevent transmission. 
+    10 of 100 pregnancies beyond the due date. The woman physician / gynecologist at short intervals will test whether the placenta provides the baby still enough oxygen and nutrients. 
+    The great day of birth will come in this time and for you to start a new life.
+  </string>
+  <string name="info_title_week_default">
+    Not yet entered
+  </string>
+  <string name="info_text_week_default">
+    Text not yet available.
+  </string>
+
+-->
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="releasenotes">\
+	     <li>Vers. 3.3.1</li>\n
+	     Bugfix: Wenn noch kein Termin eingetragen war kam es zum Absturz bei dem -Mit Freunden teilen- Menüpunkt.\n
+	     Bugfix: von Zeitmachinemodus auf heutiges Datum aktualisiert die Daten.\n Danke Jens \n 
+	    <li>Vers. 3.3</li>\n
+	    Größenangaben und Werte überarbeitet\n
+	    Für die Lite Version:\n
+	    Admob Standalone SDK durch Google Play Service ersetzt.\n
+	    Ad-Werbung Request nur wenn die App auch wirklich aktiv ist.\n
+	    \n 
+	    <li>Vers. 3.2</li>\n
+	    Bugfix Widget im Landscape Modus\n
+	    Bugfix Widget Anzeige wenn Datum außerhalb der Validierung\n
+	    Performance Optimierung\n
+	    \n
+	    <li>Vers. 3.1.2</li>\n
+	    Bugfix Updatefehler\n
+	    \n
+	    <li>Vers. 3.1.1</li>\n
+	    Rechtschreibung korrigiert\n
+	    \n
+	    <li>Vers. 3.1</li>\n
+	    Babygeräusche in About (Easter Egg) \n
+	    "Feeback - Email senden" im Menü.\n
+	    "Mit Freunden teilen" Funktionalität im Menü\n
+	    Icons zu den Menüpunkten hinzugefügt\n
+	    \n
+	    <li>Vers. 3.0</li>\n
+	    Zeitmaschine: Das aktuelle Datum kann temporär verändert werden.\n
+	    Verbessertes Design und aussagekräftigere Meldung wenn ein falsches Datum eingegeben wurde.\n
+	    \n
+	    <li>Vers. 2.2</li>\n
+    	Bugfix Berechnungfehler bei Tage bis E.T. wegen Sommer/Winterzeit\n
+    	Danke Denise \n
+    	Menü um Wocheninfo erweitert\n
+    	Updateinterval des Widget optimiert \n
+    	\n
+    	<li>Vers. 2.1</li>\n
+    	Batterie sparenden Maßnahmen\n
+    	Die aktuelle Woche + Tag wird nun zusätzlich im Widget angezeigt.\n
+    	\n
+    	<li>Vers. 2.0</li>\n
+    	der aktuelle Monat wird angezeigt\n
+    	Es ist nun ein Widget verfügbar.\n
+    	\tklick und halte auf dem Homescreen,\n
+    	\twähle Widet\n 
+    	\twähle das SSWR widget\n
+    	Informationen zur aktuellen Woche.\n
+    	\tklick auf die angezeigte Woche oder auf den Button (Info aktuelle Woche)\n
+    	About Kontaktinformationen verlinkt.\n
+		\n
+		<li>Vers. 1.0</li> \n
+    	E.T. wird gespeichert.\n
+    	Lite - Version: Werbungsfinanziert\n
+    	Full - Version: Bezahlversion\n
+	</string>
+</resources>

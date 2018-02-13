@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weekinfo_label">SSWR was passiert diese Woche</string>
+    <string name="info_title_week_1">1. - 2. Woche</string>
+    <string name="info_text_week_1">
+    	Von 200 Millionen Spermien hat eines die Eizelle im Eileiter erreicht und befruchtet. Die äußerste Schicht der Eizelle verhärtet sich jetzt, damit keine anderen Samenfäden eindringen können.
+    </string>
+    <string name="info_title_week_2">1. - 2. Woche</string>
+    <string name="info_text_week_2">
+    	Von 200 Millionen Spermien hat eines die Eizelle im Eileiter erreicht und befruchtet. Damit steht der genetische Code des Embryos fest. Augenfarbe, Geschlecht, Charakter: ein einzigartiger Mensch entsteht. 
+    	Die Zellteilung beginnt und erste Schwangerschaftshormone werden gebildet. 
+    </string>
+    <string name="info_title_week_3">3. Woche</string>
+    <string name="info_text_week_3">
+    	Die Eizelle hat sich inzwischen mehrfach geteilt und ist zu einer kleinen Kugel geworden, die sich bereits in Baby und Plazenta teilt. 
+    	Diese Kugel wandert nun über die Eileiter zur Gebärmutter und wächst dort in die Schleimhaut ein. Manche Frauen bemerken diesen Prozess als eine leichte Einnistungsblutung. 
+    	Durch weitere Zellteilungen spezialisieren sich die Zellen und legen schon Organe, Nervensystem und Gehirn an. Auch das Herz-Kreislaufsystem, die Wirbelsäule, Binde- und Muskelgewebe und die Geschlechtsorgane werden angelegt. 
+    	Ein Embryo ist entstanden.
+    </string>
+    <string name="info_title_week_4">4. Woche</string>
+    <string name="info_text_week_4">
+    	Am Ende dieser Woche können Sie erfahren, dass Sie schwanger sind. Die Regelblutung bleibt aus und der Embryo hat genug Hormone gebildet, dass diese mit einem Schwangerschaftstest nachweisbar sind.
+    </string>
+    <string name="info_title_week_5">5. Woche</string>
+    <string name="info_text_week_5">
+    	Der Embryo ist bereits ungefähr so groß wie ein Reiskorn. 
+    	In dieser Woche bilden sich Kopf, Gehirn, Blutzellen und Adern. 
+    	Im Ultraschall sieht das Kleine aus wie ein heller Punkt in einer dunklen Fruchtblase. 
+    	Am Ende der 5. Woche beginnt das kleine Herz zu schlagen. 
+    	Der Embryo ist nun über eine rudimentäre Nabelschnur mit der Plazenta verbunden. 
+    	Spätestens jetzt sollte die Schwangere Alkohol- und Zigarettenkonsum komplett einstellen, da der Embryo sehr empfindlich ist. 
+    	Die meisten Frauen entwickeln glücklicherweise eine natürliche Abneigung gegen solche Gifte. Auch können nun erste Beschwerden auftreten. 
+    	Die Hormonveränderung kann Übelkeit, starke Geruchssensibiltät, Reizbarkeit, Müdigkeit, Verstopfung oder Blähungen mit sich bringen.
+    </string>
+    <string name="info_title_week_6">6. Woche</string>
+    <string name="info_text_week_6">
+    	Der Embryo ist jetzt schon 6 mm lang und erscheint gestreckt. Er ähnelt einer kleinen Bohne. 
+    	Arm- und Beinansätze sind als Knospen erkennbar. 
+    	In dieser Woche wird das Gesicht des Ungeborenen angelegt, dazu lebenswichtige Organe wie Leber, Magen und Darm. 
+    	Das Rückenmark ist vorhanden und man kann schon die Augenhöhlen und den Mund erkennen. Das Ungeborene bewegt sich sanft schaukelnd im Fruchtwasser. 
+    	Manche Frauen spüren in der Frühschwangerschaft ein Ziehen im Bauch ähnlich der einsetzenden Menstruation. Dies liegt daran, dass sich die Mutterbänder und die Gebärmutter dehnen und ist kein Grund zur Sorge. 
+    </string>
+    <string name="info_title_week_7">7. Woche</string>
+    <string name="info_text_week_7">
+    	Der Embryo wächst nun sehr schnell, er wird jeden Tag ungefähr einen Millimeter größer. Die Größe des Embryos wird in der Schädel-Steiß-Länge (SSL) angegeben, d. h. es wird der Abstand vom Kopf bis zum Gesäß gemessen. 
+    	Der Verdauungstrakt, das Herz, die Nieren, das Gehirn und die Lungen sind vorhanden und entwickeln sich nun weiter. Diese Zeit ist ein wichtiger Entwicklungsabschnitt. 
+    	Bis zur 10. Schwangerschaftswoche sind alle Organsysteme fertig ausgebildet und müssen dann nur noch ausreifen.
+    </string>
+    <string name="info_title_week_8">8. Woche</string>
+    <string name="info_text_week_8">
+    	Der Embryo hat jetzt eine Größe von 9 bis 16 mm (SSL). Das Herz des Ungeborenen schlägt nun 140- bis 150-mal in der Minute. Die Wirbelsäule ist nun beweglich, weil sich Wirbelkörper um das Rückenmark herum gebildet haben. 
+    	Die Nervenzellen des Embryos befinden sich jetzt in einer besonders empfindlichen Phase und sind deshalb besonders anfällig für Giftstoffe. 
+    	Werden jetzt schädliche Stoffe wie Drogen, Alkohol oder bestimmte Medikamente zugeführt, kann dies zu schweren späteren Schäden führen.
+    </string>
+    <string name="info_title_week_9">9. Woche</string>
+    <string name="info_text_week_9">
+    	Die Größe des Embryos beträgt jetzt zwischen 17 und 24 mm (SSL). Die Arme, Hände, Beine und Füße sind jetzt deutlich sichtbar. Bei Jungen entwickeln sich jetzt die Hoden. 
+    	Eine Unterscheidung der beiden Geschlechter ist jedoch auf dem Ultraschallbild noch nicht möglich. Deutlich sind jedoch jetzt schon die Bewegungen des Kindes zu sehen. 
+    	Dabei wird es noch einige Zeit dauern, bis Sie die Kindsbewegungen auch spüren können. Eine Ultraschalluntersuchung zwischen der 9. und der 12. Schwangerschaftswoche stellt fest ob Herz- und Bewegungsreaktionen des Embryos vorhanden sind.
+		Die Gebärmutter hat nun deutlich an Größe gewonnen und kann auf die Harnblase drücken Während der Schwangerschaft steigt der Grundumsatz und der Sauerstoffverbrauch des Körpers um ca. 20 %.
+    </string>
+    <string name="info_title_week_10">10. Woche</string>
+    <string name="info_text_week_10">
+    	Der Fötus ist nun 25 bis 33 mm (SSL) groß und wiegt weniger als 4 g. Auf dem Ultraschallbild sind starke Bewegungen zu sehen. Das Gesicht des Ungeborenen ist jetzt deutlicher zu erkennen. Die Augenlider sind noch geschlossen.
+		Die lebenswichtigen Organe - Leber, Nieren, Darm, Gehirn und Lungen - sind voll entwickelt und funktionstüchtig, der Kopf ist halb so groß wie der Rest des Körpers. Die Stirn ist im Moment stark vorgewölbt und ist überdimensional groß. 
+		Die riskanteste Zeit der Schwangerschaft ist nun zu Ende. Das Risiko eine Fehlgeburt zu erleiden sinkt ab jetzt rapide. Der schwankende Hormonspiegel macht sich jetzt vor allem im Stimmungsbild der Schwangeren bemerkbar. 
+		Zwischen absoluten Hochgefühlen und tränenreichen Verzweiflungsanfällen ist jetzt alles möglich. Im zweiten Drittel der Schwangerschaft kommen diese Schwankungen wieder etwas ins Gleichgewicht.
+    </string>
+    <string name="info_title_week_11">11. Woche</string>
+    <string name="info_text_week_11">
+    	Das Gesicht des Fötus ist nun vollständig ausgeformt, wobei die Augenlider weiterhin geschlossen sind. Das Ungeborene misst jetzt etwa 3 cm und wiegt etwa 15g. Die Haut ist von einem weichen Flaum bedeckt. Noch ist die Schwangerschaft von außen fast nicht zu erkennen. Die Brüste haben etwas an Volumen gewonnen und es ist möglich dass die Hosen schon etwas kneifen. Das Herz der Mutter muss, aufgrund der vergrößerten Blutmenge, mehr Leistung bringen. Sie fühlen sich vielleicht müde und sind etwas kurzatmig. Gönnen Sie sich jetzt ab und zu eine Extra-Pause. Bewegung tut Ihnen gut, weil der Kreislauf dann die Plazenta besser mit Sauerstoff versorgen kann. Verzichten Sie jedoch auf sportliche Höchstleistungen.
+    </string>
+    <string name="info_title_week_12">12. Woche</string>
+    <string name="info_text_week_12">
+    	Der Fötus ist jetzt etwa 5 cm lang und wiegt 16 g. Das kleine Herz schlägt 120 bis 160 Mal in der Minute. Die Muskulatur ist jetzt soweit ausgebildet, dass Ellenbogen- und Handgelenke gebeugt werden können. Auch die Hände können sich bewegen. Milz, Leber und Knochenmark entwickeln ein eigenständiges Blutbidlungssystem. Mit dem Ende der 12. Schwangerschaftswoche endet für die meisten Frauen die Zeit der morgendlichen Übelkeit. Sollte diese jedoch weiter anhalten, und Sie an Gewicht verlieren, sprechen Sie unbedingt mit Ihrem Arzt/Ihrer Ärztin darüber. Becken, Sehnen und Gelenke der Mutter werden durch die Schwangerschaftshormone weicher und nachgiebiger. Dies gilt auch für die Bandscheiben.
+    </string>
+    <string name="info_title_week_13">13. Woche</string>
+    <string name="info_text_week_13">
+    	Das Gewicht des Ungeborenen beträgt etwa 18 g, ist ca 6 cm groß (SSL) und der Kopfdurchmesser liegt bei 21 mm. Die Organe des Fötus sind nun fertig ausgeformt und müssen nur noch wachsen. Die ersten Knochen entstehen aus dem Knorpelgewebe. Die Gesichtsmuskulatur des Ungeborenen ist jetzt so ausgebildet, dass es bereits die Lippen bewegen, die Stirn runzeln und gähnen kann. Ab jetzt wird die Größe des Fötus anhand der Kopfmasse beurteilt. Die Plazenta erreicht jetzt ihre volle Funktion. Sie versorgt das Kind mit Nährstoffen und Sauerstoff. Gleichzeitig wirkt sie wie eine Schranke gegenüber einiger schädlicher Substanzen.
+    </string>
+    <string name="info_title_week_14">14. Woche</string>
+    <string name="info_text_week_14">
+    	Der Kopfdurchmesser des Fötus liegt nun bei 25 mm, das Gewicht beträgt um die 25 g und die SSL beträgt ca 7.1 cm. Nun sind auf dem Ultraschallbild die äußeren Geschlechtsorgane zu unterscheiden. Alle Organsysteme sind funktionstüchtig. So übt das Ungeborene schon Atembewegungen, obwohl die Sauerstoffversorgung über die Plazenta natürlich noch sichergestellt ist. Tast-, Geschmacks-, und Gleichgewichtssinn sind gut entwickelt. Neben dem Greif-Reflex funktioniert auch der Saugreflex schon.
+    </string>
+    <string name="info_title_week_15">15. Woche</string>
+    <string name="info_text_week_15">
+    	Das Baby hat nun Gewicht liegt bei ungefähr 80 g und ist ca 8.1 cm lang. Jetzt nimmt das Baby enorm an Gewicht zu. Das Kind kann jetzt hören. Um die Knochenbildung voran zu treiben wird jetzt ausreichend Kalzium benötigt.
+		Das Herz ist fast vollständig entwickelt, die Leber und die Bauchspeicheldrüse nehmen ihre Funktion auf. Das Risiko eines Harnweginfektes ist jetzt besonders hoch. Achten Sie darauf genügend zu trinken und bei ersten Anzeichen einer Infektion Ihren Arzt/Ihre Ärztin aufzusuchen. Auch Infektionen im Scheidenbereich sind nicht selten, da sich der PH-Wert des Scheidenmillieus verändert. So können sich Bakterien und Hefepilze leichter vermehren.
+    </string>
+    <string name="info_title_week_16">16. Woche</string>
+    <string name="info_text_week_16">
+    	Der Kopfdurchmesser des Babys liegt jetzt bei 32  mm, es hat ein Gewicht von ungefähr 90 g und ist 9,4 cm lang. Die bis jetzt rasante Entwicklung der Organe ist jetzt soweit abgeschlossen. Nun geht es vor allem darum, dass der kleine Körper an Größe und Gewicht zulegt. Der Fötus beginnt sich nun zu strecken. Haare, Wimpern und Augenbrauen wachsen. Wenn Sie älter als 35 Jahre sind, oder ein erhöhtes Risiko haben ein Kind mit einer Chormosomenstörung zu haben, wird Ihr Arzt/Ihre Ärztin mit Ihnen über eine Fruchtwasseruntersuchung (Amniozentese) sprechen. Diese kann die Chromosomen und mögliche Störungen des Ungeborenen feststellen.
+    </string>
+    <string name="info_title_week_17">17. Woche</string>
+    <string name="info_text_week_17">
+    	Das Baby hat jetzt einen Kopfdurchmesser von ca 35  mm, wiegt ca. 100 g und ist 10,6 cm lang. Vielleicht können Sie jetzt schon erste zarte Kindsbewegungen spüren. Hände und Tastsinn des Babys sind nun soweit ausgebildet, dass es schon nach der Nabelschnur greifen kann. Das Ungeborene hört jetzt Geräusche die von außen zu ihm dringen, wie den Pulsschlag der Mutter, ihre Stimme oder Musik. Die Chance per Ultraschall das Geschlecht des Kindes zu erkennen ist jetzt besonders hoch.
+    </string>
+    <string name="info_title_week_18">18. Woche</string>
+    <string name="info_text_week_18">
+    	Der Kopfdurchmesser liegt jetzt bei etwa 38 mm, das Gewicht bei ca. 125 g. Das Ungeborene ist ungefähr 12 cm groß. Kindsbewegungen sind jetzt deutlich wahrnehmbar. Sie werden den Unterschied zwischen den Ruhephasen und den aktiven Phasen des Fötus deutlich spüren können. Besonders deutlich zu fühlen sind die Bewegungen in den Abendstunden, wenn Sie selbst zur Ruhe kommen. Ein Kalziummangel oder der erhöhte Druck der Gebärmutter auf die Beckengefäße kann jetzt Krämpfe in den Beinen hervorrufen. Krampfadern können entstehen oder sich verschlimmern. Die Gebärmutter hat deutlich an Größe gewonnen. Sie hat fast die Höhe des Nabels erreicht und schiebt alle Organe etwas nach oben. Der Bauch wächst deutlich sichtbar. Die Spannung der Bauchhaut führt zu der so genannten Linea nigra, einer dunklen Linie vom Nabel bis zum Schambein.
+    </string>
+    <string name="info_title_week_19">19. Woche</string>
+    <string name="info_text_week_19">
+    	Das Babys ist 24 cm lang (Scheitel-Fersen-Länge), das Gewicht beträgt ca. 200 g und der Kopf hat einen Durchmesser von ca 42 mm. Die Gebärmutter dehnt sich durch die erhöhte Flüssigkeitsmenge täglich mehr aus, was dem Baby immer mehr Bewegungsspielraum lässt. Die Augen des Fötus bewegen sich hin und her, die Lider bleiben jedoch bis zum Ende des 6. Schwangerschaftsmonates geschlossen. Jetzt ist die richtige Zeit sich Gedanken über den Ort der Geburt zu machen. Auch die meisten Geburtsvorbereitungskurse beginnen ab der 20. Woche. Diese Kurse bereiten angehende Mütter und Väter kompetent auf das große Ereignis vor.
+    </string>
+    <string name="info_title_week_20">20. Woche</string>
+    <string name="info_text_week_20">
+    	Der Kopfdurchmesser beträgt nun etwa 46  mm und das Gewicht ca. 300 g. Die SFL beträgt ca 25 cm. 
+    	Der Fötus entwickelt sich jetzt nicht mehr ganz so schnell. 
+    	Nun werden kleine Fettpolster angelegt, die nach der Geburt für die Wärmeregulierung notwendig sind. 
+    	Das Baby trinkt täglich eine kleine Menge Fruchtwasser und scheidet diese über die Harnwege wieder aus. 
+    	So werden Nieren und Schluckbewegungen trainiert. Die Mutter kann jetzt schon recht kräftige Kindsbewegungen wahrnehmen.
+    </string>
+    <string name="info_title_week_21">21. Woche</string>
+    <string name="info_text_week_21">
+    	Das Baby nimmt jetzt sehr schnell an Gewicht zu. Es wiegt ca 350 g und ist ca 26 cm lang (SFL). Das Gleichgewichtsorgan ist voll entwickelt, das Baby ist jetzt in der Lage sich selbst wahrzunehmen. 
+    	Die Haut des Fötus ist mit einem feinen Haarflaum, den Lanugohaaren, bedeckt. Er schützt die Haut und hilft bei der Regelung der Körpertemperatur. 
+    	Eine weißlich, wächserne Schicht bedeckt den Körper des Fötus – die Käseschmiere. Sie schützt die Haut vor dem Auslaugen und vor Wärmeverlust. 
+    	Manchmal ist eine schmerzlose Verfestigung der Gebärmutter zu spüren. Dies sind Vorwehen, quasi eine Vorübung des Körpers für die Geburt. 
+    	Wenn die Kontraktionen schmerzhaft sind, häufig und regelmäßig auftreten sollten Sie Kontakt zum behandelnden Arzt aufnehmen. Möglicherweise handelt es sich dann um echte, vorzeitige Wehen.
+    </string>
+    <string name="info_title_week_22">22. Woche</string>
+    <string name="info_text_week_22">
+    	Ihr Baby wiegt nun ca 500 g, hat eine Kopfdurchmesser von 52 mm und Scheitel-Fersen-Länge von ca 28 cm. 
+		Das Baby entwickelt einen festen Schlaf-Wach-Rhythmus. Es entwickelt zunehmend ein Bewusstsein für seine Umwelt. 
+		Wenn Sie von Zeit zu Zeit rhythmische Zuckungen in Ihrem Bauch spüren ist das kein Grund zur Besorgnis. Das Baby hat einfach nur Schluckauf. 
+		Trainieren Sie jetzt mit speziellen Übungen den Beckenboden. Er muss den Druck des Babys halten. Möglicherweise tauchen jetzt, durch die starke Dehnung, Schwangerschaftsstreifen auf. 
+		Sie verschwinden leider nicht mehr, werden aber nach der Geburt deutlich blasser.
+    </string>
+    <string name="info_title_week_23">23. Woche</string>
+    <string name="info_text_week_23">
+    	Ihr Baby wiegt nun ca 580 g, hat eine Kopfdurchmesser von 58 bis 69 mm und Scheitel-Fersen-Länge von ca 30 cm. 
+		Die Menge des Fruchtwassers nimmt weiter zu und enthält nun auch abgestorbene Zellen, Haare und Hautschmiere. Das Baby reagiert jetzt schon mit konkreten Bewegungen auf Geräusche. Der Arzt/die Ärztin wird von nun an den Hämoglobinwert im Blut der Mutter sorgfältig kontrollieren. Dieser Wert gibt Auskunft über die Sauerstoffversorgung des Babys.
+    </string>
+    <string name="info_title_week_24">24. Woche</string>
+    <string name="info_text_week_24">
+        Ihr Baby wiegt nun ca 700 g, hat eine Kopfdurchmesser von 61 bis 72 mm und Scheitel-Fersen-Länge von ca 31 cm. Die Bewegungsmöglichkeiten des Fötus werden mehr und mehr eingeschränkt. 
+    	Der Geschmacksinn des Babys ist schon weit entwickelt. Es reagiert auf starke Reize aus der Außenwelt mit heftigen Bewegungen und beschleunigtem Pulsschlag. Die Fettdepots des Fötus sind soweit angelegt, dass die Haut faltenfrei und prall ist.
+    </string>
+    
+    <string name="info_title_week_25">25. Woche</string>
+    <string name="info_text_week_25">
+        Ihr Baby wiegt nun ca 800 g, hat eine Kopfdurchmesser von 64 bis 75 mm und Scheitel-Fersen-Länge von ca 33 cm. Die Bewegungsmöglichkeiten des Fötus werden mehr und mehr eingeschränkt. 
+    	Die Lungen entwickeln sich weiter, es wird aber noch kein Sauerstoff von den Lungen aus ins Blut gebracht – das passiert über die Nabelschnur, die auch das verbrauchte Blut wieder zur Plazenta transportiert. 
+    	Dort wird es wieder mit Sauerstoff angereichert und in den Blutkreislauf des Kindes zurückgeführt. Das Kind schluckt weiterhin fleißig Fruchtwasser und trainiert so Harnwege und Verdauungssystem.
+		Für viele Schwangere werden die Nächte jetzt ungemütlich. Zum einen stört der jetzt doch schon große Bauch beim Finden einer bequemen Liegeposition, zum andern ist das Baby gerade in den Nachtstunden sehr aktiv. 
+		Auch Gedanken an die Geburt und die Zukunft können bisweilen den Schlaf rauben.
+		
+    </string>
+    <string name="info_title_week_26">26. Woche</string>
+    <string name="info_text_week_26">
+    	Ihr Baby wiegt nun ca 900 g, hat eine Kopfdurchmesser von 66 bis 77 mm und Scheitel-Fersen-Länge von ca 34 cm.
+    	Die Augen sind jetzt geöffnet. 
+    	Wird eine Lichtquelle direkt auf den Bauch gerichtet reagiert das Baby mit vermehrten Bewegungen und schnellerem Herzschlag. 
+    	Babys die ab der 27. Schwangerschaftswoche zu früh geboren werden haben eine recht gute Überlebenschance. 
+    	Sie müssen jedoch noch eine Zeitlang intensiv ärztlich betreut werden.
+    </string>
+    <string name="info_title_week_27">27. Woche</string>
+    <string name="info_text_week_27">
+        Ihr Baby wiegt nun ca 1000 g, hat eine Kopfdurchmesser von 70 bis 80 mm und Scheitel-Fersen-Länge von ca 36 cm.
+    	Die Reife der Lungen ist nun fast abgeschlossen, das Baby könnte nun selbständig atmen, wenn es jetzt geboren würde. 
+    	Viele Schwangere haben in den letzten Monaten einen niedrigen Hämoglobinwert. Die Eisenvorräte des Körpers sind aufgebraucht. 
+    	Möglicherweise muss Eisen zusätzlich zugeführt werden, um die Sauerstoffversorgung des Kindes zu gewährleisten. 
+    	Nun beginnt die beschwerlichste Zeit der Schwangerschaft. Das Kind benötigt mehr und mehr Platz. 
+    	Typische Beschwerden für diesen Teil der Schwangerschaft sind Sodbrennen, Verstopfung, Kurzatmigkeit und vermehrter Harndrang. 
+    	Auch die Wirbelsäule ist stark belastet und reagiert oft mit Schmerzen.
+    </string>
+    <string name="info_title_week_28">28. Woche</string>
+    <string name="info_text_week_28">
+        Ihr Baby wiegt nun ca 1100 g, hat eine Kopfdurchmesser von 72 bis 83 mm und Scheitel-Fersen-Länge von ca 37 cm.
+    	Viele Babys begeben sich schon jetzt in die optimale Geburtsposition mit dem Kopf nach unten. 
+    	Die Kindslage und die Plazentafunktion werden nun bei den Vorsorgeuntersuchungen sorgfältig geprüft. 
+    	Die Gebärmutter eicht jetzt etwa 10 cm über den Bauchnabel. In die Fußgelenke wird jetzt vermehrt Gewebewasser eingelagert. 
+    	Diese Ödeme sind meist unbedenklich und am nächsten Morgen meist wieder verschwunden. 
+    	Legen Sie die Beine so oft als möglich hoch.
+    </string>
+    <string name="info_title_week_29">29. Woche</string>
+    <string name="info_text_week_29">
+        Ihr Baby wiegt nun ca 1250 g, hat eine Kopfdurchmesser von 74 bis 86 mm und Scheitel-Fersen-Länge von ca 39 cm.
+    	Ab der 30. Woche gehen Sie häufiger zur Vorsorgeuntersuchung. 
+    	Der Arzt/die Ärztin überprüft die Herztöne und die Lage des Kindes. 
+    	Die Schwangerschaft ist jetzt meist sehr beschwerlich und die Angst vor der Geburt weicht langsam der Erwartung auf den Tag der Geburt.
+    </string>
+    <string name="info_title_week_30">30. Woche</string>
+    <string name="info_text_week_30">
+        Ihr Baby wiegt nun ca 1400 g, hat eine Kopfdurchmesser von 76 bis 88 mm und Scheitel-Fersen-Länge von ca 40 cm.
+    	Der Fötus wächst in dieser Zeit um mehrere Zentimeter und legt schnell an Gewicht zu. 
+    	Häufig sind jetzt Vorwehen zu spüren. Diese sind noch nicht schmerzhaft, aber unangenehm. 
+    	Aus der Brust tritt vielleicht etwas weißliche Flüssigkeit aus. Dieses Kolostrum (Vormilch) ist sehr nährstoffreich und wird schon in der Schwangerschaft, 
+    	und besonders in den ersten Tagen nach der Geburt produziert.
+    </string>
+    <string name="info_title_week_31">31. Woche</string>
+    <string name="info_text_week_31">
+        Ihr Baby wiegt nun ca 1600 g, hat eine Kopfdurchmesser von 78 bis 90 mm und Scheitel-Fersen-Länge von ca 42 cm.
+    	Das Baby nimmt jetzt pro Woche 150 bis 200 g Gewicht zu.
+		Die Bewegungen des Kindes werden nun langsamer und gemächlicher, aber sehr kräftig. Häufig sind sie von außen zu beobachten. 
+		Fast alle Kinder liegen nun schon in der optimalen Geburtsposition, mit dem Kopf nach unten. 
+		Jetzt ist es Zeit sich um die Erstausstattung des Kindes zu kümmern. Besorgen Sie spätestens jetzt alles, was noch fehlt.
+    </string>
+    <string name="info_title_week_32">32. Woche</string>
+    <string name="info_text_week_32">
+        Ihr Baby wiegt nun ca 1800 g, hat eine Kopfdurchmesser von 80 bis 93 mm und Scheitel-Fersen-Länge von ca 45 cm.
+        In der nächsten Zeit werden Senkwehen dafür sorgen, dass das Köpfchen des Babys sich fest in das kleine Becken senkt. 
+        Wenn sich das Kind noch nicht in die Geburtsausgangslage mit dem Kopf nach unten gedreht hat, 
+        kann man jetzt versuchen durch eine äußere Wendung die Schädellage herzustellen.
+    </string>
+    <string name="info_title_week_33">33. Woche</string>
+    <string name="info_text_week_33">
+        Ihr Baby wiegt nun ca 2250 g, hat eine Kopfdurchmesser von 84 bis 97 mm und Scheitel-Fersen-Länge von ca 45 cm.
+    	Achten Sie in dieser Zeit besonders darauf genügend Calcium zu sich zu nehmen, da das Baby einen enorm hohen Bedarf hat. 
+    	Möglicherweise gibt das Baby schon jetzt das Signal zur Geburt. 
+    	Packen Sie schon den Klinikkoffer und schließen Sie die Vorbereitungen für den neuen Erdenbürger ab. 
+    	Falls jetzt größere Mengen an Fruchtwasser abgehen sollten Sie sofort einen Arzt/eine Ärztin aufsuchen, da das Infektionsrisiko dadurch enorm erhöht wird.
+    </string>
+    <string name="info_title_week_34">34. Woche</string>
+    <string name="info_text_week_34">
+        Ihr Baby wiegt nun ca 2250 g, hat eine Kopfdurchmesser von 84 bis 97 mm und Scheitel-Fersen-Länge von ca 45 cm.
+		Die Senkwehen haben dafür gesorgt, dass das Kind wesentlich tiefer im Bauch liegt. 
+		Dies bedeutet für viele Schwangere eine enorme Erleichterung. Sie bekommen wieder besser Luft, Sodbrennen und Übelkeit lassen nach. 
+		Gönnen Sie sich in dieser Phase der Schwangerschaft ausreichend Ruhephasen. 
+		Das zusätzliche Gewicht und der weit nach vorne gewölbte Bauch sind sehr beschwerlich.
+    </string>
+    <string name="info_title_week_35">35. Woche</string>
+    <string name="info_text_week_35">
+        Ihr Baby wiegt nun ca 2550 g, hat eine Kopfdurchmesser von 86 bis 99 mm und Scheitel-Fersen-Länge von ca 46 cm.
+		Nun beginnt die Zeit des Wartens. Für viele werdende Mütter ist es ein Balanceakt zwischen Angstgefühlen und enormer Vorfreude. 
+		Der Abgang eines Schleimpfropfes, das Platzen der Fruchtblase und das Einsetzten der Geburtswehen kündigen einen baldigen Geburtstermin an. 
+		Sprechen Sie über eines dieser Ereignisse mit dem Arzt oder der Hebamme.
+    </string>
+    <string name="info_title_week_36">36. Woche</string>
+    <string name="info_text_week_36">
+        Ihr Baby wiegt nun ca 2750 g, hat eine Kopfdurchmesser von 87 bis 101 mm und Scheitel-Fersen-Länge von ca 47 cm.
+    	Die Finger- und Fußnägel des Babys sind jetzt fertig ausgebildet, und auch das Kopfhaar kann jetzt schon eine stattliche Länge von bis zu 5 cm aufweisen. 
+    	Der Körper der Mutter bereitet sich auf das Stillen vor. Durch die Plazenta fließen jetzt täglich 80 Liter Blut.
+    </string>
+    <string name="info_title_week_37">37. Woche</string>
+    <string name="info_text_week_37">
+        Ihr Baby wiegt nun ca 2950 g, hat eine Kopfdurchmesser von 89 bis 102 mm und Scheitel-Fersen-Länge von ca 48 cm.
+    	Das Baby ist jetzt in jeder Hinsicht geburtsreif. Die Schädelnähte am Kopf des Babys werden erst im Laufe des ersten Lebensjahres vollständig verknöchern. 
+    	Dies hat den Vorteil, dass sie sich im Geburtskanal noch etwas zusammenschieben lassen, und die Geburt erleichtern.
+    </string>
+    <string name="info_title_week_38">38. Woche</string>
+    <string name="info_text_week_38">
+        Ihr Baby wiegt nun ca 3100 g, hat eine Kopfdurchmesser von 90 bis 103 mm und Scheitel-Fersen-Länge von ca 49 cm.
+    	Für das Kind wird es jetzt richtig eng in der Gebärmutter. Für Bewegungen bleibt nicht mehr viel Platz. 
+    	Wenn das Kind wach ist sind seine Augen ständig geöffnet.
+    </string>
+    <string name="info_title_week_39">39. Woche</string>
+    <string name="info_text_week_39">
+        Ihr Baby wiegt nun ca 3250 g und misst ca 50 cm (Scheitel-Fersen-Länge).
+    	Die letzten Tage der Schwangerschaft haben begonnen. Das Warten ist oft unerträglich. 
+    	Viele Frauen spüren jetzt den so genannten „Nestbauinstinkt“. 
+    	Sie haben schier unerschöpfliche Energie und beginnen noch einmal ein großes Aufräumen und Putzen. 
+    	Trotzdem ist es wichtig, dass Sie sich jetzt genügend Erholungspausen gönnen. Sie werden für die Geburt viel Kraft brauchen.
+    </string>
+    <string name="info_title_week_40">40. Woche</string>
+    <string name="info_text_week_40">
+    	10 von 100 Schwangerschaften überschreiten den errechneten Geburtstermin. 
+    	Der Frauenarzt/die Frauenärztin wird in kurzen Abständen testen ob die Plazenta das Kind noch ausreichend mit Sauerstoff und Nährstoffen versorgt. 
+    	Meist sind Berechnungsfehler der Grund für ein Überschreiten des Geburtstermins. 
+    	Unter Umständen wird die Geburt jetzt auch künstlich eingeleitet, um eine Übertragung zu verhindern. 
+    	Der große Tag der Geburt wird in dieser Zeit kommen und für Sie damit ein neuer Lebensabschnitt beginnen.
+    </string>
+    <string name="info_title_week_41">41. Woche</string>
+    <string name="info_text_week_41">
+ 		10 von 100 Schwangerschaften überschreiten den errechneten Geburtstermin. 
+ 		Der Frauenarzt/die Frauenärztin wird in kurzen Abständen testen ob die Plazenta das Kind noch ausreichend mit Sauerstoff und Nährstoffen versorgt. 
+ 		Meist sind Berechnungsfehler der Grund für ein Überschreiten des Geburtstermins. 
+ 		Unter Umständen wird die Geburt jetzt auch künstlich eingeleitet, um eine Übertragung zu verhindern. 
+ 		Der große Tag der Geburt wird in dieser Zeit kommen und für Sie damit ein neuer Lebensabschnitt beginnen.   
+    </string>
+    <string name="info_title_week_42">42. Woche</string>
+    <string name="info_text_week_42">
+    	10 von 100 Schwangerschaften überschreiten den errechneten Geburtstermin. 
+ 		Der Frauenarzt/die Frauenärztin wird in kurzen Abständen testen ob die Plazenta das Kind noch ausreichend mit Sauerstoff und Nährstoffen versorgt. 
+ 		Meist sind Berechnungsfehler der Grund für ein Überschreiten des Geburtstermins. 
+ 		Unter Umständen wird die Geburt jetzt auch künstlich eingeleitet, um eine Übertragung zu verhindern. 
+ 		Der große Tag der Geburt wird in dieser Zeit kommen und für Sie damit ein neuer Lebensabschnitt beginnen.
+    </string>
+    <string name="info_title_week_default">Noch nicht eingepflegt</string>
+    <string name="info_text_week_default">
+    	Text noch nicht vorhanden.
+    </string>
+    
+</resources>
