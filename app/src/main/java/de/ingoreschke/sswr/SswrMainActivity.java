@@ -32,7 +32,7 @@ import de.ingoreschke.sswr.utils.Util;
 
 
 public class SswrMainActivity extends ActivityIr {
-	private static final String TAG = "SchwangerschaftsrechnerActivity";
+	private static final String TAG = "SswrMainActivity";
 	private static final String PREFS_NAME = "et_date";
 	private static final String KEY_ET_YEAR = "etYear";
 	private static final String KEY_ET_MONTH = "etMonth";
