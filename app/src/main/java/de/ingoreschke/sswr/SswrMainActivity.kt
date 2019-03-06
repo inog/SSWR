@@ -1,36 +1,28 @@
 package de.ingoreschke.sswr
 
-import java.util.Calendar
-import java.util.Date
-
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.appwidget.AppWidgetManager
-import android.content.*
+import android.content.ComponentName
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.LinearLayout
-import android.widget.RemoteViews
-import android.widget.TextView
-import android.widget.Toast
-
+import android.widget.*
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
-
 import de.ingoreschke.sswr.utils.Util
+import java.util.*
 
 
 class SswrMainActivity : ActivityIr() {
 
-    private var mainIntro: TextView? = null
+    private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
 

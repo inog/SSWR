@@ -1,8 +1,5 @@
 package de.ingoreschke.sswr;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -11,6 +8,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class Widget extends AppWidgetProvider {
 	private static final String TAG = "Widget";
@@ -23,9 +23,9 @@ public class Widget extends AppWidgetProvider {
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds){
 		Log.d(TAG, "onUpdate");
-		
-		final int N = appWidgetIds.length;
-		for (int i=0; i<N; i++) {
+
+
+        for (int i=0; i<appWidgetIds.length; i++) {
 			int widgetId = appWidgetIds[i];
 			
 			et = context.getSharedPreferences(PREFS_NAME, 0);
