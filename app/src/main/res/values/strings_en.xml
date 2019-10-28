@@ -9,9 +9,9 @@
     <string name="str_daysToBirth_label">Days until b-day</string>
     <string name="str_daysUntilNow_label">Days done</string>
     <string name="str_weekPlusDays_label">Eintrag im Mutterpass</string>
-    <string name="str_xteWeek_label">Sie sind in der</string>
-    <string name="str_xteWeek_suffix">. Woche</string>
-    <string name="str_xteMonth_label">Das entspricht</string>
+    <string name="str_xteWeek_label">You are at week</string>
+    <string name="str_xteWeek_suffix"></string>
+    <string name="str_xteMonth_label">Equivalent</string>
     <string name="str_xteMonth_suffix">. Monat</string>
     
     <string name="main_btnEtDate">E.T. ändern</string>
