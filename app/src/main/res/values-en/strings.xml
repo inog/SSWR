@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SSWR</string>
     <string name="str_intro">To calculate the current week of pregnancy, please enter the calculated date of birth.(b-day)</string>
-    <string name="str_intro_timemachinemode">Attention! Time Machine mode. ! \ nYou have changed today's date.</string>
+    <string name="str_intro_timemachinemode">Attention! Time Machine mode! \nYou have changed today\'s date.</string>
     <string name="str_today_label">Today</string>
     <string name="str_et_label">Calculated date of birth</string>
     <string name="dateDisplay">n.A.</string>
@@ -10,59 +10,52 @@
     <string name="str_daysUntilNow_label">Days done</string>
     <string name="str_weekPlusDays_label">Eintrag im Mutterpass</string>
     <string name="str_xteWeek_label">You are at week</string>
-    <string name="str_xteWeek_suffix"></string>
-    <string name="str_xteMonth_label">Equivalent</string>
-    <string name="str_xteMonth_suffix">. Monat</string>
+    <string name="str_xteWeek_suffix">week</string>
+    <string name="str_xteMonth_label">at month</string>
+    <string name="str_xteMonth_suffix"></string>
     
-    <string name="main_btnEtDate">E.T. ändern</string>
-    <string name="pickDateFirstUse">E.T. eintragen</string>
-    <string name="main_btnWeekInfo">Info aktuelle Woche</string>
-    <string name="main_btnTimemachine">Zeitmaschine</string>
-    <string name="errorTitle">Fehler!</string>
-    <string name="errorIllegalDate_d1TooSmall">\    	
-    	Der von Ihnen eingegebene Entbindungstermin kann nicht zur Berechnung der Schwangerschaftswoche herangezogen werden, 
-    	da er zu weit in der Vergangenheit liegt.
+    <string name="main_btnEtDate">Change b-day</string>
+    <string name="pickDateFirstUse">Enter b-day</string>
+    <string name="main_btnWeekInfo">Info current week</string>
+    <string name="main_btnTimemachine">Timemachine</string>
+    <string name="errorTitle">Error!</string>
+    <string name="errorIllegalDate_d1TooSmall">
+        The due date you have entered can not be used to calculate the week of pregnancy, because he is too far in the past.
     </string>
-    <string name="errorIllegalDate_d2TooBig">\    	
-    	Der von Ihnen eingegebene Entbindungstermin kann nicht zur Berechnung der Schwangerschaftswoche herangezogen werden, 
-    	da er zu weit in der Zukunft liegt.
+    <string name="errorIllegalDate_d2TooBig">
+        The due date you have entered can not be used to calculate the week of pregnancy, because he is too far in the future.
     </string>
-    <string name="errorNoDate">Bitte geben Sie zuerst den errechneten Termin (E.T.) ein.</string>
+    <string name="errorNoDate">Please enter first the calculated date of birth.</string>
     
-    <string name="alertboxTimemachine_title">Zeitmaschine</string> 
-    <string name="alertboxTimemachine_text">Wie schwanger sind Sie an Weihnachten? Oder Ostern? Nutzen Sie die Zeitmaschine und drehen Sie das heutige Datum vor oder zurück.</string>
+    <string name="alertboxTimemachine_title">Timemachine</string>
+    <string name="alertboxTimemachine_text">How pregnant are you at Christmas? Or Easter? Use the time machine and turn today\'s date back or forth.</string>
         
-    <string name="full_version_required">Vollversion notwendig</string>
+    <string name="full_version_required">Full version required</string>
         
 
     <!-- menu -->
-    <string name="menu_tellAFriend">Mit Freunden teilen</string>
-    <string name="menu_timemachine">Zeitmachine</string>
-    <string name="menu_weekinfo">Wocheninfo</string>
-    <string name="menu_editEt">Et. ändern</string>
-    <string name="menu_about">Über die App</string>
-    <string name="menu_feedback">Feedback senden</string>
+    <string name="menu_tellAFriend">Share</string>
+    <string name="menu_timemachine">Timemachine</string>
+    <string name="menu_weekinfo">Week info</string>
+    <string name="menu_editEt">Change b-day</string>
+    <string name="menu_about">About</string>
+    <string name="menu_feedback">send Feedback</string>
   
    	    
    	
    	<!-- widget -->    
-	<string name="widget_intro">aktuelle SSW</string>
-	<string name="widget_default">E.T. eingeben</string>
+	<string name="widget_intro">current pregnancy week</string>
+	<string name="widget_default">Enter b-day</string>
 	    
 	<!-- About -->    
     <string name="about_title">SSWR</string>
     <string name="about_text">\
-    	SSWR: Schwangerschaftswochenrechner\n
-    	In welcher Schwangerschaftswoche befinden Sie sich? Was würde im Mutterpass stehen, bzw. was würde die Hebamme sagen?
-    	Errechnen Sie einfach durch Eingabe des
-    	errechneten Geburtstermin (E.T.) die aktuelle Schwangerschaftswoche.\n	 
+    	SSWR: Schwangerschaftswochenrechner this is the german word for pregnancy week calculator.\n
+    	In which week of pregnancy are you? What would be in the passport, or what would the midwife say?
+        Simply calculate by entering the calculated due date (b-day) the current week of pregnancy. \n
     </string>
     <string name="about_linedelimiter">-----------------</string>
-    <string name="about_promo_nike">\
-   		Der SSWR wurde mit Hilfe meiner süßen Frau Nike (Hebamme) erstellt.\n
-    	<a href="http://www.hebamme-nike.de" target="_blank">http://www.hebamme-nike.de</a>\n
-    </string>
-    <string name="about_promo_nike_url">http://www.hebamme-nike.de</string> 
+
     <string name="about_promo_robert">\
     	Icon design by  Robert Hahmann <a href="mailto:info@robert-hahmann.de\">info@robert-hahmann.de</a>
     </string>
@@ -71,7 +64,7 @@
     <string name="about_promo_robert_email_txt">Hallo,\nich habe Ihr Design bei der App SSWR gesehen.\n</string>
         
     <string name="about_contact">\
-    	Bei Bugs oder Problemen würden wir uns über eine Email freuen.\n
+    	For bugs,errors or problems we would be glad about an email.\n
     	kontakt@ingo-reschke.de\n
     	Ingo Reschke 
     </string>
@@ -79,25 +72,25 @@
     <string name="about_contact_email">kontakt@ingo-reschke.de</string>
     <string name="about_contact_email_sub">SSWR: Feedback</string>
     <string name="about_contact_email_text">\
-        Hallo, \n
-        Ich möchte Ihnen ein Feedback senden.\n
+        Hello, \n
+        I would like to send you a feedback.\n
         Ich finde den SSWR:\n
         \n\n
-        Ich wünsche mir folgende Funktion(nen):\n
+        I wish the following function(s):\n
         \n\n
-        Ich habe eine Fehler (Bug) gefunden, nämlich:\n
+        I found an error:\n
         \n\n
     </string> 
-    <string name="about_btn_babyinmon1">Babygeräusche abspielen</string>
-    <string name="about_btn_babyinmon1_stop">Babygeräusche stoppen</string>
+    <string name="about_btn_babyinmon1">play baby noises</string>
+    <string name="about_btn_babyinmon1_stop">stop baby noises</string>
     <string name="about_babysound_info">\
-        Hören Sie hier eine Aufnahme der kindlichen Herztöne an, so wie sie von der Hebamme mit einem Dopton abgehört werden können. 
-        Für optimale Klangqualität bitte maximale Lautstärke einstellen.
+        Listen to a recording of the childish heart sounds, as they can be heard by the midwife with a Dop tone.
+         For optimum sound quality please adjust the maximum volume.
     </string>
          
-    <string name="tellAFriend_title">Mit Freunden teilen</string>
-    <string name="tellAFriendSubject">Ich bin Schwanger.</string>    
- 	<string name="tellAFriendText">Aktuell bin ich in der </string> 
+    <string name="tellAFriend_title">tell a friend</string>
+    <string name="tellAFriendSubject">I\'m pregnant.</string>
+ 	<string name="tellAFriendText">Currently I am in the  week.</string>
  	<string name="tellAFriendText2">\nUm Up to Date zu bleiben benutze ich den SSWR. \n</string>
     <string name="tellAFriendLinkLight">https://market.android.com/details?id=de.ingoreschke.sswr.lite</string>
     <string name="tellAFriendLinkFull">https://market.android.com/details?id=de.ingoreschke.sswr.full</string>
