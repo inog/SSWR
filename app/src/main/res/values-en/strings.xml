@@ -10,7 +10,7 @@
     <string name="str_daysUntilNow_label">Days done</string>
     <string name="str_weekPlusDays_label">Eintrag im Mutterpass</string>
     <string name="str_xteWeek_label">You are at week</string>
-    <string name="str_xteWeek_suffix">week</string>
+    <string name="str_xteWeek_suffix"></string>
     <string name="str_xteMonth_label">at month</string>
     <string name="str_xteMonth_suffix"></string>
     
