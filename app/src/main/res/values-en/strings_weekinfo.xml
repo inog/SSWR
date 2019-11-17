@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-<!-- 
+
   <string name="weekinfo_label">
     SSWR what happens this week
   </string>
@@ -183,9 +183,7 @@
   <string name="info_text_week_19">
     The head of the baby has a diameter from 42 to 51 mm, the weight amounts to approx. 260 g. The uterus expands by the increased liquid quantity daily more, which the baby ever more clearance of motion leaves. The eyes of the fetus move back and forth, the eyelids remain however up to the end 6. Pregnancy month closed. Now the correct time is to be made thoughts over the place of the birth. Also most birth preparatory courses begin at the 20. Week. These courses prepare beginning mothers and fathers competently for the large event.
   </string>
--->
-  
-<!-- 
+
   <string name="info_title_week_20">
     20th Week
   </string>
@@ -375,5 +373,4 @@
     Text not yet available.
   </string>
 
--->
 </resources>

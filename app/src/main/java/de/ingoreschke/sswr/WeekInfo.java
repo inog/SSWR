@@ -38,11 +38,11 @@ public class WeekInfo extends ActivityIr {
         	adView.loadAd(request);
         }
 		
-		Bundle b = getIntent().getExtras();
-		if (b == null){
+		Bundle bundle = getIntent().getExtras();
+		if (bundle == null){
 			return;
 		}
-		actualWeek = b.getInt("week");
+		actualWeek = bundle.getInt("week");
 		updateView(actualWeek);
 	}
 	
