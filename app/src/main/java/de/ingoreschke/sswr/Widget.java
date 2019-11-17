@@ -38,8 +38,8 @@ public class Widget extends AppWidgetProvider {
 	        SchwangerschaftsDate sd = calculateSswDate(etYear,etMonth,etDay);
 	        
 			if (sd != null){
-		        week = String.valueOf(sd.getWeeksUntilNow()) + " + " + String.valueOf(sd.getRestOfWeekUntilNow());
-		        xteWeek = String.valueOf(sd.getXteWeek()) + context.getString(R.string.str_xteWeek_suffix);
+		        week = sd.getWeeksUntilNow() + " + " + sd.getRestOfWeekUntilNow();
+		        xteWeek = sd.getXteWeek() + context.getString(R.string.str_xteWeek_suffix);
 			}
 	        
 			
