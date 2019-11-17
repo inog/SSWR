@@ -45,12 +45,7 @@ public class About extends Activity implements OnClickListener{
 	
 	public void onClick(View v) {
 		int id =v.getId();
-		if (id == R.id.about_promo_nike) {
-			String url = getString(R.string.about_promo_nike_url);
-			final Intent ni = new Intent(Intent.ACTION_VIEW);
-			ni.setData(Uri.parse(url));
-			startActivity(ni);
-		} else if (id == R.id.about_promo_robert) {
+		if (id == R.id.about_promo_robert) {
 			final Intent ri = new Intent(Intent.ACTION_SEND);
 			ri.setType("text/plain");
 			ri.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_promo_robert_email_sub));
