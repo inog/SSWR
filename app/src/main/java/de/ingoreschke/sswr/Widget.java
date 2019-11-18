@@ -35,7 +35,7 @@ public class Widget extends AppWidgetProvider {
 	        String week = context.getString(R.string.widget_default);
 	        String xteWeek = "";
 	        
-	        SchwangerschaftsDate sd = calculateSswDate(etYear,etMonth,etDay);
+	        PregnancyDate sd = calculateSswDate(etYear,etMonth,etDay);
 	        
 			if (sd != null){
 		        week = sd.getWeeksUntilNow() + " + " + sd.getRestOfWeekUntilNow();
@@ -61,13 +61,13 @@ public class Widget extends AppWidgetProvider {
 		
 	}
 	
-	private SchwangerschaftsDate calculateSswDate(int etYear, int etMonth, int etDay){
+	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
 		Calendar c = Calendar.getInstance();
 		Date today = c.getTime();
 		c.set(etYear, etMonth, etDay);
 		Date birthDate = c.getTime();
 		try{
-			return new SchwangerschaftsDate(today, birthDate);	
+			return new PregnancyDate(today, birthDate);
 		}catch (IllegalArgumentException e) {
 			Log.e(TAG, e.getMessage());
 			SharedPreferences.Editor editor = et.edit();

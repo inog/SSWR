@@ -6,8 +6,8 @@ import java.util.GregorianCalendar;
 
 import android.util.Log;
 
-public class SchwangerschaftsDate {
-	private static final String TAG = "SchwangerschaftsDate";
+public class PregnancyDate {
+	private static final String TAG = "PregnancyDate";
 	private static final double MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
 	private static final long GESTATION_IN_DAY = 280L; 
 	public static final String DATE2_TOO_BIG = "Date (d2) is too far in the future.";
@@ -23,7 +23,7 @@ public class SchwangerschaftsDate {
 
 
 
-	public SchwangerschaftsDate(Date date1, Date date2){
+	public PregnancyDate(Date date1, Date date2){
 		d1 = eraseTime(date1);
 		d2 = eraseTime(date2);
 		daysToBirth = dateDiffInDays(d1, d2);

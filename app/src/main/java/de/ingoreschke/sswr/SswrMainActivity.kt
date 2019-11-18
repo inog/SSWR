@@ -44,7 +44,7 @@ class SswrMainActivity : ActivityIr() {
     private var etDay: Int = 0
     private var todayDay: Int = 0
 
-    private var sd: SchwangerschaftsDate? = null
+    private var sd: PregnancyDate? = null
 
     //the callback received when the user "sets" the date in the dialog
     private val mDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -295,7 +295,7 @@ class SswrMainActivity : ActivityIr() {
         val today = c1.time
         val birthDate = c2.time
         try {
-            this.sd = SchwangerschaftsDate(today, birthDate)
+            this.sd = PregnancyDate(today, birthDate)
             showResult()
             if (!isTimeMachineMode) {
                 updateWidget()
@@ -303,9 +303,9 @@ class SswrMainActivity : ActivityIr() {
         } catch (e: IllegalArgumentException) {
             Log.e(TAG, e.message)
             var error = ""
-            if (e.message == SchwangerschaftsDate.DATE1_TOO_SMALL) {
+            if (e.message == PregnancyDate.DATE1_TOO_SMALL) {
                 error = getString(R.string.errorIllegalDate_d1TooSmall)
-            } else if (e.message == SchwangerschaftsDate.DATE2_TOO_BIG) {
+            } else if (e.message == PregnancyDate.DATE2_TOO_BIG) {
                 error = getString(R.string.errorIllegalDate_d2TooBig)
             } else {
                 error = e.message!!
