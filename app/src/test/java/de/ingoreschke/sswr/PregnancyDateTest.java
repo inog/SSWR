@@ -1,20 +1,18 @@
 package de.ingoreschke.sswr;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
-
-@RunWith(MockitoJUnitRunner.class)
 public class PregnancyDateTest {
-     PregnancyDate cut;
+
+    PregnancyDate cut;
+
 
     @Test
     public void testPregnancyDate(){
