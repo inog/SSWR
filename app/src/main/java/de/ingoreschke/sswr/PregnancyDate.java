@@ -52,7 +52,7 @@ public class PregnancyDate {
 		long md2 = c2.getTimeInMillis();
 		long milliseconds = md2 - md1;
 		long days = Math.round(milliseconds / MILLISECONDS_IN_DAY);
-		Log.d(TAG, "dateDiffInDays : " + date1.toString() + "\t" + date2.toString() + "\t" + days) ;
+//		Log.d(TAG, "dateDiffInDays : " + date1.toString() + "\t" + date2.toString() + "\t" + days) ;
 		
 		if (days > GESTATION_IN_DAY + 22L){
 			throw new IllegalArgumentException(DATE2_TOO_BIG);
@@ -61,7 +61,7 @@ public class PregnancyDate {
 		}
 		return days;
 	}
-	
+
 	
 	public long calcWeeks(long days) {
 		long weeks = days/7;
