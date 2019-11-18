@@ -22,7 +22,6 @@ public class PregnancyDateTest {
         Date startDate = Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         cut = new PregnancyDate(startDate,dayOfBirth);
-
         assertEquals(10l, cut.getDaysToBirth());
 
     }
