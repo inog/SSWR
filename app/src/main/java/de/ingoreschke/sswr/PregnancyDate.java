@@ -9,7 +9,7 @@ import android.util.Log;
 public class PregnancyDate {
 	private static final String TAG = "PregnancyDate";
 	private static final double MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
-	private static final long GESTATION_IN_DAY = 280L; 
+	static final long GESTATION_IN_DAY = 280L;
 	public static final String DATE2_TOO_BIG = "Date (d2) is too far in the future.";
 	public static final String DATE1_TOO_SMALL = "Date (d1) is too far in the past.";
 	private Date d1;
