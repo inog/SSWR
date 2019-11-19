@@ -9,7 +9,6 @@ import java.util.Date;
 import static org.junit.Assert.assertEquals;
 
 public class PregnancyDateTest {
-    private PregnancyDate cut;
 
     @Test
     public void testPregnancyDate() {
@@ -20,7 +19,7 @@ public class PregnancyDateTest {
 
         Date startDate = Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        cut = new PregnancyDate(startDate, dayOfBirth);
+        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
 
         assertEquals(expectedDays2Birth, cut.getDaysToBirth());
         assertEquals(expectedDaysUntilNow, cut.getDaysUntilNow());
