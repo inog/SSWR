@@ -12,9 +12,7 @@ public class PregnancyDate {
 	static final long GESTATION_IN_DAY = 280L;
 	public static final String DATE2_TOO_BIG = "Date (d2) is too far in the future.";
 	public static final String DATE1_TOO_SMALL = "Date (d1) is too far in the past.";
-	private Date d1;
-	private Date d2;
-	private long daysToBirth;
+    private long daysToBirth;
 	private long daysUntilNow;
 	private long weeksUntilNow;
 	private long restOfWeekUntilNow;
@@ -24,8 +22,8 @@ public class PregnancyDate {
 
 
 	public PregnancyDate(Date date1, Date date2){
-		d1 = eraseTime(date1);
-		d2 = eraseTime(date2);
+        Date d1 = eraseTime(date1);
+        Date d2 = eraseTime(date2);
 		daysToBirth = dateDiffInDays(d1, d2);
 		daysUntilNow = GESTATION_IN_DAY - daysToBirth;
 		weeksUntilNow = calcWeeks(daysUntilNow);
@@ -34,7 +32,7 @@ public class PregnancyDate {
 		xteMonth = calcMonth(weeksUntilNow) +1;
 	}
 	
-	public Date eraseTime(Date date){
+	private Date eraseTime(Date date){
 		Calendar c = GregorianCalendar.getInstance();
 		c.setTime(date);
 		c.set(Calendar.HOUR_OF_DAY, 0);
@@ -43,7 +41,7 @@ public class PregnancyDate {
 		return c.getTime();
 	}
 	
-	public long dateDiffInDays(Date date1, Date date2){
+	private long dateDiffInDays(Date date1, Date date2){
 		Calendar c1 = GregorianCalendar.getInstance();
 		Calendar c2 = GregorianCalendar.getInstance();
 		c1.setTime(date1);
@@ -62,25 +60,19 @@ public class PregnancyDate {
 		return days;
 	}
 
-	
-	public long calcWeeks(long days) {
-		long weeks = days/7;
-		return  weeks;
+	private long calcWeeks(long days) {
+        return days/7;
 	}
 	
-	public long calcRestOfWeek(long days){
-		long rest = days%7;
-		return rest;
+	private long calcRestOfWeek(long days){
+        return days%7;
 	}
 	
-	public long calcMonth(long weeks){
-		long month = weeks/4;
-		return month;
+	private long calcMonth(long weeks){
+        return weeks/4;
 	}
-	
-	
-	
-	//getter
+
+    //getter
 	public long getDaysToBirth() {
 		return daysToBirth;
 	}
