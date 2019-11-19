@@ -9,11 +9,11 @@ import java.util.Date;
 import static org.junit.Assert.assertEquals;
 
 public class PregnancyDateTest {
-    PregnancyDate cut;
+    private PregnancyDate cut;
 
     @Test
     public void testPregnancyDate() {
-        long expectedDays2Birth = 10l;
+        long expectedDays2Birth = 10L;
         long expectedDaysUntilNow = PregnancyDate.GESTATION_IN_DAY - expectedDays2Birth;
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.plusDays(expectedDays2Birth);
