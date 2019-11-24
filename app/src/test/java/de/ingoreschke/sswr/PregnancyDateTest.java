@@ -48,6 +48,7 @@ public class PregnancyDateTest {
         assertEquals(39L, cut.getXteWeek());
         assertEquals(10L, cut.getXteMonth());
     }
+
     @Test
     public void testPregnancyDate_later() {
         long expectedDays2Birth = 100L;
@@ -61,11 +62,12 @@ public class PregnancyDateTest {
 
         assertEquals(expectedDays2Birth, cut.getDaysToBirth());
         assertEquals(expectedDaysUntilNow, cut.getDaysUntilNow());
-        assertEquals(4L, cut.getRestOfWeekUntilNow());
-        assertEquals(38L, cut.getWeeksUntilNow());
-        assertEquals(39L, cut.getXteWeek());
-        assertEquals(10L, cut.getXteMonth());
+        assertEquals(5L, cut.getRestOfWeekUntilNow());
+        assertEquals(25L, cut.getWeeksUntilNow());
+        assertEquals(26L, cut.getXteWeek());
+        assertEquals(7, cut.getXteMonth());
     }
+
 
 
 }

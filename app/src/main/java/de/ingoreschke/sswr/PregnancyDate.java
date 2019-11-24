@@ -3,6 +3,7 @@ package de.ingoreschke.sswr;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -26,9 +27,9 @@ public class PregnancyDate {
 
 	public PregnancyDate(Date date1, Date date2){
 
-    //    Date d2 = eraseTime(date2);
-	//	Date d1 = eraseTime(date1);
-	//	daysToBirth = dateDiffInDays(d1, d2);
+        //Date d2 = eraseTime(date2);
+		//Date d1 = eraseTime(date1);
+		//daysToBirth = dateDiffInDays(d1, d2);
 
 		LocalDate ld1 = LocalDate.from(date1.toInstant().atZone(ZoneId.systemDefault()));
 		LocalDate ld2 = LocalDate.from(date2.toInstant().atZone(ZoneId.systemDefault()));
@@ -50,8 +51,7 @@ public class PregnancyDate {
 		return c.getTime();
 	}
 	private long dateDiffInDays(LocalDate date1, LocalDate date2){
-		Period intervalPeriod = Period.between(date1, date2);
-		int days = intervalPeriod.getDays();
+		long days = ChronoUnit.DAYS.between(date1, date2);
 		if (days > GESTATION_IN_DAY + 22L){
 			throw new IllegalArgumentException(DATE2_TOO_BIG);
 		}else if(days < -21L){
