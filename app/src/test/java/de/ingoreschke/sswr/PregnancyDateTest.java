@@ -67,6 +67,19 @@ public class PregnancyDateTest {
         assertEquals(26L, cut.getXteWeek());
         assertEquals(7, cut.getXteMonth());
     }
+    @Test (expected = IllegalArgumentException.class)
+    public void testPregnancyDate_Date2ToBig() {
+        long expectedDays2Birth = 350L;
+        long expectedDaysUntilNow = PregnancyDate.GESTATION_IN_DAY - expectedDays2Birth;
+        LocalDate now = LocalDate.now();
+        LocalDate birthDate = now.plusDays(expectedDays2Birth);
+
+        Date startDate = new Date();
+        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
+
+
+    }
 
 
 
