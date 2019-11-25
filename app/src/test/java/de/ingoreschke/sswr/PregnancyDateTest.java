@@ -67,20 +67,22 @@ public class PregnancyDateTest {
         assertEquals(26L, cut.getXteWeek());
         assertEquals(7, cut.getXteMonth());
     }
+
     @Test (expected = IllegalArgumentException.class)
     public void testPregnancyDate_Date2ToBig() {
-        long expectedDays2Birth = 350L;
-        long expectedDaysUntilNow = PregnancyDate.GESTATION_IN_DAY - expectedDays2Birth;
         LocalDate now = LocalDate.now();
-        LocalDate birthDate = now.plusDays(expectedDays2Birth);
-
+        LocalDate birthDate = now.plusDays(350L);
         Date startDate = new Date();
         Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
-
-
+        new PregnancyDate(startDate, dayOfBirth);
     }
 
-
-
+    @Test (expected = IllegalArgumentException.class)
+    public void testPregnancyDate_Date1ToSmall() {
+        LocalDate now = LocalDate.now();
+        LocalDate birthDate = now.minusDays(22L);
+        Date startDate = new Date();
+        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        new PregnancyDate(startDate, dayOfBirth);
+    }
 }
