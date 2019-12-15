@@ -3,7 +3,9 @@ package de.ingoreschke.sswr;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -17,9 +19,7 @@ public class PregnancyDateTest {
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.plusDays(expectedDays2Birth);
 
-        Date startDate = Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
+        PregnancyDate cut = new PregnancyDate(now, birthDate);
 
         assertEquals(expectedDays2Birth, cut.getDaysToBirth());
         assertEquals(expectedDaysUntilNow, cut.getDaysUntilNow());
@@ -37,9 +37,7 @@ public class PregnancyDateTest {
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.plusDays(expectedDays2Birth);
 
-        Date startDate = new Date();
-        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
+        PregnancyDate cut = new PregnancyDate(now, birthDate);
 
         assertEquals(expectedDays2Birth, cut.getDaysToBirth());
         assertEquals(expectedDaysUntilNow, cut.getDaysUntilNow());
@@ -56,9 +54,7 @@ public class PregnancyDateTest {
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.plusDays(expectedDays2Birth);
 
-        Date startDate = new Date();
-        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        PregnancyDate cut = new PregnancyDate(startDate, dayOfBirth);
+        PregnancyDate cut = new PregnancyDate(now, birthDate);
 
         assertEquals(expectedDays2Birth, cut.getDaysToBirth());
         assertEquals(expectedDaysUntilNow, cut.getDaysUntilNow());
@@ -72,17 +68,22 @@ public class PregnancyDateTest {
     public void testPregnancyDate_Date2ToBig() {
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.plusDays(350L);
-        Date startDate = new Date();
-        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        new PregnancyDate(startDate, dayOfBirth);
+        new PregnancyDate(now, birthDate);
     }
 
     @Test (expected = IllegalArgumentException.class)
     public void testPregnancyDate_Date1ToSmall() {
         LocalDate now = LocalDate.now();
         LocalDate birthDate = now.minusDays(22L);
-        Date startDate = new Date();
-        Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        new PregnancyDate(startDate, dayOfBirth);
+        new PregnancyDate(now,birthDate);
+    }
+
+    @Test
+    public void testCalenderDate(){
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.get(Calendar.YEAR) + " - " + c.get(Calendar.MONTH) + " - " + c.get(Calendar.DAY_OF_MONTH));
+        System.out.println(c.getTime());
+        System.out.println(LocalDate.of(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)));
+        System.out.println(LocalDate.of(c.get(Calendar.YEAR), c.get(Calendar.MONTH)+1, c.get(Calendar.DAY_OF_MONTH))); //need +1 for no Zero Month
     }
 }

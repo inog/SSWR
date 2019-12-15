@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import de.ingoreschke.sswr.utils.Util
+import java.time.LocalDate
 import java.util.*
 
 
@@ -44,7 +45,7 @@ class SswrMainActivity : ActivityIr() {
     private var etDay: Int = 0
     private var todayDay: Int = 0
 
-    private var sd: PregnancyDate? = null
+    private var pregnancyDate: PregnancyDate? = null
 
     //the callback received when the user "sets" the date in the dialog
     private val mDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -199,8 +200,8 @@ class SswrMainActivity : ActivityIr() {
         } else if (id == R.id.menu_tellAFriend) {
             val title = getString(R.string.tellAFriendSubject)
             var text = ""
-            if (sd != null) {
-                text = getString(R.string.tellAFriendText) + " " + sd!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix) + "."
+            if (pregnancyDate != null) {
+                text = getString(R.string.tellAFriendText) + " " + pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix) + "."
             }
             text += getString(R.string.tellAFriendText2)
             if (isLiteVersion) {
@@ -264,8 +265,8 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun callWeekInfo() {
-        if (this.sd != null) {
-            val weekl = sd!!.xteWeek
+        if (this.pregnancyDate != null) {
+            val weekl = pregnancyDate!!.xteWeek
             val week = Util.safeLongToInt(weekl)
             val i = Intent(this, WeekInfo::class.java)
             i.putExtra("week", week)
@@ -288,14 +289,11 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun calculateSswDate() {
-        val c1 = Calendar.getInstance()
-        val c2 = Calendar.getInstance()
-        c1.set(todayYear, todayMonth, todayDay)
-        c2.set(etYear, etMonth, etDay)
-        val today = c1.time
-        val birthDate = c2.time
+        val today = LocalDate.of(todayYear, todayMonth + 1,todayDay)
+        val birthDate = LocalDate.of(etYear, etMonth +1 , etDay)
+
         try {
-            this.sd = PregnancyDate(today, birthDate)
+            this.pregnancyDate = PregnancyDate(today, birthDate)
             showResult()
             if (!isTimeMachineMode) {
                 updateWidget()
@@ -316,14 +314,14 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun showResult() {
-        etDaysToBirthDisplay!!.text = sd!!.daysToBirth.toString()
-        etDaysUntilNowDisplay!!.text = sd!!.daysUntilNow.toString()
-        etWeekPlusDaysDisplay!!.text = sd!!.weeksUntilNow.toString() + " + " + sd!!.restOfWeekUntilNow.toString()
+        etDaysToBirthDisplay!!.text = pregnancyDate!!.daysToBirth.toString()
+        etDaysUntilNowDisplay!!.text = pregnancyDate!!.daysUntilNow.toString()
+        etWeekPlusDaysDisplay!!.text = pregnancyDate!!.weeksUntilNow.toString() + " + " + pregnancyDate!!.restOfWeekUntilNow.toString()
 
-        var w = sd!!.xteWeek.toString()
+        var w = pregnancyDate!!.xteWeek.toString()
         w = w + getString(R.string.str_xteWeek_suffix)
         etXteWeekDisplay!!.text = w
-        var m = sd!!.xteMonth.toString()
+        var m = pregnancyDate!!.xteMonth.toString()
         m = m + getString(R.string.str_xteMonth_suffix)
         etXteMonth!!.text = m
     }
@@ -342,8 +340,8 @@ class SswrMainActivity : ActivityIr() {
 
     private fun updateWidget() {
         Log.d(TAG, "updateWidget")
-        val week = sd!!.weeksUntilNow.toString() + " + " + sd!!.restOfWeekUntilNow.toString()
-        val xteWeek = sd!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix)
+        val week = pregnancyDate!!.weeksUntilNow.toString() + " + " + pregnancyDate!!.restOfWeekUntilNow.toString()
+        val xteWeek = pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix)
         val appWidgetManager = AppWidgetManager.getInstance(this) //this is context
         val views = RemoteViews(this.packageName, R.layout.widget_layout)
         //Perform update on the view
