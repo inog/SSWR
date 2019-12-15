@@ -3,7 +3,9 @@ package de.ingoreschke.sswr;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -84,5 +86,14 @@ public class PregnancyDateTest {
         Date startDate = new Date();
         Date dayOfBirth = Date.from(birthDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         new PregnancyDate(startDate, dayOfBirth);
+    }
+
+    @Test
+    public void testCalenderDate(){
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.get(Calendar.YEAR) + " - " + c.get(Calendar.MONTH) + " - " + c.get(Calendar.DAY_OF_MONTH));
+        System.out.println(c.getTime());
+        System.out.println(LocalDate.of(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)));
+        System.out.println(LocalDate.of(c.get(Calendar.YEAR), c.get(Calendar.MONTH)+1, c.get(Calendar.DAY_OF_MONTH))); //need +1 for no Zero Month
     }
 }

@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import de.ingoreschke.sswr.utils.Util
+import java.time.LocalDate
 import java.util.*
 
 
@@ -294,6 +295,11 @@ class SswrMainActivity : ActivityIr() {
         c2.set(etYear, etMonth, etDay)
         val today = c1.time
         val birthDate = c2.time
+
+        val today2 = LocalDate.of(todayYear, todayMonth + 1,todayDay);
+        Log.d(TAG, "today: " + today);
+        Log.d(TAG, "today2: " + today2);
+
         try {
             this.pregnancyDate = PregnancyDate(today, birthDate)
             showResult()
