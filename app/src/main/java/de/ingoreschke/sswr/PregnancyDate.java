@@ -1,9 +1,7 @@
 package de.ingoreschke.sswr;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 public class PregnancyDate {
     private static final String TAG = "PregnancyDate";
@@ -18,10 +16,8 @@ public class PregnancyDate {
     private long xteMonth;
 
 
-    public PregnancyDate(Date date1, Date date2) {
-        LocalDate ld1 = LocalDate.from(date1.toInstant().atZone(ZoneId.systemDefault()));
-        LocalDate ld2 = LocalDate.from(date2.toInstant().atZone(ZoneId.systemDefault()));
-        daysToBirth = dateDiffInDays(ld1, ld2);
+    public PregnancyDate(LocalDate date1, LocalDate date2) {
+        daysToBirth = dateDiffInDays(date1, date2);
         daysUntilNow = GESTATION_IN_DAY - daysToBirth;
         weeksUntilNow = calcWeeks(daysUntilNow);
         restOfWeekUntilNow = calcRestOfWeek(daysUntilNow);

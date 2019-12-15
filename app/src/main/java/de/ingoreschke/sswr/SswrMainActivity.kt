@@ -289,16 +289,8 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun calculateSswDate() {
-        val c1 = Calendar.getInstance()
-        val c2 = Calendar.getInstance()
-        c1.set(todayYear, todayMonth, todayDay)
-        c2.set(etYear, etMonth, etDay)
-        val today = c1.time
-        val birthDate = c2.time
-
-        val today2 = LocalDate.of(todayYear, todayMonth + 1,todayDay);
-        Log.d(TAG, "today: " + today);
-        Log.d(TAG, "today2: " + today2);
+        val today = LocalDate.of(todayYear, todayMonth + 1,todayDay)
+        val birthDate = LocalDate.of(etYear, etMonth +1 , etDay)
 
         try {
             this.pregnancyDate = PregnancyDate(today, birthDate)
