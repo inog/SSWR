@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -62,12 +63,9 @@ public class Widget extends AppWidgetProvider {
 	}
 	
 	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
-		Calendar c = Calendar.getInstance();
-		Date today = c.getTime();
-		c.set(etYear, etMonth, etDay);
-		Date birthDate = c.getTime();
+		LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
 		try{
-			return new PregnancyDate(today, birthDate);
+			return new PregnancyDate(LocalDate.now(), birthDate);
 		}catch (IllegalArgumentException e) {
 			Log.e(TAG, e.getMessage());
 			SharedPreferences.Editor editor = et.edit();

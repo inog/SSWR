@@ -1,14 +1,11 @@
 package de.ingoreschke.sswr;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-
-import android.util.Log;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class PregnancyDate {
     private static final String TAG = "PregnancyDate";
-    private static final double MILLISECONDS_IN_DAY = 1000 * 60 * 60 * 24;
+
     static final long GESTATION_IN_DAY = 280L;
     public static final String DATE2_TOO_BIG = "Date (d2) is too far in the future.";
     public static final String DATE1_TOO_SMALL = "Date (d1) is too far in the past.";
@@ -19,10 +16,9 @@ public class PregnancyDate {
     private long xteWeek;
     private long xteMonth;
 
-    public PregnancyDate(Date date1, Date date2) {
-        Date d1 = eraseTime(date1);
-        Date d2 = eraseTime(date2);
-        daysToBirth = dateDiffInDays(d1, d2);
+    public PregnancyDate(LocalDate date1, LocalDate date2) {
+        daysToBirth = dateDiffInDays(date1,date2);
+
         daysUntilNow = GESTATION_IN_DAY - daysToBirth;
         weeksUntilNow = calcWeeks(daysUntilNow);
         restOfWeekUntilNow = calcRestOfWeek(daysUntilNow);
@@ -30,25 +26,9 @@ public class PregnancyDate {
         xteMonth = calcMonth(weeksUntilNow) + 1;
     }
 
-    private Date eraseTime(Date date) {
-        Calendar c = GregorianCalendar.getInstance();
-        c.setTime(date);
-        c.set(Calendar.HOUR_OF_DAY, 0);
-        c.set(Calendar.MINUTE, 0);
-        c.set(Calendar.SECOND, 0);
-        return c.getTime();
-    }
+    private long dateDiffInDays(LocalDate date1, LocalDate date2) {
 
-    private long dateDiffInDays(Date date1, Date date2) {
-        Calendar c1 = GregorianCalendar.getInstance();
-        Calendar c2 = GregorianCalendar.getInstance();
-        c1.setTime(date1);
-        c2.setTime(date2);
-        long md1 = c1.getTimeInMillis();
-        long md2 = c2.getTimeInMillis();
-        long milliseconds = md2 - md1;
-        long days = Math.round(milliseconds / MILLISECONDS_IN_DAY);
-        Log.d(TAG, "dateDiffInDays : " + date1.toString() + "\t" + date2.toString() + "\t" + days);
+        long days = ChronoUnit.DAYS.between(date1, date2);
 
         if (days > GESTATION_IN_DAY + 22L) {
             throw new IllegalArgumentException(DATE2_TOO_BIG);
