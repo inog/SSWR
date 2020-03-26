@@ -27,9 +27,7 @@ public class PregnancyDate {
     }
 
     private long dateDiffInDays(LocalDate date1, LocalDate date2) {
-
         long days = ChronoUnit.DAYS.between(date1, date2);
-
         if (days > GESTATION_IN_DAY + 22L) {
             throw new IllegalArgumentException(DATE2_TOO_BIG);
         } else if (days < -21L) {
