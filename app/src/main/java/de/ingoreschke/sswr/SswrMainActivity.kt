@@ -98,11 +98,10 @@ class SswrMainActivity : ActivityIr() {
         if (isLiteVersion) {
             //create an ad
             adView = AdView(this)
-            adView!!.adUnitId = ActivityIr.AD_UNIT_ID_MAIN
+            adView!!.adUnitId = AD_UNIT_ID_MAIN
             adView!!.adSize = AdSize.SMART_BANNER
             //add Adview to hierachy
-            val lw = findViewById(R.id.linearlayout_wrapper) as LinearLayout
-            lw.addView(adView)
+            findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
             //create an adRequest
             val request = AdRequest.Builder().build()
             //start loading the ad in the background
@@ -149,7 +148,7 @@ class SswrMainActivity : ActivityIr() {
 
     override fun onCreateDialog(id: Int): Dialog? {
         when (id) {
-            ActivityIr.FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
+            FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle(R.string.full_version_required)
                     .setPositiveButton(android.R.string.ok) { dialog, whichButton -> Toast.makeText(this@SswrMainActivity, "Replace this toast with an intent to start the android market to buy your full version.", Toast.LENGTH_SHORT).show() }
