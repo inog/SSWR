@@ -18,11 +18,13 @@ import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import de.ingoreschke.sswr.utils.Util
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 import java.util.*
 
 
 class SswrMainActivity : ActivityIr() {
-
+    private val dateFormater = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
     private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
@@ -277,15 +279,11 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun updateCurrentDateDisplay() {
-        val sb = StringBuilder()
-        sb.append(todayDay).append(".").append(todayMonth + 1).append(".").append(todayYear)
-        currentDateDisplay!!.text = sb.toString()
+        currentDateDisplay!!.text = LocalDate.of(todayYear, todayMonth + 1, todayDay).format(dateFormater)
     }
 
     private fun updateDateDisplay() {
-        val sb = StringBuilder()
-        sb.append(etDay).append(".").append(etMonth + 1).append(".").append(etYear)
-        etDateDisplay!!.text = sb.toString()
+        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormater)
     }
 
     private fun calculateSswDate() {
