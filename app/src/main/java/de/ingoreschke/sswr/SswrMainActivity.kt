@@ -350,7 +350,6 @@ class SswrMainActivity : ActivityIr() {
         )
     }
 
-
     private fun saveEtDate(year: Int, month: Int, day: Int): Boolean {
         Log.d(TAG, "saveEtDate is called")
         if (year != 0) {
