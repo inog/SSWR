@@ -24,7 +24,7 @@ import java.util.*
 
 
 class SswrMainActivity : ActivityIr() {
-    private val dateFormater = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
+    private val dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
     private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
@@ -278,11 +278,11 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun updateCurrentDateDisplay() {
-        currentDateDisplay!!.text = LocalDate.of(todayYear, todayMonth + 1, todayDay).format(dateFormater)
+        currentDateDisplay!!.text = LocalDate.of(todayYear, todayMonth + 1, todayDay).format(dateFormatter)
     }
 
     private fun updateDateDisplay() {
-        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormater)
+        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormatter)
     }
 
     private fun calculateSswDate() {
