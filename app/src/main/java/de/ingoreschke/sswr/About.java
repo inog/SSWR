@@ -25,9 +25,7 @@ public class About extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
-		
-		tw_promo_nike = (TextView) findViewById(R.id.about_promo_nike);
-		tw_promo_nike.setOnClickListener(this);
+
 		tw_promo_robert = (TextView) findViewById(R.id.about_promo_robert);
 		tw_promo_robert.setOnClickListener(this);
 		tw_contact = (TextView) findViewById(R.id.about_contact);
