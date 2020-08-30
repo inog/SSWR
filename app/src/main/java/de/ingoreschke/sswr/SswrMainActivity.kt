@@ -25,7 +25,7 @@ import java.util.*
 
 class SswrMainActivity : ActivityIr() {
     private val dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
-    private var mainIntro: TextView? = null
+    private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
 
@@ -95,16 +95,18 @@ class SswrMainActivity : ActivityIr() {
         Log.i(TAG, "Sswr started")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_sswr)
-        //create an ad
-        adView = AdView(this)
-        adView!!.adUnitId = AD_UNIT_ID_MAIN
-        adView!!.adSize = AdSize.SMART_BANNER
-        //add Adview to hierachy
-        findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
-        //create an adRequest
-        val request = AdRequest.Builder().build()
-        //start loading the ad in the background
-        adView!!.loadAd(request)
+        if (isLiteVersion) {
+            //create an ad
+            adView = AdView(this)
+            adView!!.adUnitId = AD_UNIT_ID_MAIN
+            adView!!.adSize = AdSize.SMART_BANNER
+            //add Adview to hierachy
+            findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
+            //create an adRequest
+            val request = AdRequest.Builder().build()
+            //start loading the ad in the background
+            adView!!.loadAd(request)
+        }
 
         //set ViewElements
         mainIntro = findViewById(R.id.main_intro) as TextView
@@ -203,7 +205,11 @@ class SswrMainActivity : ActivityIr() {
                 text = getString(R.string.tellAFriendText) + " " + pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix) + "."
             }
             text += getString(R.string.tellAFriendText2)
-            text += getString(R.string.tellAFriendLink)
+            if (isLiteVersion) {
+                text += getString(R.string.tellAFriendLinkLight)
+            } else {
+                text += getString(R.string.tellAFriendLinkFull)
+            }
 
             val tellAFriendIntent = Intent(Intent.ACTION_SEND)
             tellAFriendIntent.type = "text/plain"
@@ -280,8 +286,8 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun calculateSswDate() {
-        val today = LocalDate.of(todayYear, todayMonth + 1, todayDay)
-        val birthDate = LocalDate.of(etYear, etMonth + 1, etDay)
+        val today = LocalDate.of(todayYear, todayMonth + 1,todayDay)
+        val birthDate = LocalDate.of(etYear, etMonth +1 , etDay)
 
         try {
             this.pregnancyDate = PregnancyDate(today, birthDate)
