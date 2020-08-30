@@ -11,6 +11,21 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        lite {
+            dimension "version"
+            applicationIdSuffix ".lite"
+            versionNameSuffix "-lite"
+        }
+        full {
+            dimension "version"
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
