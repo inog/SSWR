@@ -58,11 +58,6 @@
     	errechneten Geburtstermin (E.T.) die aktuelle Schwangerschaftswoche.\n	 
     </string>
     <string name="about_linedelimiter">-----------------</string>
-    <string name="about_promo_nike">\
-   		Der SSWR wurde mit Hilfe meiner süßen Frau Nike (Hebamme) erstellt.\n
-    	<a href="http://www.hebamme-nike.de" target="_blank">http://www.hebamme-nike.de</a>\n
-    </string>
-    <string name="about_promo_nike_url">http://www.hebamme-nike.de</string> 
     <string name="about_promo_robert">\
     	Icon design by  Robert Hahmann <a href="mailto:info@robert-hahmann.de\">info@robert-hahmann.de</a>
     </string>
@@ -99,6 +94,5 @@
     <string name="tellAFriendSubject">Ich bin Schwanger.</string>    
  	<string name="tellAFriendText">Aktuell bin ich in der </string> 
  	<string name="tellAFriendText2">\nUm Up to Date zu bleiben benutze ich den SSWR. \n</string>
-    <string name="tellAFriendLinkLight">https://market.android.com/details?id=de.ingoreschke.sswr.lite</string>
-    <string name="tellAFriendLinkFull">https://market.android.com/details?id=de.ingoreschke.sswr.full</string>
+    <string name="tellAFriendLink">https://market.android.com/details?id=de.ingoreschke.sswr</string>
 </resources>
