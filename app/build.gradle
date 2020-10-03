@@ -5,9 +5,9 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "de.ingoreschke.sswr"
-        minSdkVersion 26
-        targetSdkVersion 26
-        versionCode 4
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 13
         versionName "4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
