@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="releasenotes">\
+	<string name="releasenotes">\n
+
+		<li>Vers. 4.1</li>
+		Using DayNight Theme.
+
 		<li>Vers. 4.0</li>
 		Upgrade tech stack to newer version. Use gradle for builds. Add English language support.
 
