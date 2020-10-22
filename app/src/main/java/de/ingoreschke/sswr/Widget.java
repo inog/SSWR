@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -20,7 +19,7 @@ public class Widget extends AppWidgetProvider {
 	private static final String KEY_ET_MONTH = "etMonth";
 	private static final String KEY_ET_DAY= "etDAY";
 	private SharedPreferences et;
-	
+
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds){
 		Log.d(TAG, "onUpdate");
@@ -28,26 +27,26 @@ public class Widget extends AppWidgetProvider {
 
         for (int i=0; i<appWidgetIds.length; i++) {
 			int widgetId = appWidgetIds[i];
-			
+
 			et = context.getSharedPreferences(PREFS_NAME, 0);
 			int etYear 	= et.getInt(KEY_ET_YEAR,0);
 	    	int etMonth = et.getInt(KEY_ET_MONTH, 0);
 	    	int etDay	= et.getInt(KEY_ET_DAY, 0);
 	        String week = context.getString(R.string.widget_default);
 	        String xteWeek = "";
-	        
+
 	        PregnancyDate sd = calculateSswDate(etYear,etMonth,etDay);
-	        
+
 			if (sd != null){
 		        week = sd.getWeeksUntilNow() + " + " + sd.getRestOfWeekUntilNow();
 		        xteWeek = sd.getXteWeek() + context.getString(R.string.str_xteWeek_suffix);
 			}
-	        
-			
+
+
 	        // Create an Intent to launch Activity
 	        Intent intent = new Intent(context, SswrMainActivity.class);
 	        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-	
+
 	        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
 			views.setTextViewText(R.id.widgetTV02, week);
 			views.setTextViewText(R.id.widgetTV03, xteWeek);
@@ -56,16 +55,19 @@ public class Widget extends AppWidgetProvider {
 			appWidgetManager.updateAppWidget(widgetId, views);
 		}
 	}
-	
+
 	@Override
 	public void onEnabled(Context context){
-		
+
 	}
-	
+
 	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
-		LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
+		Calendar c = Calendar.getInstance();
+		Date today = c.getTime();
+		c.set(etYear, etMonth, etDay);
+		Date birthDate = c.getTime();
 		try{
-			return new PregnancyDate(LocalDate.now(), birthDate);
+			return new PregnancyDate(today, birthDate);
 		}catch (IllegalArgumentException e) {
 			Log.e(TAG, e.getMessage());
 			SharedPreferences.Editor editor = et.edit();

@@ -17,14 +17,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import de.ingoreschke.sswr.utils.Util
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 import java.util.*
 
 
 class SswrMainActivity : ActivityIr() {
-    private val dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
+
     private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
@@ -98,10 +95,11 @@ class SswrMainActivity : ActivityIr() {
         if (isLiteVersion) {
             //create an ad
             adView = AdView(this)
-            adView!!.adUnitId = AD_UNIT_ID_MAIN
+            adView!!.adUnitId = ActivityIr.AD_UNIT_ID_MAIN
             adView!!.adSize = AdSize.SMART_BANNER
             //add Adview to hierachy
-            findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
+            val lw = findViewById(R.id.linearlayout_wrapper) as LinearLayout
+            lw.addView(adView)
             //create an adRequest
             val request = AdRequest.Builder().build()
             //start loading the ad in the background
@@ -148,7 +146,7 @@ class SswrMainActivity : ActivityIr() {
 
     override fun onCreateDialog(id: Int): Dialog? {
         when (id) {
-            FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
+            ActivityIr.FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle(R.string.full_version_required)
                     .setPositiveButton(android.R.string.ok) { dialog, whichButton -> Toast.makeText(this@SswrMainActivity, "Replace this toast with an intent to start the android market to buy your full version.", Toast.LENGTH_SHORT).show() }
@@ -278,17 +276,24 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun updateCurrentDateDisplay() {
-        currentDateDisplay!!.text = LocalDate.of(todayYear, todayMonth + 1, todayDay).format(dateFormatter)
+        val sb = StringBuilder()
+        sb.append(todayDay).append(".").append(todayMonth + 1).append(".").append(todayYear)
+        currentDateDisplay!!.text = sb.toString()
     }
 
     private fun updateDateDisplay() {
-        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormatter)
+        val sb = StringBuilder()
+        sb.append(etDay).append(".").append(etMonth + 1).append(".").append(etYear)
+        etDateDisplay!!.text = sb.toString()
     }
 
     private fun calculateSswDate() {
-        val today = LocalDate.of(todayYear, todayMonth + 1,todayDay)
-        val birthDate = LocalDate.of(etYear, etMonth +1 , etDay)
-
+        val c1 = Calendar.getInstance()
+        val c2 = Calendar.getInstance()
+        c1.set(todayYear, todayMonth, todayDay)
+        c2.set(etYear, etMonth, etDay)
+        val today = c1.time
+        val birthDate = c2.time
         try {
             this.pregnancyDate = PregnancyDate(today, birthDate)
             showResult()
@@ -349,6 +354,7 @@ class SswrMainActivity : ActivityIr() {
                 views
         )
     }
+
 
     private fun saveEtDate(year: Int, month: Int, day: Int): Boolean {
         Log.d(TAG, "saveEtDate is called")
