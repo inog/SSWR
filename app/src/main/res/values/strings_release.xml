@@ -2,10 +2,13 @@
 <resources>
 	<string name="releasenotes">\n
 
-		<li>Vers. 4.1</li>
-		Using DayNight Theme.
+		<li>Vers. 4.1,1</li>\n
+		Bugfix for Android 7 devices
 
-		<li>Vers. 4.0</li>
+		<li>Vers. 4.1</li>\n
+		Using DayNight Theme.\n
+
+		<li>Vers. 4.0</li>\n
 		Upgrade tech stack to newer version. Use gradle for builds. Add English language support.
 
 	    <li>Vers. 3.3.1</li>\n
