@@ -32,7 +32,7 @@ public class About extends Activity implements OnClickListener{
 		tw_contact.setOnClickListener(this);
 		btn_babyinmom1 = (Button) findViewById(R.id.about_btn_babyinmom1);
 		btn_babyinmom1.setOnClickListener(this);
-		//sound1 = R.raw.babyinmom005;
+		sound1 = R.raw.babyinmom005;
 	}
 	
 	@Override
