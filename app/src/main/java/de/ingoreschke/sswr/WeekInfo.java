@@ -1,9 +1,5 @@
 package de.ingoreschke.sswr;
 
-//import com.google.ads.AdRequest;
-//import com.google.ads.AdSize;
-//import com.google.ads.AdView;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
@@ -15,11 +11,8 @@ import com.google.android.gms.ads.AdView;
 
 public class WeekInfo extends ActivityIr {
 	private static final String TAG = "WeekInfo";
-	private TextView tw_title;
-	private TextView tw_text;
 	private AdView adView;
-	private int actualWeek;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -29,12 +22,10 @@ public class WeekInfo extends ActivityIr {
         	adView = new AdView(this);
         	adView.setAdUnitId(AD_UNIT_ID_WEEKINFO);
         	adView.setAdSize(AdSize.SMART_BANNER);
-        	//add Adview to hierachy
-        	LinearLayout lw = (LinearLayout) findViewById(R.id.weekinfo_LinearLayout);
+
+        	LinearLayout lw = findViewById(R.id.weekinfo_LinearLayout);
         	lw.addView(adView);
-        	//create an adRequest
         	AdRequest request = new AdRequest.Builder().build();
-        	//start loading the ad in the background
         	adView.loadAd(request);
         }
 		
@@ -42,7 +33,7 @@ public class WeekInfo extends ActivityIr {
 		if (bundle == null){
 			return;
 		}
-		actualWeek = bundle.getInt("week");
+		int actualWeek = bundle.getInt("week");
 		updateView(actualWeek);
 	}
 	
@@ -70,8 +61,8 @@ public class WeekInfo extends ActivityIr {
     }
 	private void updateView(int week){
 		Log.d(TAG,"aktuelle Woche: "+ week);
-		tw_title = (TextView) findViewById(R.id.weekinfo_title);
-		tw_text = (TextView) findViewById(R.id.weekinfo_text);
+		TextView tw_title = findViewById(R.id.weekinfo_title);
+		TextView tw_text = findViewById(R.id.weekinfo_text);
 		tw_title.setText(getTitletxt(week));
 		tw_text.setText(getInfotxt(week));
 	}
