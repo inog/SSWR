@@ -15,11 +15,11 @@ import static org.junit.Assert.assertTrue;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
-public class ExampleInstrumentedTest {
+public class ExampleInstrumentedTestFull {
     @Test
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertTrue(appContext.getPackageName().startsWith("de.ingoreschke.sswr"));
+        assertEquals("de.ingoreschke.sswr.full", appContext.getPackageName());
     }
 }
