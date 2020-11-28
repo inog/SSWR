@@ -1,13 +1,9 @@
 package de.ingoreschke.sswr;
 
 import android.content.Context;
-
 import androidx.test.platform.app.InstrumentationRegistry;
-
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Instrumentation test, which will execute on an Android device.
