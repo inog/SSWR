@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 
 public class About extends ActivityIr implements OnClickListener{
-	private TextView tw_promo_nike;
 	private TextView tw_promo_robert;
 	private TextView tw_contact;
 	private Button btn_babyinmom1;
