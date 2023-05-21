@@ -1,0 +1,28 @@
+
+body{
+	font-family:Tahoma, Arial;
+	
+}
+
+h1, h2, .mleft{
+	margin-left:30px;
+}
+.mtop{
+	margin-top:30px;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.cls{
+	clear:both;
+}
+
+.qrText {
+	margin-top:45px;
+}
