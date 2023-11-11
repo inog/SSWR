@@ -12,7 +12,11 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.RemoteViews
+import android.widget.TextView
+import android.widget.Toast
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -20,7 +24,7 @@ import de.ingoreschke.sswr.utils.Util
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
-import java.util.*
+import java.util.Calendar
 
 
 class SswrMainActivity : ActivityIr() {
@@ -80,13 +84,9 @@ class SswrMainActivity : ActivityIr() {
     private val isTimeMachineMode: Boolean
         get() {
             val c = Calendar.getInstance()
-            return if (todayYear == c.get(Calendar.YEAR) &&
+            return !(todayYear == c.get(Calendar.YEAR) &&
                     todayMonth == c.get(Calendar.MONTH) &&
-                    todayDay == c.get(Calendar.DAY_OF_MONTH)) {
-                false
-            } else {
-                true
-            }
+                    todayDay == c.get(Calendar.DAY_OF_MONTH))
         }
 
 
@@ -109,17 +109,17 @@ class SswrMainActivity : ActivityIr() {
         }
 
         //set ViewElements
-        mainIntro = findViewById(R.id.main_intro) as TextView
-        currentDateDisplay = findViewById(R.id.currentDate) as TextView
-        etDateDisplay = findViewById(R.id.dateDisplay) as TextView
-        etDaysToBirthDisplay = findViewById(R.id.str_daysToBirth) as TextView
-        etDaysUntilNowDisplay = findViewById(R.id.str_daysUntilNow) as TextView
-        etWeekPlusDaysDisplay = findViewById(R.id.str_weekPlusDays) as TextView
-        etXteWeekDisplay = findViewById(R.id.str_xteWeek) as TextView
-        etXteMonth = findViewById(R.id.str_xteMonth) as TextView
-        btnEtDate = findViewById(R.id.main_btnEtDate) as Button
-        btnTimemachine = findViewById(R.id.main_btnTimemachine) as Button
-        btnInfoText = findViewById(R.id.main_btnWeekInfo) as Button
+        mainIntro = findViewById<TextView>(R.id.main_intro)
+        currentDateDisplay = findViewById<TextView>(R.id.currentDate)
+        etDateDisplay = findViewById<TextView>(R.id.dateDisplay)
+        etDaysToBirthDisplay = findViewById<TextView>(R.id.str_daysToBirth)
+        etDaysUntilNowDisplay = findViewById<TextView>(R.id.str_daysUntilNow)
+        etWeekPlusDaysDisplay = findViewById<TextView>(R.id.str_weekPlusDays)
+        etXteWeekDisplay = findViewById<TextView>(R.id.str_xteWeek)
+        etXteMonth = findViewById<TextView>(R.id.str_xteMonth)
+        btnEtDate = findViewById<Button>(R.id.main_btnEtDate)
+        btnTimemachine = findViewById<Button>(R.id.main_btnTimemachine)
+        btnInfoText = findViewById<Button>(R.id.main_btnWeekInfo)
 
 
         //set today
@@ -296,7 +296,7 @@ class SswrMainActivity : ActivityIr() {
                 updateWidget()
             }
         } catch (e: IllegalArgumentException) {
-            Log.e(TAG, e.message)
+            Log.e(TAG, e.message!!)
             var error = ""
             if (e.message == PregnancyDate.DATE1_TOO_SMALL) {
                 error = getString(R.string.errorIllegalDate_d1TooSmall)
@@ -345,7 +345,7 @@ class SswrMainActivity : ActivityIr() {
         views.setTextViewText(R.id.widgetTV02, week)
         views.setTextViewText(R.id.widgetTV03, xteWeek)
         appWidgetManager.updateAppWidget(
-                ComponentName(this, Widget::class.java!!),
+                ComponentName(this, Widget::class.java),
                 views
         )
     }
