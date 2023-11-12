@@ -10,8 +10,6 @@ import android.util.Log;
 import android.widget.RemoteViews;
 
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Widget extends AppWidgetProvider {
 	private static final String TAG = "Widget";
@@ -46,7 +44,7 @@ public class Widget extends AppWidgetProvider {
 			
 	        // Create an Intent to launch Activity
 	        Intent intent = new Intent(context, SswrMainActivity.class);
-	        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+	        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 	
 	        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
 			views.setTextViewText(R.id.widgetTV02, week);
