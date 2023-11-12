@@ -297,7 +297,7 @@ class SswrMainActivity : ActivityIr() {
             }
         } catch (e: IllegalArgumentException) {
             Log.e(TAG, e.message!!)
-            var error = ""
+            var error: String
             if (e.message == PregnancyDate.DATE1_TOO_SMALL) {
                 error = getString(R.string.errorIllegalDate_d1TooSmall)
             } else if (e.message == PregnancyDate.DATE2_TOO_BIG) {
