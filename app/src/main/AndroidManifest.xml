@@ -13,15 +13,14 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1283865206002218~1303144682"/>
 
-        <activity android:name=".SswrMainActivity">
+        <activity android:name=".SswrMainActivity"  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WeekInfo" />
-        <activity android:name=".About" />
+        <activity android:name=".WeekInfo" android:exported="false" />
+        <activity android:name=".About" android:exported="false"/>
     </application>
 
 </manifest>
