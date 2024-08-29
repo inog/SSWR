@@ -97,15 +97,16 @@ class SswrMainActivity : ActivityIr() {
         setContentView(R.layout.main_sswr)
         if (isLiteVersion) {
             //create an ad
-            adView = AdView(this)
-            adView!!.adUnitId = AD_UNIT_ID_MAIN
-            adView!!.adSize = AdSize.SMART_BANNER
+            val adView = AdView(this)
+            adView.adUnitId = AD_UNIT_ID_MAIN
+            adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
+
             //add Adview to hierachy
             findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
             //create an adRequest
             val request = AdRequest.Builder().build()
             //start loading the ad in the background
-            adView!!.loadAd(request)
+            adView.loadAd(request)
         }
 
         //set ViewElements
@@ -262,6 +263,7 @@ class SswrMainActivity : ActivityIr() {
         } else if (id == R.id.main_btnWeekInfo || id == R.id.main_xteWeek_row) {
             callWeekInfo()
         } else {
+            Log.e(TAG, "Unknown Button clicked")
         }
     }
 
