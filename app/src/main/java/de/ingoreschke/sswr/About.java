@@ -1,11 +1,9 @@
 package de.ingoreschke.sswr;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,8 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class About extends Activity implements OnClickListener{
-	private TextView tw_promo_nike;
+public class About extends ActivityIr implements OnClickListener{
 	private TextView tw_promo_robert;
 	private TextView tw_contact;
 	private Button btn_babyinmom1;
@@ -25,16 +22,14 @@ public class About extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
-		
-		tw_promo_nike = (TextView) findViewById(R.id.about_promo_nike);
-		tw_promo_nike.setOnClickListener(this);
+
 		tw_promo_robert = (TextView) findViewById(R.id.about_promo_robert);
 		tw_promo_robert.setOnClickListener(this);
 		tw_contact = (TextView) findViewById(R.id.about_contact);
 		tw_contact.setOnClickListener(this);
 		btn_babyinmom1 = (Button) findViewById(R.id.about_btn_babyinmom1);
 		btn_babyinmom1.setOnClickListener(this);
-		//sound1 = R.raw.babyinmom005;
+		sound1 = R.raw.babyinmom005;
 	}
 	
 	@Override

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="releasenotes">\
-	     <li>Vers. 3.3.1</li>\n
-	     Bugfix: Wenn noch kein Termin eingetragen war kam es zum Absturz bei dem -Mit Freunden teilen- Menüpunkt.\n
-	     Bugfix: von Zeitmachinemodus auf heutiges Datum aktualisiert die Daten.\n Danke Jens \n 
+	<string name="releasenotes">\n
+
+		<li>Vers. 4.1.1</li>\n
+		Bugfix für Android 7 \n
+		Using pattern to support different Versions \n
+
+		<li>Vers. 4.1</li>\n
+		Using DayNight Theme.\n
+
+		<li>Vers. 4.0</li>
+		Upgrade tech stack to newer version. Use gradle for builds. Add English language support.
+
+	    <li>Vers. 3.3.1</li>\n
+	    Bugfix: Wenn noch kein Termin eingetragen war kam es zum Absturz bei dem -Mit Freunden teilen- Menüpunkt.\n
+	    Bugfix: von Zeitmachinemodus auf heutiges Datum aktualisiert die Daten.\n Danke Jens \n
 	    <li>Vers. 3.3</li>\n
 	    Größenangaben und Werte überarbeitet\n
 	    Für die Lite Version:\n

@@ -58,11 +58,6 @@
     	errechneten Geburtstermin (E.T.) die aktuelle Schwangerschaftswoche.\n	 
     </string>
     <string name="about_linedelimiter">-----------------</string>
-    <string name="about_promo_nike">\
-   		Der SSWR wurde mit Hilfe meiner süßen Frau Nike (Hebamme) erstellt.\n
-    	<a href="http://www.hebamme-nike.de" target="_blank">http://www.hebamme-nike.de</a>\n
-    </string>
-    <string name="about_promo_nike_url">http://www.hebamme-nike.de</string> 
     <string name="about_promo_robert">\
     	Icon design by  Robert Hahmann <a href="mailto:info@robert-hahmann.de\">info@robert-hahmann.de</a>
     </string>

@@ -12,17 +12,23 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.RemoteViews
+import android.widget.TextView
+import android.widget.Toast
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import de.ingoreschke.sswr.utils.Util
 import java.time.LocalDate
-import java.util.*
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.util.Calendar
 
 
 class SswrMainActivity : ActivityIr() {
-
+    private val dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
     private var mainIntro:TextView? = null
     private var currentDateDisplay: TextView? = null
     private var etDateDisplay: TextView? = null
@@ -78,13 +84,9 @@ class SswrMainActivity : ActivityIr() {
     private val isTimeMachineMode: Boolean
         get() {
             val c = Calendar.getInstance()
-            return if (todayYear == c.get(Calendar.YEAR) &&
+            return !(todayYear == c.get(Calendar.YEAR) &&
                     todayMonth == c.get(Calendar.MONTH) &&
-                    todayDay == c.get(Calendar.DAY_OF_MONTH)) {
-                false
-            } else {
-                true
-            }
+                    todayDay == c.get(Calendar.DAY_OF_MONTH))
         }
 
 
@@ -95,30 +97,30 @@ class SswrMainActivity : ActivityIr() {
         setContentView(R.layout.main_sswr)
         if (isLiteVersion) {
             //create an ad
-            adView = AdView(this)
-            adView!!.adUnitId = ActivityIr.AD_UNIT_ID_MAIN
-            adView!!.adSize = AdSize.SMART_BANNER
+            val adView = AdView(this)
+            adView.adUnitId = AD_UNIT_ID_MAIN
+            adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
+
             //add Adview to hierachy
-            val lw = findViewById(R.id.linearlayout_wrapper) as LinearLayout
-            lw.addView(adView)
+            findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
             //create an adRequest
             val request = AdRequest.Builder().build()
             //start loading the ad in the background
-            adView!!.loadAd(request)
+            adView.loadAd(request)
         }
 
         //set ViewElements
-        mainIntro = findViewById(R.id.main_intro) as TextView
-        currentDateDisplay = findViewById(R.id.currentDate) as TextView
-        etDateDisplay = findViewById(R.id.dateDisplay) as TextView
-        etDaysToBirthDisplay = findViewById(R.id.str_daysToBirth) as TextView
-        etDaysUntilNowDisplay = findViewById(R.id.str_daysUntilNow) as TextView
-        etWeekPlusDaysDisplay = findViewById(R.id.str_weekPlusDays) as TextView
-        etXteWeekDisplay = findViewById(R.id.str_xteWeek) as TextView
-        etXteMonth = findViewById(R.id.str_xteMonth) as TextView
-        btnEtDate = findViewById(R.id.main_btnEtDate) as Button
-        btnTimemachine = findViewById(R.id.main_btnTimemachine) as Button
-        btnInfoText = findViewById(R.id.main_btnWeekInfo) as Button
+        mainIntro = findViewById<TextView>(R.id.main_intro)
+        currentDateDisplay = findViewById<TextView>(R.id.currentDate)
+        etDateDisplay = findViewById<TextView>(R.id.dateDisplay)
+        etDaysToBirthDisplay = findViewById<TextView>(R.id.str_daysToBirth)
+        etDaysUntilNowDisplay = findViewById<TextView>(R.id.str_daysUntilNow)
+        etWeekPlusDaysDisplay = findViewById<TextView>(R.id.str_weekPlusDays)
+        etXteWeekDisplay = findViewById<TextView>(R.id.str_xteWeek)
+        etXteMonth = findViewById<TextView>(R.id.str_xteMonth)
+        btnEtDate = findViewById<Button>(R.id.main_btnEtDate)
+        btnTimemachine = findViewById<Button>(R.id.main_btnTimemachine)
+        btnInfoText = findViewById<Button>(R.id.main_btnWeekInfo)
 
 
         //set today
@@ -147,7 +149,7 @@ class SswrMainActivity : ActivityIr() {
 
     override fun onCreateDialog(id: Int): Dialog? {
         when (id) {
-            ActivityIr.FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
+            FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle(R.string.full_version_required)
                     .setPositiveButton(android.R.string.ok) { dialog, whichButton -> Toast.makeText(this@SswrMainActivity, "Replace this toast with an intent to start the android market to buy your full version.", Toast.LENGTH_SHORT).show() }
@@ -261,6 +263,7 @@ class SswrMainActivity : ActivityIr() {
         } else if (id == R.id.main_btnWeekInfo || id == R.id.main_xteWeek_row) {
             callWeekInfo()
         } else {
+            Log.e(TAG, "Unknown Button clicked")
         }
     }
 
@@ -277,15 +280,11 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun updateCurrentDateDisplay() {
-        val sb = StringBuilder()
-        sb.append(todayDay).append(".").append(todayMonth + 1).append(".").append(todayYear)
-        currentDateDisplay!!.text = sb.toString()
+        currentDateDisplay!!.text = LocalDate.of(todayYear, todayMonth + 1, todayDay).format(dateFormatter)
     }
 
     private fun updateDateDisplay() {
-        val sb = StringBuilder()
-        sb.append(etDay).append(".").append(etMonth + 1).append(".").append(etYear)
-        etDateDisplay!!.text = sb.toString()
+        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormatter)
     }
 
     private fun calculateSswDate() {
@@ -299,8 +298,8 @@ class SswrMainActivity : ActivityIr() {
                 updateWidget()
             }
         } catch (e: IllegalArgumentException) {
-            Log.e(TAG, e.message)
-            var error = ""
+            Log.e(TAG, e.message!!)
+            var error: String
             if (e.message == PregnancyDate.DATE1_TOO_SMALL) {
                 error = getString(R.string.errorIllegalDate_d1TooSmall)
             } else if (e.message == PregnancyDate.DATE2_TOO_BIG) {
@@ -348,11 +347,10 @@ class SswrMainActivity : ActivityIr() {
         views.setTextViewText(R.id.widgetTV02, week)
         views.setTextViewText(R.id.widgetTV03, xteWeek)
         appWidgetManager.updateAppWidget(
-                ComponentName(this, Widget::class.java!!),
+                ComponentName(this, Widget::class.java),
                 views
         )
     }
-
 
     private fun saveEtDate(year: Int, month: Int, day: Int): Boolean {
         Log.d(TAG, "saveEtDate is called")
