@@ -17,6 +17,10 @@ android {
         targetCompatibility = 17
     }
 
+    kotlin {
+        jvmToolchain(17)
+    }
+
     flavorDimensions "version"
     productFlavors {
         lite {
