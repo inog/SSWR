@@ -44,6 +44,7 @@ public class WeekInfo extends ActivityIr {
 	        }
 		super.onDestroy();
 	}
+
 	@Override
 	protected void onResume() {
       super.onResume();
@@ -59,6 +60,7 @@ public class WeekInfo extends ActivityIr {
 	  }
       super.onPause();
     }
+
 	private void updateView(int week){
 		Log.d(TAG,"aktuelle Woche: "+ week);
 		TextView tw_title = findViewById(R.id.weekinfo_title);
@@ -67,7 +69,8 @@ public class WeekInfo extends ActivityIr {
 		tw_text.setText(getInfotxt(week));
 	}
 	
-	private String getTitletxt(int week){
+
+    private String getTitletxt(int week){
         return switch (week) {
             case 1 -> getString(R.string.info_title_week_1);
             case 2 -> getString(R.string.info_title_week_2);
