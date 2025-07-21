@@ -2,6 +2,10 @@
 <resources>
 	<string name="releasenotes">\n
 
+		<li>Vers. 4.2.0</li>\n
+		Support for Android 15 (API level 35)\n
+		Updated target SDK to 35\n
+
 		<li>Vers. 4.1.1</li>\n
 		Bugfix für Android 7 \n
 		Using pattern to support different Versions \n
