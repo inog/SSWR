@@ -7,7 +7,7 @@ android {
         applicationId "de.ingoreschke.sswr"
         minSdkVersion 26
         targetSdkVersion 35
-        versionCode 2600421 //{minSkd}{00}{3 digits Version epic.major.minor} i.e. 2400410
+        versionCode 2600422 //{minSkd}{00}{3 digits Version epic.major.minor} i.e. 2400410
         versionName "4.2.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
