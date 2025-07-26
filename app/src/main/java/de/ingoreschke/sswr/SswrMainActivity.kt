@@ -149,6 +149,7 @@ class SswrMainActivity : ActivityIr() {
         updateCurrentDateDisplay()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateDialog(id: Int): Dialog? {
         when (id) {
             FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
