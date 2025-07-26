@@ -2,6 +2,11 @@
 <resources>
 	<string name="releasenotes">\n
 
+		<li>Vers. 4.2.2</li>\n
+		Bugfix: UI-Glitch on Android 15 (API level 35) resolved\n
+		<li>Vers. 4.2.1</li>\n
+		Bugfix: UI-Glitch rolled back on Android 14 (API level 34)\n
+
 		<li>Vers. 4.2.0</li>\n
 		Support for Android 15 (API level 35)\n
 		Updated target SDK to 35\n
