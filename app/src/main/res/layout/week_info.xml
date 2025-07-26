@@ -3,8 +3,9 @@
 <ScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
   	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent">
-	
+  	android:layout_height="fill_parent"
+	android:fitsSystemWindows="true">
+
 	<LinearLayout
 	  android:id="@+id/weekinfo_LinearLayout"
 	  android:orientation="vertical"
@@ -17,7 +18,7 @@
 	  	android:layout_width="wrap_content"
 	  	android:layout_height="wrap_content"
 	  	android:textSize="30sp"
-	  	android:drawableLeft="@drawable/icon"
+	  	android:drawableStart="@drawable/icon"
 	  	style="@android:style/TextAppearance.Large"/>
       
 

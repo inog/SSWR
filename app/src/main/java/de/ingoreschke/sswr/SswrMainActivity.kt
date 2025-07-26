@@ -17,6 +17,7 @@ import android.widget.LinearLayout
 import android.widget.RemoteViews
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.WindowCompat
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -94,6 +95,7 @@ class SswrMainActivity : ActivityIr() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         Log.i(TAG, "Sswr started")
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.main_sswr)
         if (isLiteVersion) {
             //create an ad
