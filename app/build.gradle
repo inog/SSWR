@@ -4,12 +4,15 @@ apply plugin: 'kotlin-android'
 android {
     compileSdk 35
     defaultConfig {
-        applicationId "de.ingoreschke.sswr"
+        applicationId "de.ingoreschke.sswr.lite"
         minSdkVersion 26
         targetSdkVersion 35
         versionCode 2600422 //{minSkd}{00}{3 digits Version epic.major.minor} i.e. 2400410
-        versionName "4.2.2"
+        versionName "4.2.2-lite"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Step 2: Add a flag for ads
+        buildConfigField "boolean", "SHOW_ADS", "true"
     }
 
     compileOptions {
@@ -19,20 +22,6 @@ android {
 
     kotlin {
         jvmToolchain(17)
-    }
-
-    flavorDimensions "version"
-    productFlavors {
-        lite {
-            dimension "version"
-            applicationIdSuffix ".lite"
-            versionNameSuffix "-lite"
-        }
-        full {
-            dimension "version"
-            applicationIdSuffix ".full"
-            versionNameSuffix "-full"
-        }
     }
 
     buildTypes {
@@ -57,7 +46,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:5.13.0'
     androidTestImplementation 'androidx.test:runner:1.6.2'
-    androidTestImplementation 'androidx.test:rules:1.6.1'
+    androidTestImplementation 'androidx.test.rules:1.6.1'
     androidTestImplementation 'org.hamcrest:hamcrest-library:3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
