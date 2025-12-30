@@ -32,4 +32,8 @@
 		android:icon="@android:drawable/ic_menu_send"
 		android:title="@string/menu_feedback"
 		/>
+    <item
+        android:id="@+id/menu_remove_ads"
+        android:title="@string/menu_remove_ads"
+        app:showAsAction="never" />
 </menu>

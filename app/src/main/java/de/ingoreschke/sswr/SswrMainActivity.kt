@@ -41,6 +41,7 @@ class SswrMainActivity : ActivityIr() {
     private var etXteMonth: TextView? = null
 
     private var adView: AdView? = null
+    private lateinit var billingManager: BillingManager
 
     private var btnEtDate: Button? = null
     private var btnTimemachine: Button? = null
@@ -97,9 +98,13 @@ class SswrMainActivity : ActivityIr() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.main_sswr)
+        
+        billingManager = BillingManager(this)
+
         if (isLiteVersion) {
             //create an ad
             val adView = AdView(this)
+            this.adView = adView
             adView.adUnitId = AD_UNIT_ID_MAIN
             adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
 
@@ -132,7 +137,7 @@ class SswrMainActivity : ActivityIr() {
         todayDay = c.get(Calendar.DAY_OF_MONTH)
 
         //Restore stored e.t. (birth) or set default
-        val et = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val et = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         etYear = et.getInt(KEY_ET_YEAR, 0)
         etMonth = et.getInt(KEY_ET_MONTH, 0)
         etDay = et.getInt(KEY_ET_DAY, 0)
@@ -155,7 +160,7 @@ class SswrMainActivity : ActivityIr() {
             FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle(R.string.full_version_required)
-                    .setPositiveButton(android.R.string.ok) { dialog, whichButton -> Toast.makeText(this@SswrMainActivity, "Replace this toast with an intent to start the android market to buy your full version.", Toast.LENGTH_SHORT).show() }
+                    .setPositiveButton(android.R.string.ok) { dialog, whichButton -> billingManager.startPurchaseFlow() }
                     .setNegativeButton(android.R.string.cancel
                     ) { dialog, whichButton -> dialog.dismiss() }.create()
 
@@ -181,6 +186,11 @@ class SswrMainActivity : ActivityIr() {
         super.onCreateOptionsMenu(menu)
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
+        
+        // Hide "Remove Ads" if user is already Pro
+        val removeAdsItem = menu.findItem(R.id.menu_remove_ads)
+        removeAdsItem?.isVisible = isLiteVersion
+        
         return true
     }
 
@@ -222,6 +232,9 @@ class SswrMainActivity : ActivityIr() {
             startActivity(Intent.createChooser(tellAFriendIntent, getString(R.string.tellAFriend_title)))
         } else if (id == R.id.menu_weekinfo) {
             callWeekInfo()
+        } else if (id == R.id.menu_remove_ads) {
+            billingManager.startPurchaseFlow()
+            return true
         }
         //More items go here (if any) ...
         return false
@@ -244,6 +257,8 @@ class SswrMainActivity : ActivityIr() {
         if (adView != null) {
             adView!!.resume()
         }
+        // Refresh pro status when returning to app
+        billingManager.queryPurchases()
     }
 
     override fun onPause() {

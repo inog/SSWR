@@ -7,12 +7,9 @@ android {
         applicationId "de.ingoreschke.sswr.lite"
         minSdkVersion 26
         targetSdkVersion 35
-        versionCode 2600422 //{minSkd}{00}{3 digits Version epic.major.minor} i.e. 2400410
+        versionCode 2600422
         versionName "4.2.2-lite"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        // Step 2: Add a flag for ads
-        buildConfigField "boolean", "SHOW_ADS", "true"
     }
 
     compileOptions {
@@ -42,6 +39,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.gms:play-services-ads:23.3.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    
+    // Billing Library for In-App Purchases
+    implementation 'com.android.billingclient:billing-ktx:7.1.1'
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:5.13.0'
