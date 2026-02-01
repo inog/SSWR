@@ -37,9 +37,9 @@
 
     <!-- menu -->
     <string name="menu_tellAFriend">Mit Freunden teilen</string>
-    <string name="menu_timemachine">Zeitmachine</string>
+    <string name="menu_timemachine">Zeitmaschine</string>
     <string name="menu_weekinfo">Wocheninfo</string>
-    <string name="menu_editEt">Et. ändern</string>
+    <string name="menu_editEt">E.T. ändern</string>
     <string name="menu_about">Über die App</string>
     <string name="menu_feedback">Feedback senden</string>
   
@@ -80,7 +80,7 @@
         \n\n
         Ich wünsche mir folgende Funktion(nen):\n
         \n\n
-        Ich habe eine Fehler (Bug) gefunden, nämlich:\n
+        Ich habe einen Fehler (Bug) gefunden, nämlich:\n
         \n\n
     </string> 
     <string name="about_btn_babyinmon1">Babygeräusche abspielen</string>
