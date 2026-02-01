@@ -93,5 +93,4 @@
  	<string name="tellAFriendText">Currently I am in the </string>
  	<string name="tellAFriendText2">\nTo stay up to date I use the SSWR. \n</string>
     <string name="tellAFriendLinkLight">https://market.android.com/details?id=de.ingoreschke.sswr.lite</string>
-    <string name="tellAFriendLinkFull">https://market.android.com/details?id=de.ingoreschke.sswr.full</string>
 </resources>
