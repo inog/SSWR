@@ -20,10 +20,10 @@
     <string name="main_btnTimemachine">Timemachine</string>
     <string name="errorTitle">Error!</string>
     <string name="errorIllegalDate_d1TooSmall">
-        The due date you have entered can not be used to calculate the week of pregnancy, because he is too far in the past.
+        The due date you have entered can not be used to calculate the week of pregnancy, because it is too far in the past.
     </string>
     <string name="errorIllegalDate_d2TooBig">
-        The due date you have entered can not be used to calculate the week of pregnancy, because he is too far in the future.
+        The due date you have entered can not be used to calculate the week of pregnancy, because it is too far in the future.
     </string>
     <string name="errorNoDate">Please enter first the calculated date of birth.</string>
     
@@ -39,7 +39,7 @@
     <string name="menu_weekinfo">Week info</string>
     <string name="menu_editEt">Change b-day</string>
     <string name="menu_about">About</string>
-    <string name="menu_feedback">send Feedback</string>
+    <string name="menu_feedback">Send feedback</string>
   
    	    
    	
@@ -60,21 +60,21 @@
     	Icon design by  Robert Hahmann <a href="mailto:info@robert-hahmann.de\">info@robert-hahmann.de</a>
     </string>
     <string name="about_promo_robert_email">info@robert-hahmann.de</string>
-    <string name="about_promo_robert_email_sub">Kontaktanfrage über SSWR</string>
-    <string name="about_promo_robert_email_txt">Hallo,\nich habe Ihr Design bei der App SSWR gesehen.\n</string>
+    <string name="about_promo_robert_email_sub">Contact request via SSWR</string>
+    <string name="about_promo_robert_email_txt">Hello,\nI saw your design in the SSWR app.\n</string>
         
     <string name="about_contact">\
     	For bugs,errors or problems we would be glad about an email.\n
     	coffee2code@sswr.ingo-reschke.de \n
     	Ingo Reschke 
     </string>
-    <string name="about_contact_email_Intent">Sende Email.</string>
+    <string name="about_contact_email_Intent">Send email.</string>
     <string name="about_contact_email">coffee2code@sswr.ingo-reschke.de</string>
     <string name="about_contact_email_sub">SSWR: Feedback</string>
     <string name="about_contact_email_text">\
         Hello, \n
         I would like to send you a feedback.\n
-        Ich finde den SSWR:\n
+        I think SSWR is:\n
         \n\n
         I wish the following function(s):\n
         \n\n
@@ -90,8 +90,7 @@
          
     <string name="tellAFriend_title">tell a friend</string>
     <string name="tellAFriendSubject">I\'m pregnant.</string>
- 	<string name="tellAFriendText">Currently I am in the  week.</string>
+ 	<string name="tellAFriendText">Currently I am in the </string>
  	<string name="tellAFriendText2">\nTo stay up to date I use the SSWR. \n</string>
     <string name="tellAFriendLinkLight">https://market.android.com/details?id=de.ingoreschke.sswr.lite</string>
-    <string name="tellAFriendLinkFull">https://market.android.com/details?id=de.ingoreschke.sswr.full</string>
 </resources>

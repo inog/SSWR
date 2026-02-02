@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="releasenotes">\n
+
+		<li>Version 4.1.1</li>\n
+		Bugfix for Android 7 \n
+		Using pattern to support different versions \n
+
+		<li>Version 4.1</li>\n
+		Using DayNight Theme.\n
+
+		<li>Version 4.0</li>
+		Upgrade tech stack to newer version. Use gradle for builds. Add English language support.
+
+	    <li>Version 3.3.1</li>\n
+	    Bugfix: If no date was entered yet, the app crashed when using the -Share with friends- menu item.\n
+	    Bugfix: Switching from time machine mode to today\'s date updates the data.\n Thanks Jens \n
+	    <li>Version 3.3</li>\n
+	    Size information and values revised\n
+	    For the Lite version:\n
+	    Admob Standalone SDK replaced by Google Play Service.\n
+	    Ad request only when the app is actually active.\n
+	    \n 
+	    <li>Version 3.2</li>\n
+	    Bugfix widget in landscape mode\n
+	    Bugfix widget display when date is outside validation range\n
+	    Performance optimization\n
+	    \n
+	    <li>Version 3.1.2</li>\n
+	    Bugfix update error\n
+	    \n
+	    <li>Version 3.1.1</li>\n
+	    Spelling corrected\n
+	    \n
+	    <li>Version 3.1</li>\n
+	    Baby sounds in About (Easter Egg) \n
+	    "Send feedback email" in menu.\n
+	    "Share with friends" functionality in menu\n
+	    Icons added to menu items\n
+	    \n
+	    <li>Version 3.0</li>\n
+	    Time machine: The current date can be temporarily changed.\n
+	    Improved design and more informative message when an incorrect date is entered.\n
+	    \n
+	    <li>Version 2.2</li>\n
+    	Bugfix calculation error for days until due date due to daylight saving time\n
+    	Thanks Denise \n
+    	Menu extended with week info\n
+    	Widget update interval optimized \n
+    	\n
+    	<li>Version 2.1</li>\n
+    	Battery saving measures\n
+    	The current week + day is now additionally displayed in the widget.\n
+    	\n
+    	<li>Version 2.0</li>\n
+    	The current month is displayed\n
+    	A widget is now available.\n
+    	\tClick and hold on the home screen,\n
+    	\tSelect widget\n 
+    	\tSelect the SSWR widget\n
+    	Information about the current week.\n
+    	\tClick on the displayed week or on the button (Current week info)\n
+    	About contact information linked.\n
+		\n
+		<li>Version 1.0</li> \n
+    	Due date is saved.\n
+    	Lite version: Ad-supported\n
+    	Full version: Paid version\n
+	</string>
+</resources>

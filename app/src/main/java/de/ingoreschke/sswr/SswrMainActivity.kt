@@ -132,7 +132,7 @@ class SswrMainActivity : ActivityIr() {
         todayDay = c.get(Calendar.DAY_OF_MONTH)
 
         //Restore stored e.t. (birth) or set default
-        val et = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val et = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         etYear = et.getInt(KEY_ET_YEAR, 0)
         etMonth = et.getInt(KEY_ET_MONTH, 0)
         etDay = et.getInt(KEY_ET_DAY, 0)
@@ -209,11 +209,7 @@ class SswrMainActivity : ActivityIr() {
                 text = getString(R.string.tellAFriendText) + " " + pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix) + "."
             }
             text += getString(R.string.tellAFriendText2)
-            if (isLiteVersion) {
-                text += getString(R.string.tellAFriendLinkLight)
-            } else {
-                text += getString(R.string.tellAFriendLinkFull)
-            }
+            text += getString(R.string.tellAFriendLinkLight)
 
             val tellAFriendIntent = Intent(Intent.ACTION_SEND)
             tellAFriendIntent.type = "text/plain"
@@ -312,7 +308,6 @@ class SswrMainActivity : ActivityIr() {
             }
             showError(error)
         }
-
     }
 
     private fun showResult() {
@@ -329,8 +324,6 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun showError(error: String) {
-
-
         AlertDialog.Builder(this)
                 .setTitle(getString(R.string.errorTitle))
                 .setMessage(error)
