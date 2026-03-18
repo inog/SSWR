@@ -21,6 +21,7 @@ import androidx.core.view.WindowCompat
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import de.ingoreschke.sswr.utils.Util
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -98,17 +99,18 @@ class SswrMainActivity : ActivityIr() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.main_sswr)
         if (isLiteVersion) {
+            MobileAds.initialize(this)
             //create an ad
-            val adView = AdView(this)
-            adView.adUnitId = AD_UNIT_ID_MAIN
-            adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
+            adView = AdView(this)
+            adView!!.adUnitId = AD_UNIT_ID_MAIN
+            adView!!.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
 
             //add Adview to hierachy
             findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
             //create an adRequest
             val request = AdRequest.Builder().build()
             //start loading the ad in the background
-            adView.loadAd(request)
+            adView!!.loadAd(request)
         }
 
         //set ViewElements
