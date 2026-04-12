@@ -21,7 +21,7 @@ public class WeekInfo extends ActivityIr {
 		if(isLiteVersion()){
         	adView = new AdView(this);
         	adView.setAdUnitId(AD_UNIT_ID_WEEKINFO);
-        	adView.setAdSize(AdSize.SMART_BANNER);
+        	adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH));
 
         	LinearLayout lw = findViewById(R.id.weekinfo_LinearLayout);
         	lw.addView(adView);
