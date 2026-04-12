@@ -2,6 +2,21 @@
 <resources>
 	<string name="releasenotes">\n
 
+		<li>Version 4.2.3</li>\n
+		Improvements and corrections to the week information texts (German and English)\n
+		Privacy policy updated with health data disclosure\n
+		Technical improvements\n
+
+		<li>Version 4.2.2</li>\n
+		Bugfix: UI glitch on Android 15 (API level 35) resolved\n
+
+		<li>Version 4.2.1</li>\n
+		Bugfix: UI glitch rolled back on Android 14 (API level 34)\n
+
+		<li>Version 4.2.0</li>\n
+		Support for Android 15 (API level 35)\n
+		Updated target SDK to 35\n
+
 		<li>Version 4.1.1</li>\n
 		Bugfix for Android 7 \n
 		Using pattern to support different versions \n

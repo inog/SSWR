@@ -2,6 +2,11 @@
 <resources>
 	<string name="releasenotes">\n
 
+		<li>Vers. 4.2.3</li>\n
+		Verbesserungen und Korrekturen der Wocheninformationen (Deutsch und Englisch)\n
+		Datenschutzerklärung um Hinweis zu Gesundheitsdaten ergänzt\n
+		Technische Verbesserungen\n
+
 		<li>Vers. 4.2.2</li>\n
 		Bugfix: UI-Glitch on Android 15 (API level 35) resolved\n
 		<li>Vers. 4.2.1</li>\n
