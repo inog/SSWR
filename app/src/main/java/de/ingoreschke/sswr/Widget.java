@@ -61,11 +61,16 @@ public class Widget extends AppWidgetProvider {
 	}
 	
 	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
-		LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
+		if (etYear == 0 || etDay == 0) {
+			return null;
+		}
 		try{
+			LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
 			return new PregnancyDate(LocalDate.now(), birthDate);
-		}catch (IllegalArgumentException e) {
-			Log.e(TAG, e.getMessage());
+		}catch (java.time.DateTimeException | IllegalArgumentException e) {
+			if (e.getMessage() != null) {
+				Log.e(TAG, e.getMessage());
+			}
 			SharedPreferences.Editor editor = et.edit();
 			editor.clear();
 			editor.commit();
