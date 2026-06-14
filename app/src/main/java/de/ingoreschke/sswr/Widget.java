@@ -17,7 +17,7 @@ public class Widget extends AppWidgetProvider {
 	private static final String KEY_ET_YEAR = "etYear";
 	private static final String KEY_ET_MONTH = "etMonth";
 	private static final String KEY_ET_DAY= "etDAY";
-	private SharedPreferences et;
+	SharedPreferences et;
 	
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds){
@@ -60,7 +60,7 @@ public class Widget extends AppWidgetProvider {
 		
 	}
 	
-	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
+	PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
 		if (etYear == 0 || etDay == 0) {
 			return null;
 		}
