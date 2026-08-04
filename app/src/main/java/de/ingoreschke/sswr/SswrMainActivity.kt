@@ -2,10 +2,8 @@ package de.ingoreschke.sswr
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.app.Dialog
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -146,7 +144,7 @@ class SswrMainActivity : ActivityIr() {
             //create an ad
             adView = AdView(this)
             adView!!.adUnitId = AD_UNIT_ID_MAIN
-            adView!!.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
+            adView!!.setAdSize(AdSize.getLargeAnchoredAdaptiveBannerAdSize(this, AdSize.FULL_WIDTH))
 
             //add Adview to hierachy
             findViewById<LinearLayout>(R.id.linearlayout_wrapper).addView(adView)
@@ -417,7 +415,7 @@ class SswrMainActivity : ActivityIr() {
             Log.d(TAG, "year:$year month:$month day:$day")
 
             // Commit the edits!
-            editor.commit()
+            editor.apply()
             return true
         } else {
             return false

@@ -60,7 +60,7 @@ public class WidgetTest {
         assertNull(result);
         verify(mockPrefs).edit();
         verify(mockEditor).clear();
-        verify(mockEditor).commit();
+        verify(mockEditor).apply();
     }
     
     @Test
@@ -69,6 +69,6 @@ public class WidgetTest {
         assertNull(result);
         verify(mockPrefs).edit();
         verify(mockEditor).clear();
-        verify(mockEditor).commit();
+        verify(mockEditor).apply();
     }
 }

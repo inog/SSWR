@@ -24,8 +24,7 @@ public class Widget extends AppWidgetProvider {
 		Log.d(TAG, "onUpdate");
 
 
-        for (int i=0; i<appWidgetIds.length; i++) {
-			int widgetId = appWidgetIds[i];
+        for (int widgetId : appWidgetIds) {
 			
 			et = context.getSharedPreferences(PREFS_NAME, 0);
 			int etYear 	= et.getInt(KEY_ET_YEAR,0);
@@ -55,11 +54,7 @@ public class Widget extends AppWidgetProvider {
 		}
 	}
 	
-	@Override
-	public void onEnabled(Context context){
-		
-	}
-	
+
 	PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
 		if (etYear == 0 || etDay == 0) {
 			return null;
@@ -73,7 +68,7 @@ public class Widget extends AppWidgetProvider {
 			}
 			SharedPreferences.Editor editor = et.edit();
 			editor.clear();
-			editor.commit();
+			editor.apply();
 			Log.d(TAG, "Prefs deleted");
 			return null;
 		}		
