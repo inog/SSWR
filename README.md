@@ -20,7 +20,7 @@
 
 ### Build Configuration
 - **Min SDK**: Android 8.0 (API 26)
-- **Target SDK**: Android 15 (API 35)
+- **Target SDK**: Android 16 (API 36)
 - **Language**: Kotlin 2.0.20
 - **Java Version**: JDK 17
 
@@ -36,7 +36,7 @@ The project includes two product flavors:
 - Kotlin Standard Library
 
 ### Version
-- **Current Version**: 4.2.2 (versionCode: 2600422)
+- **Current Version**: 4.2.3 (versionCode: 2600423)
 
 ## Project Structure
 
@@ -45,13 +45,20 @@ app/
 ├── src/
 │   ├── main/
 │   │   ├── java/de/ingoreschke/sswr/
-│   │   │   └── SswrMainActivity.kt
+│   │   │   ├── About.java
+│   │   │   ├── ActivityIr.java
+│   │   │   ├── PregnancyDate.java
+│   │   │   ├── SswrMainActivity.kt
+│   │   │   ├── WeekInfo.java
+│   │   │   ├── Widget.java
+│   │   │   └── utils/
 │   │   ├── res/
 │   │   │   ├── layout/           # UI layouts
 │   │   │   ├── values/           # German strings & resources
 │   │   │   └── values-en/        # English translations
 │   │   └── AndroidManifest.xml
-│   └── androidTest/
+│   ├── test/                     # JVM unit tests
+│   └── androidTest/              # Android instrumentation tests
 ├── build.gradle
 └── proguard-rules.pro
 ```

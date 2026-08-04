@@ -17,15 +17,14 @@ public class Widget extends AppWidgetProvider {
 	private static final String KEY_ET_YEAR = "etYear";
 	private static final String KEY_ET_MONTH = "etMonth";
 	private static final String KEY_ET_DAY= "etDAY";
-	private SharedPreferences et;
+	SharedPreferences et;
 	
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds){
 		Log.d(TAG, "onUpdate");
 
 
-        for (int i=0; i<appWidgetIds.length; i++) {
-			int widgetId = appWidgetIds[i];
+        for (int widgetId : appWidgetIds) {
 			
 			et = context.getSharedPreferences(PREFS_NAME, 0);
 			int etYear 	= et.getInt(KEY_ET_YEAR,0);
@@ -55,20 +54,21 @@ public class Widget extends AppWidgetProvider {
 		}
 	}
 	
-	@Override
-	public void onEnabled(Context context){
-		
-	}
-	
-	private PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
-		LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
+
+	PregnancyDate calculateSswDate(int etYear, int etMonth, int etDay){
+		if (etYear == 0 || etDay == 0) {
+			return null;
+		}
 		try{
+			LocalDate birthDate = LocalDate.of(etYear, etMonth + 1, etDay);
 			return new PregnancyDate(LocalDate.now(), birthDate);
-		}catch (IllegalArgumentException e) {
-			Log.e(TAG, e.getMessage());
+		}catch (java.time.DateTimeException | IllegalArgumentException e) {
+			if (e.getMessage() != null) {
+				Log.e(TAG, e.getMessage());
+			}
 			SharedPreferences.Editor editor = et.edit();
 			editor.clear();
-			editor.commit();
+			editor.apply();
 			Log.d(TAG, "Prefs deleted");
 			return null;
 		}		
