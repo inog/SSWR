@@ -23,11 +23,11 @@ public class About extends ActivityIr implements OnClickListener{
 		setContentView(R.layout.about);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-		tw_promo_robert = (TextView) findViewById(R.id.about_promo_robert);
+		tw_promo_robert = findViewById(R.id.about_promo_robert);
 		tw_promo_robert.setOnClickListener(this);
-		tw_contact = (TextView) findViewById(R.id.about_contact);
+		tw_contact = findViewById(R.id.about_contact);
 		tw_contact.setOnClickListener(this);
-		btn_babyinmom1 = (Button) findViewById(R.id.about_btn_babyinmom1);
+		btn_babyinmom1 = findViewById(R.id.about_btn_babyinmom1);
 		btn_babyinmom1.setOnClickListener(this);
 		sound1 = R.raw.babyinmom005;
 	}
@@ -46,14 +46,14 @@ public class About extends ActivityIr implements OnClickListener{
 			ri.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_promo_robert_email_sub));
 			ri.putExtra(Intent.EXTRA_TEXT, getString(R.string.about_promo_robert_email_txt));
 			ri.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.about_promo_robert_email)});
-			startActivity(Intent.createChooser(ri, "Send email..."));
+			startActivity(Intent.createChooser(ri, getString(R.string.about_contact_email_Intent)));
 		} else if (id == R.id.about_contact) {
 			final Intent ci = new Intent(Intent.ACTION_SEND);
 			ci.setType("text/plain");
 			ci.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_contact_email_sub));
 			ci.putExtra(Intent.EXTRA_TEXT, getString(R.string.about_contact_email_text));
 			ci.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.about_contact_email)});
-			startActivity(Intent.createChooser(ci, "Send email..."));
+			startActivity(Intent.createChooser(ci, getString(R.string.about_contact_email_Intent)));
 		} else if (id == R.id.about_btn_babyinmom1){
 			toggleSoundOnOff(sound1);
 		} 
