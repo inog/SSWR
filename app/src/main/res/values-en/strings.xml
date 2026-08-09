@@ -13,6 +13,7 @@
     <string name="str_xteWeek_suffix"></string>
     <string name="str_xteMonth_label">Which corresponds to month</string>
     <string name="str_xteMonth_suffix"></string>
+    <string name="ai_image_disclaimer">AI-generated illustration</string>
     
     <string name="main_btnEtDate">Change due date</string>
     <string name="pickDateFirstUse">Enter due date</string>

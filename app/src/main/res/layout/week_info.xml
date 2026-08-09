@@ -21,6 +21,30 @@
 	  	android:drawableStart="@drawable/icon"
 	  	style="@android:style/TextAppearance.Large"/>
       
+		<LinearLayout
+			android:id="@+id/weekinfo_fetus_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_marginVertical="12dp">
+
+			<ImageView
+				android:id="@+id/weekinfo_fetus_image"
+				android:layout_width="240dp"
+				android:layout_height="240dp"
+				android:scaleType="fitCenter"
+				android:adjustViewBounds="true"
+				android:contentDescription="@string/ai_image_disclaimer" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:text="@string/ai_image_disclaimer"
+				android:textSize="11sp"
+				android:textColor="#808080" />
+		</LinearLayout>
 
 	  <TextView 
 	  	android:id="@+id/weekinfo_text"

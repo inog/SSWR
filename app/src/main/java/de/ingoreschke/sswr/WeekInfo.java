@@ -2,12 +2,15 @@ package de.ingoreschke.sswr;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+
+import de.ingoreschke.sswr.utils.Util;
 
 public class WeekInfo extends ActivityIr {
 	private static final String TAG = "WeekInfo";
@@ -65,8 +68,14 @@ public class WeekInfo extends ActivityIr {
 		Log.d(TAG,"aktuelle Woche: "+ week);
 		TextView tw_title = findViewById(R.id.weekinfo_title);
 		TextView tw_text = findViewById(R.id.weekinfo_text);
+		ImageView iv_fetus = findViewById(R.id.weekinfo_fetus_image);
+		
 		tw_title.setText(getTitletxt(week));
 		tw_text.setText(getInfotxt(week));
+		if (iv_fetus != null) {
+			int imgResId = Util.getFetusDrawableResId(this, week);
+			iv_fetus.setImageResource(imgResId);
+		}
 	}
 	
 

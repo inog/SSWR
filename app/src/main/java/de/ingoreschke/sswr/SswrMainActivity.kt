@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RemoteViews
 import android.widget.TextView
@@ -38,6 +39,8 @@ class SswrMainActivity : ActivityIr() {
     private var etWeekPlusDaysDisplay: TextView? = null
     private var etXteWeekDisplay: TextView? = null
     private var etXteMonth: TextView? = null
+    private var fetusImageContainer: LinearLayout? = null
+    private var fetusImage: ImageView? = null
 
     private var adView: AdView? = null
     private lateinit var billingManager: BillingManager
@@ -168,6 +171,8 @@ class SswrMainActivity : ActivityIr() {
         etWeekPlusDaysDisplay = findViewById<TextView>(R.id.str_weekPlusDays)
         etXteWeekDisplay = findViewById<TextView>(R.id.str_xteWeek)
         etXteMonth = findViewById<TextView>(R.id.str_xteMonth)
+        fetusImageContainer = findViewById<LinearLayout>(R.id.fetus_image_container)
+        fetusImage = findViewById<ImageView>(R.id.fetus_image)
         btnEtDate = findViewById<Button>(R.id.main_btnEtDate)
         btnTimemachine = findViewById<Button>(R.id.main_btnTimemachine)
         btnInfoText = findViewById<Button>(R.id.main_btnWeekInfo)
@@ -389,6 +394,14 @@ class SswrMainActivity : ActivityIr() {
         var m = pregnancyDate!!.xteMonth.toString()
         m = m + getString(R.string.str_xteMonth_suffix)
         etXteMonth!!.text = m
+
+        if (pregnancyDate != null) {
+            val weekl = pregnancyDate!!.xteWeek
+            val week = Util.safeLongToInt(weekl)
+            val imgResId = Util.getFetusDrawableResId(this, week)
+            fetusImage?.setImageResource(imgResId)
+            fetusImageContainer?.visibility = View.VISIBLE
+        }
     }
 
     private fun showError(error: String) {
