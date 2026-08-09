@@ -21,13 +21,13 @@
 ### Build Configuration
 - **Min SDK**: Android 8.0 (API 26)
 - **Target SDK**: Android 16 (API 36)
-- **Language**: Kotlin 2.0.20
+- **Language**: Kotlin 2.2.10
 - **Java Version**: JDK 17
 
 ### App Variants
 The project includes two product flavors:
 - **Lite Version**: Basic features with ads
-- **Full Version**: Complete feature set with ads
+- **Full Version**: Complete feature set without ads
 
 ### Key Dependencies
 - AndroidX AppCompat
