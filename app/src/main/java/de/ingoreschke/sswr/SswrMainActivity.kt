@@ -2,10 +2,8 @@ package de.ingoreschke.sswr
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.app.Dialog
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +19,7 @@ import androidx.core.view.WindowCompat
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import de.ingoreschke.sswr.utils.Util
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -57,16 +56,52 @@ class SswrMainActivity : ActivityIr() {
 
     //the callback received when the user "sets" the date in the dialog
     private val mDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-        etYear = year
-        etMonth = monthOfYear
-        etDay = dayOfMonth
-        saveEtDate(year, monthOfYear, dayOfMonth)
-        updateDateDisplay()
-        calculateSswDate()
+        val today = LocalDate.of(todayYear, todayMonth + 1, todayDay)
+        val birthDate = LocalDate.of(year, monthOfYear + 1, dayOfMonth)
+        try {
+            this.pregnancyDate = PregnancyDate(today, birthDate)
+            etYear = year
+            etMonth = monthOfYear
+            etDay = dayOfMonth
+            saveEtDate(year, monthOfYear, dayOfMonth)
+            updateDateDisplay()
+            mainIntro!!.text = "" //delete intro text
+            btnTimemachine!!.isEnabled = true
+            btnEtDate!!.setText(R.string.main_btnEtDate)
+            showResult()
+            if (!isTimeMachineMode) {
+                updateWidget()
+            }
+        } catch (e: IllegalArgumentException) {
+            Log.e(TAG, e.message ?: "Validation error")
+            val error = when (e.message) {
+                PregnancyDate.DATE1_TOO_SMALL -> getString(R.string.errorIllegalDate_d1TooSmall)
+                PregnancyDate.DATE2_TOO_BIG -> getString(R.string.errorIllegalDate_d2TooBig)
+                else -> e.message ?: "Unknown error"
+            }
+            showError(error)
+        }
     }
 
     // callback for CurrentDatePicker
     private val mCurDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val today = LocalDate.of(year, monthOfYear + 1, dayOfMonth)
+        if (etYear != 0) {
+            val birthDate = LocalDate.of(etYear, etMonth + 1, etDay)
+            try {
+                this.pregnancyDate = PregnancyDate(today, birthDate)
+            } catch (e: IllegalArgumentException) {
+                Log.e(TAG, e.message ?: "Time machine target invalid")
+                val error = when (e.message) {
+                    PregnancyDate.DATE1_TOO_SMALL -> getString(R.string.errorIllegalDate_d1TooSmall)
+                    PregnancyDate.DATE2_TOO_BIG -> getString(R.string.errorIllegalDate_d2TooBig)
+                    else -> e.message ?: "Unknown error"
+                }
+                showError(error)
+                return@OnDateSetListener
+            }
+        }
+
         //set today
         val c = Calendar.getInstance()
         todayYear = year
@@ -80,7 +115,14 @@ class SswrMainActivity : ActivityIr() {
             mainIntro!!.text = ""
         }
         updateCurrentDateDisplay()
-        calculateSswDate()
+        if (pregnancyDate != null) {
+            showResult()
+            if (!isTimeMachineMode) {
+                updateWidget()
+            }
+        } else {
+            calculateSswDate()
+        }
     }
 
     private val isTimeMachineMode: Boolean
@@ -102,6 +144,7 @@ class SswrMainActivity : ActivityIr() {
         billingManager = BillingManager(this)
 
         if (isLiteVersion) {
+            MobileAds.initialize(this)
             //create an ad
             val adView = AdView(this)
             this.adView = adView
@@ -154,32 +197,40 @@ class SswrMainActivity : ActivityIr() {
         updateCurrentDateDisplay()
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onCreateDialog(id: Int): Dialog? {
-        when (id) {
-            FULL_VERSION_REQUIRED -> return AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle(R.string.full_version_required)
-                    .setPositiveButton(android.R.string.ok) { dialog, whichButton -> billingManager.startPurchaseFlow() }
-                    .setNegativeButton(android.R.string.cancel
-                    ) { dialog, whichButton -> dialog.dismiss() }.create()
+    private fun showDatePickerDialog() {
+        DatePickerDialog(
+            this, 
+            mDateSetListener, 
+            if (etYear != 0) etYear else todayYear, 
+            etMonth, 
+            if (etDay != 0) etDay else todayDay
+        ).show()
+    }
 
-            DATE_DIALOG_ID -> return DatePickerDialog(this, mDateSetListener, todayYear, todayMonth, todayDay) //todayYear, todayMonth, todayDay for das erste mal aufrufen.
-            CURRENTDATE_DIALOG_ID -> {
-                Log.d(TAG, "auf Button showDialog(CURRENTDATE_DIALOG_ID) gestartet ")
-                return DatePickerDialog(this, mCurDateSetListener, todayYear, todayMonth, todayDay)
+    private fun showCurrentDatePickerDialog() {
+        DatePickerDialog(this, mCurDateSetListener, todayYear, todayMonth, todayDay).show()
+    }
+
+    private fun showTimeMachineConfirmDialog() {
+        AlertDialog.Builder(this)
+            .setTitle(R.string.alertboxTimemachine_title)
+            .setMessage(R.string.alertboxTimemachine_text)
+            .setPositiveButton(android.R.string.ok) { _, _ -> showCurrentDatePickerDialog() }
+            .setNegativeButton(android.R.string.cancel) { dialog, _ -> dialog.cancel() }
+            .show()
+    }
+
+    private fun showFullVersionRequiredDialog() {
+        AlertDialog.Builder(this)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle(R.string.full_version_required)
+            .setPositiveButton(android.R.string.ok) { _, _ -> 
+                Toast.makeText(this@SswrMainActivity, "Replace this toast with an intent to start the android market to buy your full version.", Toast.LENGTH_SHORT).show() 
             }
-            PRE_CURRENTDATE_DIALOG_ID -> {
-                Log.d(TAG, "auf Button Zeitmaschine geklickt")
-                val builder = AlertDialog.Builder(this)
-                builder.setTitle(R.string.alertboxTimemachine_title)
-                builder.setMessage(R.string.alertboxTimemachine_text)
-                builder.setPositiveButton(android.R.string.ok) { dialog, which -> showDialog(CURRENTDATE_DIALOG_ID) }
-                builder.setNegativeButton(android.R.string.cancel) { dialog, which -> dialog.cancel() }
-                return builder.create()
+            .setNegativeButton(android.R.string.cancel) { dialog, _ -> 
+                dialog.dismiss() 
             }
-        }
-        return null
+            .show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -197,10 +248,10 @@ class SswrMainActivity : ActivityIr() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.menu_et_date) {
-            showDialog(DATE_DIALOG_ID)
+            showDatePickerDialog()
             return true
         } else if (id == R.id.menu_et_timemaschine) {
-            showDialog(PRE_CURRENTDATE_DIALOG_ID)
+            showTimeMachineConfirmDialog()
             return true
         } else if (id == R.id.about) {
             startActivity(Intent(this, About::class.java))
@@ -219,11 +270,7 @@ class SswrMainActivity : ActivityIr() {
                 text = getString(R.string.tellAFriendText) + " " + pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix) + "."
             }
             text += getString(R.string.tellAFriendText2)
-            if (isLiteVersion) {
-                text += getString(R.string.tellAFriendLinkLight)
-            } else {
-                text += getString(R.string.tellAFriendLinkFull)
-            }
+            text += getString(R.string.tellAFriendLinkLight)
 
             val tellAFriendIntent = Intent(Intent.ACTION_SEND)
             tellAFriendIntent.type = "text/plain"
@@ -271,12 +318,12 @@ class SswrMainActivity : ActivityIr() {
     fun onClick(v: View) {
         val id = v.id
         if (id == R.id.main_btnEtDate || id == R.id.main_et_row) {
-            showDialog(DATE_DIALOG_ID)
+            showDatePickerDialog()
         } else if (id == R.id.main_btnTimemachine) {
             if (isTimeMachineMode) {
-                showDialog(CURRENTDATE_DIALOG_ID)
+                showCurrentDatePickerDialog()
             } else {
-                showDialog(PRE_CURRENTDATE_DIALOG_ID)
+                showTimeMachineConfirmDialog()
             }
         } else if (id == R.id.main_btnWeekInfo || id == R.id.main_xteWeek_row) {
             callWeekInfo()
@@ -302,12 +349,17 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun updateDateDisplay() {
-        etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormatter)
+        if (etYear != 0 && etDay != 0) {
+            etDateDisplay!!.text = LocalDate.of(etYear, etMonth + 1, etDay).format(dateFormatter)
+        }
     }
 
     private fun calculateSswDate() {
-        val today = LocalDate.of(todayYear, todayMonth + 1,todayDay)
-        val birthDate = LocalDate.of(etYear, etMonth +1 , etDay)
+        if (etYear == 0 || etDay == 0) {
+            return
+        }
+        val today = LocalDate.of(todayYear, todayMonth + 1, todayDay)
+        val birthDate = LocalDate.of(etYear, etMonth + 1, etDay)
 
         try {
             this.pregnancyDate = PregnancyDate(today, birthDate)
@@ -316,18 +368,14 @@ class SswrMainActivity : ActivityIr() {
                 updateWidget()
             }
         } catch (e: IllegalArgumentException) {
-            Log.e(TAG, e.message!!)
-            var error: String
-            if (e.message == PregnancyDate.DATE1_TOO_SMALL) {
-                error = getString(R.string.errorIllegalDate_d1TooSmall)
-            } else if (e.message == PregnancyDate.DATE2_TOO_BIG) {
-                error = getString(R.string.errorIllegalDate_d2TooBig)
-            } else {
-                error = e.message!!
+            Log.e(TAG, e.message ?: "Calculation error")
+            val error = when (e.message) {
+                PregnancyDate.DATE1_TOO_SMALL -> getString(R.string.errorIllegalDate_d1TooSmall)
+                PregnancyDate.DATE2_TOO_BIG -> getString(R.string.errorIllegalDate_d2TooBig)
+                else -> e.message ?: "Unknown error"
             }
             showError(error)
         }
-
     }
 
     private fun showResult() {
@@ -344,8 +392,6 @@ class SswrMainActivity : ActivityIr() {
     }
 
     private fun showError(error: String) {
-
-
         AlertDialog.Builder(this)
                 .setTitle(getString(R.string.errorTitle))
                 .setMessage(error)
@@ -384,7 +430,7 @@ class SswrMainActivity : ActivityIr() {
             Log.d(TAG, "year:$year month:$month day:$day")
 
             // Commit the edits!
-            editor.commit()
+            editor.apply()
             return true
         } else {
             return false
@@ -397,9 +443,5 @@ class SswrMainActivity : ActivityIr() {
         private val KEY_ET_YEAR = "etYear"
         private val KEY_ET_MONTH = "etMonth"
         private val KEY_ET_DAY = "etDAY"
-
-        private val DATE_DIALOG_ID = 0
-        private val PRE_CURRENTDATE_DIALOG_ID = 1
-        private val CURRENTDATE_DIALOG_ID = 2
     }
 }
