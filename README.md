@@ -10,7 +10,7 @@
   - Days completed in pregnancy
   - "Mutterpass" format (week + days notation)
   - Current pregnancy month
-- **Weekly Information**: Get detailed information about your current pregnancy week
+- **Weekly Information**: Get detailed information and individual fetal development illustrations for every pregnancy week (weeks 1–42)
 - **Time Machine Mode**: Travel forward or backward in time to see your pregnancy status on specific dates (e.g., holidays)
 - **Home Screen Widget**: Quick access to current pregnancy week directly from your home screen
 - **Share Progress**: Share your current pregnancy week with friends and family

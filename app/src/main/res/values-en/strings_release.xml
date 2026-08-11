@@ -2,6 +2,9 @@
 <resources>
 	<string name="releasenotes">\n
 
+		<li>Version 4.2.4</li>\n
+		Individual illustrations for each pregnancy week (weeks 1–42) matching the fetal development stage\n
+
 		<li>Version 4.2.3</li>\n
 		Improvements and corrections to the week information texts (German and English)\n
 		Privacy policy updated with health data disclosure\n
