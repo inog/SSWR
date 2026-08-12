@@ -2,8 +2,10 @@
 <resources>
 	<string name="releasenotes">\n
 
-		<li>Vers. 4.2.4</li>\n
-		Individuelle Abbildungen für jede Schwangerschaftswoche (Woche 1–42) zur Veranschaulichung des Entwicklungsstands des Fötus\n
+		<li>Vers. 4.3.0</li>\n
+		Individuelle Abbildungen für jede Schwangerschaftswoche (Woche 1–42) zur Veranschaulichung der fötalen Entwicklung\n
+		In-App-Kauf (Google Play Billing) zum dauerhaften Entfernen von Werbung\n
+		Vereinfachung der App-Struktur (Vereinheitlichung der App-Builds)\n
 
 		<li>Vers. 4.2.3</li>\n
 		Verbesserungen und Korrekturen der Wocheninformationen (Deutsch und Englisch)\n

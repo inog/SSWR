@@ -36,7 +36,7 @@
 - Kotlin Standard Library
 
 ### Version
-- **Current Version**: 4.2.4 (versionCode: 2600424)
+- **Current Version**: 4.3.0 (versionCode: 2600430)
 
 ## Project Structure
 

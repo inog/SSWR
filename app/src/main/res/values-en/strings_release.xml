@@ -2,8 +2,10 @@
 <resources>
 	<string name="releasenotes">\n
 
-		<li>Version 4.2.4</li>\n
-		Individual illustrations for each pregnancy week (weeks 1–42) matching the fetal development stage\n
+		<li>Version 4.3.0</li>\n
+		Individual illustrations for each pregnancy week (weeks 1–42) matching fetal development\n
+		In-App Purchase (Google Play Billing) to remove ads permanently\n
+		Simplified app architecture (unified build configuration)\n
 
 		<li>Version 4.2.3</li>\n
 		Improvements and corrections to the week information texts (German and English)\n
