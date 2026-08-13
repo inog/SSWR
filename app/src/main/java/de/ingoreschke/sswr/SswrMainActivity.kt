@@ -2,6 +2,7 @@ package de.ingoreschke.sswr
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Intent
@@ -416,13 +417,18 @@ class SswrMainActivity : ActivityIr() {
 
     private fun updateWidget() {
         Log.d(TAG, "updateWidget")
-        val week = pregnancyDate!!.weeksUntilNow.toString() + " + " + pregnancyDate!!.restOfWeekUntilNow.toString()
-        val xteWeek = pregnancyDate!!.xteWeek.toString() + getString(R.string.str_xteWeek_suffix)
-        val appWidgetManager = AppWidgetManager.getInstance(this) //this is context
+        val date = pregnancyDate ?: return
+        val week = "${date.weeksUntilNow} + ${date.restOfWeekUntilNow}"
+        val xteWeek = "${date.xteWeek}${getString(R.string.str_xteWeek_suffix)}"
+        val appWidgetManager = AppWidgetManager.getInstance(this)
         val views = RemoteViews(this.packageName, R.layout.widget_layout)
-        //Perform update on the view
         views.setTextViewText(R.id.widgetTV02, week)
         views.setTextViewText(R.id.widgetTV03, xteWeek)
+
+        val intent = Intent(this, SswrMainActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        views.setOnClickPendingIntent(R.id.widgetCanvas, pendingIntent)
+
         appWidgetManager.updateAppWidget(
                 ComponentName(this, Widget::class.java),
                 views
