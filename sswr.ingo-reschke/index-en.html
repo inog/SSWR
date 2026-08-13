@@ -1,66 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SSWR Pregnancy Weeks Calculator App</title>
     <meta charset="UTF-8">
-    <meta content="SSWR - The Pregnancy Weeks Calculator" name="description">
-    <meta content="SSWR, pregnancy, weeks, due date, E.D., Android, app" name="keywords">
-    <meta content="en" name="language">
-    <meta content="index, follow" name="robots">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="img/icon.png" rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSWR - Pregnancy Week Calculator Android App</title>
+    <meta name="description" content="SSWR – The Pregnancy Week Calculator for Android. Accurately calculate pregnancy week, maternity logbook entry, countdown to due date, and fetal development info.">
+    <meta name="keywords" content="SSWR, Pregnancy Week Calculator, pregnancy, EDD, estimated due date, maternity logbook, Android app">
+    <meta name="theme-color" content="#6c35a8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
 </head>
 <body>
-<h1>SSWR Pregnancy Weeks Calculator - App</h1>
-<h2>Description</h2>
-<p class="mleft">
-    Are you pregnant?
-    What week of pregnancy are you in?
-    The Pregnancy Weeks Calculator (SSWR) is designed for pregnant women and medical professionals
-    who want to calculate the exact pregnancy week based on the estimated due date (E.D.).
-    In addition to the week calculation, you will find the entry in the maternity record (corresponding to the completed
-    week plus days of the current week) and an indication of how many days are left until the E.D. or how many days you have been pregnant.
 
-    If you like this app, we would appreciate positive reviews.
-</p>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-wrapper" aria-label="Main Navigation">
+                <a href="index-en.html" class="brand">
+                    <img src="img/icon.png" alt="SSWR App Icon" class="brand-icon" width="44" height="44">
+                    <div class="brand-title">
+                        <span class="brand-name">SSWR</span>
+                        <span class="brand-subtitle">Pregnancy Week Calculator</span>
+                    </div>
+                </a>
+                <div class="header-actions">
+                    <div class="lang-switch" role="group" aria-label="Language Selector">
+                        <a href="index.html" title="Auf Deutsch wechseln">DE</a>
+                        <a href="index-en.html" class="active" aria-current="page">EN</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<h2>Free Version</h2>
-<img alt="sswr lite qr code" border="0" class="left" src="img/qr_code_sswr_lite_m.png">
-<p class="qrText">
-    If you have a barcode scanner (app), you can scan the barcode (left) and you
-    will be directed to the SSWR download.<br>
-    Or click on the logo below.<br>
-    <a href="http://market.android.com/details?id=de.ingoreschke.sswr.lite" target="_blank">
-        <img alt="Available in Android Market"
-             src="http://www.android.com/images/brand/45_avail_market_logo1.png"/>
-    </a>
-</p>
-<div class="cls"></div>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span>Android App • Version 4.3</span>
+                        </div>
+                        <h1>The Reliable Pregnancy Week Calculator</h1>
+                        <p class="lead">
+                            Are you pregnant or supporting expecting mothers? SSWR is tailored for pregnant women, midwives, and healthcare professionals to quickly calculate the exact pregnancy week, maternity record entries, and vital developmental milestones.
+                        </p>
+                        
+                        <div class="download-cta-box">
+                            <div class="cta-buttons">
+                                <a href="https://play.google.com/store/apps/details?id=de.ingoreschke.sswr.lite" target="_blank" rel="noopener noreferrer" class="play-badge-link" id="hero-play-button">
+                                    <svg class="play-badge-svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M47.1 27.2C44.5 35.6 43 45.4 43 56.6v398.8c0 11.2 1.5 21 4.1 29.4l228.6-228.6L47.1 27.2z" fill="#00E676"/>
+                                        <path d="M352.5 163.6L275.7 256.2l76.8 92.6 86.8-50.1c16.3-9.4 16.3-24.8 0-34.2l-86.8-50.9z" fill="#FFD600"/>
+                                        <path d="M47.1 27.2c6.9-4.8 16.2-7.2 27.6-.6l277.8 137-76.8 92.6L47.1 27.2z" fill="#00B0FF"/>
+                                        <path d="M275.7 256.2l76.8 92.6-277.8 137c-11.4 6.6-20.7 4.2-27.6-.6l228.6-229z" fill="#FF3D00"/>
+                                    </svg>
+                                    <div class="play-badge-text">
+                                        <span class="play-badge-subtitle">Get it on</span>
+                                        <span class="play-badge-title">Google Play</span>
+                                    </div>
+                                </a>
+                                <span class="cta-note">Available for free on Google Play</span>
+                            </div>
 
+                            <div class="cta-qr">
+                                <img src="img/qr_code_sswr_lite.png" alt="QR code to download on Google Play Store" width="95" height="95">
+                                <div class="cta-qr-label">Scan QR code</div>
+                            </div>
+                        </div>
+                    </div>
 
-<h2>Screenshots</h2>
-<img alt="screenshot" border="0" class="mleft" src="img/SC20111031-162025.png">
-<img alt="screenshot" border="0" class="mleft" src="img/SC20111031-162015.png">
-<img alt="screenshot" border="0" class="mleft" src="img/SC20111031-162030.png">
-<img alt="screenshot" border="0" class="mleft" src="img/SC20111031-162040.png">
+                    <div class="hero-visual">
+                        <div class="phone-mockup">
+                            <img src="img/Screenshot_20260813-104549.png" alt="SSWR App Main Screen Screenshot" width="285" height="640">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Features Section -->
+        <section class="section section-alt" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Features Overview</h2>
+                    <p>All essential pregnancy calculations and developmental information – fast, precise, and beautifully presented.</p>
+                </div>
 
-<div class="mleft mtop">
-    <a href="http://www.ingo-reschke.de" target="_blank">Developer's Homepage</a>
-    <a href="privacy-en.html">Privacy Policy</a>
-</div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Precise Week & Logbook</h3>
+                        <p>Calculate the exact pregnancy week, current month, and standard maternity logbook entry format (e.g., 24 + 5).</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Day-by-Day Countdown</h3>
+                        <p>Track exactly how many days you have completed and how many days remain until your estimated due date (EDD).</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Weekly Info (Weeks 1–42)</h3>
+                        <p>Rich medical insights and fetal illustrations for every pregnancy week, including head diameter, weight, and development details.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 14 10"></polyline>
+                                <path d="M16.2 7.8c2.3 2.3 2.8 5.7 1.6 8.5"></path>
+                            </svg>
+                        </div>
+                        <h3>Time Machine</h3>
+                        <p>Explore your pregnancy status for any specific past or future date – perfect for review, doctor appointments, or planning.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Home Screen Widget</h3>
+                        <p>Glance at your current pregnancy week and day counter instantly without opening the app via the handy home screen widget.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>100% Privacy & Offline</h3>
+                        <p>Your due date and health data stay strictly on your local device. No user accounts, no uploads to external servers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Showcase Section -->
+        <section class="section" id="screenshots">
+            <div class="container">
+                <div class="section-header">
+                    <h2>App Screenshots</h2>
+                    <p>Experience the modern, clean, and intuitive interface of SSWR.</p>
+                </div>
+
+                <div class="screenshots-grid">
+                    <!-- Screenshot 1 -->
+                    <article class="screenshot-card">
+                        <div class="screenshot-img-wrapper" onclick="openScreenshotModal('img/Screenshot_20260813-104549.png', 'SSWR Main Screen: Pregnancy week, logbook entry, and day counter')">
+                            <img src="img/Screenshot_20260813-104549.png" alt="Main view of the Pregnancy Week Calculator" loading="lazy">
+                            <span class="zoom-hint">🔍 Zoom in</span>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Main Overview</h3>
+                            <p>Everything at a glance: calculated week, month, maternity logbook entry, day countdowns, and weekly fetal illustration.</p>
+                        </div>
+                    </article>
+
+                    <!-- Screenshot 2 -->
+                    <article class="screenshot-card">
+                        <div class="screenshot-img-wrapper" onclick="openScreenshotModal('img/Screenshot_20260813-104557.png', 'SSWR Week Info: Detailed developmental info for the 25th week')">
+                            <img src="img/Screenshot_20260813-104557.png" alt="Weekly development information and milestones" loading="lazy">
+                            <span class="zoom-hint">🔍 Zoom in</span>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Weekly Information</h3>
+                            <p>In-depth development guidance for each pregnancy week (1–42) with baby measurements (head diameter, weight) and physiological details.</p>
+                        </div>
+                    </article>
+
+                    <!-- Screenshot 3 -->
+                    <article class="screenshot-card">
+                        <div class="screenshot-img-wrapper" onclick="openScreenshotModal('img/Screenshot_20260813-105233.png', 'SSWR Time Machine: Interactive date picker')">
+                            <img src="img/Screenshot_20260813-105233.png" alt="Time Machine and date picker dialog" loading="lazy">
+                            <span class="zoom-hint">🔍 Zoom in</span>
+                        </div>
+                        <div class="screenshot-info">
+                            <h3>Time Machine & Date Picker</h3>
+                            <p>Interactive calendar dialog to easily adjust the estimated due date or calculate progress on any specific date.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA Section -->
+        <section class="container" id="download">
+            <div class="download-section">
+                <div class="download-inner">
+                    <div class="download-content">
+                        <h2>Download SSWR for Free</h2>
+                        <p>Install the app safely directly via Google Play or scan the QR code with your smartphone camera.</p>
+                        <div class="download-actions">
+                            <a href="https://play.google.com/store/apps/details?id=de.ingoreschke.sswr.lite" target="_blank" rel="noopener noreferrer" class="play-badge-link" id="footer-play-button">
+                                <svg class="play-badge-svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M47.1 27.2C44.5 35.6 43 45.4 43 56.6v398.8c0 11.2 1.5 21 4.1 29.4l228.6-228.6L47.1 27.2z" fill="#00E676"/>
+                                    <path d="M352.5 163.6L275.7 256.2l76.8 92.6 86.8-50.1c16.3-9.4 16.3-24.8 0-34.2l-86.8-50.9z" fill="#FFD600"/>
+                                    <path d="M47.1 27.2c6.9-4.8 16.2-7.2 27.6-.6l277.8 137-76.8 92.6L47.1 27.2z" fill="#00B0FF"/>
+                                    <path d="M275.7 256.2l76.8 92.6-277.8 137c-11.4 6.6-20.7 4.2-27.6-.6l228.6-229z" fill="#FF3D00"/>
+                                </svg>
+                                <div class="play-badge-text">
+                                    <span class="play-badge-subtitle">Get it on</span>
+                                    <span class="play-badge-title">Google Play</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="download-qr-box">
+                        <img src="img/qr_code_sswr_lite.png" alt="QR code to download the SSWR app" width="140" height="140">
+                        <span>Scan QR code to download</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal Dialog -->
+    <dialog id="screenshot-dialog" class="image-modal" aria-label="Screenshot Preview">
+        <div class="modal-inner">
+            <button type="button" class="modal-close-btn" onclick="closeScreenshotModal()" aria-label="Close">✕</button>
+            <img id="dialog-img" src="" alt="Enlarged screenshot preview">
+        </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-copy">
+                    &copy; Ingo Reschke • SSWR Pregnancy Week Calculator
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.ingo-reschke.de" target="_blank" rel="noopener noreferrer">Developer's Homepage</a>
+                    <a href="privacy-en.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const dialog = document.getElementById('screenshot-dialog');
+        const dialogImg = document.getElementById('dialog-img');
+
+        function openScreenshotModal(src, alt) {
+            dialogImg.src = src;
+            dialogImg.alt = alt;
+            dialog.showModal();
+        }
+
+        function closeScreenshotModal() {
+            dialog.close();
+        }
+
+        dialog.addEventListener('click', (e) => {
+            const rect = dialog.getBoundingClientRect();
+            if (
+                e.clientX < rect.left ||
+                e.clientX > rect.right ||
+                e.clientY < rect.top ||
+                e.clientY > rect.bottom
+            ) {
+                dialog.close();
+            }
+        });
+    </script>
 </body>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19905740-6']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </html>
