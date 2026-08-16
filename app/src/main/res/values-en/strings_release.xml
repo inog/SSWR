@@ -4,8 +4,10 @@
 
 		<li>Version 4.3.0</li>\n
 		Individual illustrations for each pregnancy week (weeks 1–42) matching fetal development\n
+		Modernized home screen widget with support for pinning directly from the app\n
 		In-App Purchase (Google Play Billing) to remove ads permanently\n
-		Simplified app architecture (unified build configuration)\n
+		Fixed DatePicker initial month selection bug\n
+		Simplified app architecture and technical optimizations\n
 
 		<li>Version 4.2.3</li>\n
 		Improvements and corrections to the week information texts (German and English)\n
