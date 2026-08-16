@@ -208,7 +208,7 @@ class SswrMainActivity : ActivityIr() {
             this, 
             mDateSetListener, 
             if (etYear != 0) etYear else todayYear, 
-            etMonth, 
+            if (etYear != 0) etMonth else todayMonth, 
             if (etDay != 0) etDay else todayDay
         ).show()
     }
@@ -285,12 +285,23 @@ class SswrMainActivity : ActivityIr() {
             startActivity(Intent.createChooser(tellAFriendIntent, getString(R.string.tellAFriend_title)))
         } else if (id == R.id.menu_weekinfo) {
             callWeekInfo()
+        } else if (id == R.id.menu_add_widget) {
+            pinWidget()
+            return true
         } else if (id == R.id.menu_remove_ads) {
             billingManager.startPurchaseFlow()
             return true
         }
         //More items go here (if any) ...
         return false
+    }
+
+    private fun pinWidget() {
+        val appWidgetManager = AppWidgetManager.getInstance(this)
+        val myProvider = ComponentName(this, Widget::class.java)
+        if (appWidgetManager.isRequestPinAppWidgetSupported) {
+            appWidgetManager.requestPinAppWidget(myProvider, null, null)
+        }
     }
 
     override fun onStop() {

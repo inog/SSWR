@@ -40,6 +40,7 @@
     <string name="menu_editEt">Change due date</string>
     <string name="menu_about">About the app</string>
     <string name="menu_feedback">Send feedback</string>
+    <string name="menu_add_widget">Add Widget to Home Screen</string>
     <string name="menu_remove_ads">Remove Ads</string>
 
     <!-- widget -->    
