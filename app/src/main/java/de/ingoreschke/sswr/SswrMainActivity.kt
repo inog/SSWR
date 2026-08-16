@@ -244,9 +244,9 @@ class SswrMainActivity : ActivityIr() {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         
-        // Hide "Remove Ads" if user is already Pro
+        // Hide "Remove Ads" until product is activated in Google Play Console
         val removeAdsItem = menu.findItem(R.id.menu_remove_ads)
-        removeAdsItem?.isVisible = isLiteVersion
+        removeAdsItem?.isVisible = false
         
         return true
     }
