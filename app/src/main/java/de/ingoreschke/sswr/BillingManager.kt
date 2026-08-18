@@ -8,22 +8,25 @@ import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
+import com.android.billingclient.api.PendingPurchasesParams
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
 
-class BillingManager(private val activity: Activity) : PurchasesUpdatedListener {
+class BillingManager(
+    private val activity: Activity,
+    private val onProStatusChanged: ((Boolean) -> Unit)? = null
+) : PurchasesUpdatedListener {
 
     private val billingClient: BillingClient = BillingClient.newBuilder(activity)
         .setListener(this)
-        .enablePendingPurchases()
+        .enablePendingPurchases(
+            PendingPurchasesParams.newBuilder()
+                .enableOneTimeProducts()
+                .build()
+        )
         .build()
-
-    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     // Replace this with your actual Product ID from Google Play Console
     companion object {
@@ -137,11 +140,23 @@ class BillingManager(private val activity: Activity) : PurchasesUpdatedListener 
 
     private fun updateProStatus(isPro: Boolean) {
         val prefs = activity.getSharedPreferences(ActivityIr.PREFS_SETTINGS, Context.MODE_PRIVATE)
+        val wasPro = prefs.getBoolean(ActivityIr.KEY_IS_PRO, false)
         prefs.edit().putBoolean(ActivityIr.KEY_IS_PRO, isPro).apply()
-        
-        // If the status changed, you might want to restart the activity or notify it
+
+        if (wasPro != isPro) {
+            activity.runOnUiThread {
+                onProStatusChanged?.invoke(isPro)
+            }
+        }
+
         if (isPro) {
-            Log.d(TAG, "User is now PRO. Ads should be hidden.")
+            Log.d(TAG, "User is PRO. Ads hidden.")
+        }
+    }
+
+    fun destroy() {
+        if (billingClient.isReady) {
+            billingClient.endConnection()
         }
     }
 }

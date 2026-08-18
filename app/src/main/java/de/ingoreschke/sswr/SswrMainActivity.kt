@@ -11,6 +11,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -145,7 +146,16 @@ class SswrMainActivity : ActivityIr() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.main_sswr)
         
-        billingManager = BillingManager(this)
+        billingManager = BillingManager(this) { isPro ->
+            if (isPro) {
+                adView?.let { ad ->
+                    (ad.parent as? ViewGroup)?.removeView(ad)
+                    ad.destroy()
+                    this.adView = null
+                }
+                invalidateOptionsMenu()
+            }
+        }
 
         if (isLiteVersion) {
             MobileAds.initialize(this)
@@ -313,6 +323,7 @@ class SswrMainActivity : ActivityIr() {
         if (adView != null) {
             adView!!.destroy()
         }
+        billingManager.destroy()
         super.onDestroy()
     }
 
