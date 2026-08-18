@@ -2,11 +2,14 @@
 <resources>
 	<string name="releasenotes">\n
 
-		<li>Vers. 4.3.0</li>\n
-		Individuelle Abbildungen für jede Schwangerschaftswoche (Woche 1–42) zur Veranschaulichung der fötalen Entwicklung\n
+		<li>Vers. 4.3.1</li>\n
 		Modernisiertes Home-Screen-Widget mit Unterstützung zum direkten Hinzufügen aus der App\n
 		Fehlerbehebung bei der Datumsauswahl (Startmonat korrigiert)\n
-		Vereinfachung der App-Struktur und technische Optimierungen\n
+		Technische Verbesserungen und Kompatibilitäts-Updates\n
+
+		<li>Vers. 4.3.0</li>\n
+		Individuelle Abbildungen für jede Schwangerschaftswoche (Woche 1–42) zur Veranschaulichung der fötalen Entwicklung\n
+		Vereinfachung der App-Struktur (Vereinheitlichung der App-Builds)\n
 
 		<li>Vers. 4.2.3</li>\n
 		Verbesserungen und Korrekturen der Wocheninformationen (Deutsch und Englisch)\n

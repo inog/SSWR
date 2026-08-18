@@ -1,6 +1,6 @@
 # Google Play Store Listing — SSWR
 
-Dieses Dokument enthält die aktuellen Texte und Metadaten für den Google Play Console Store-Eintrag der SSWR App (**Version 4.3.0**, `versionCode: 2600430`, `applicationId: de.ingoreschke.sswr.lite`).
+Dieses Dokument enthält die aktuellen Texte und Metadaten für den Google Play Console Store-Eintrag der SSWR App (**Version 4.3.1**, `versionCode: 2600431`, `applicationId: de.ingoreschke.sswr.lite`).
 
 ---
 
@@ -43,10 +43,10 @@ Dieses Dokument enthält die aktuellen Texte und Metadaten für den Google Play 
 
 ### Release Notes / Neu in dieser Version (max. 500 Zeichen)
 ```text
-Neu in Version 4.3.0:
-• Fötale Entwicklung: Anschauliche Illustrationen für jede Schwangerschaftswoche (1–42)
+Neu in Version 4.3.1:
 • Modernisiertes Home-Screen-Widget mit praktischer Schnell-Hinzufügen-Funktion
 • Datumsauswahl optimiert (Startmonat korrigiert)
+• Fötale Entwicklung: Anschauliche Illustrationen für jede Schwangerschaftswoche (1–42)
 • Technische Verbesserungen und Vorbereitung für Android 15 & 16
 ```
 
@@ -91,10 +91,10 @@ Neu in Version 4.3.0:
 
 ### Release Notes / What's New (max 500 chars)
 ```text
-What's new in version 4.3.0:
-• Fetal Development: Vivid illustrations for every pregnancy week (1–42)
+What's new in version 4.3.1:
 • Modernized Home Screen Widget with direct pinning support
 • DatePicker initial month selection bug fixed
+• Fetal Development: Vivid illustrations for every pregnancy week (1–42)
 • Technical optimizations and support for Android 15 & 16
 ```
 

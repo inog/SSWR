@@ -26,5 +26,5 @@ Android pregnancy week calculator (Kotlin/Java, single `app/` module, unified si
 - **Monetization & Ads:** Guard banner ad requests with `if (isLiteVersion())`. `BillingManager` manages the `remove_ads` SKU.
 - **Month offset:** `Calendar`/`DatePicker` months are 0-based. Always add `+1` when constructing `LocalDate` (e.g. `LocalDate.of(year, month + 1, day)`).
 - **SharedPreferences schema:** file `"et_date"`, keys `etYear` / `etMonth` (0-based) / `etDAY`. Duplicated in `SswrMainActivity` and `Widget` — no shared layer.
-- **`versionCode` format:** `{minSdk}{00}{epic}{major}{minor}` — e.g. `2600430` = minSdk 26, v4.3.0.
+- **`versionCode` format:** `{minSdk}{00}{epic}{major}{minor}` — e.g. `2600431` = minSdk 26, v4.3.1.
 - **`PregnancyDate` errors:** throws `IllegalArgumentException` with constants `DATE1_TOO_SMALL` or `DATE2_TOO_BIG`; callers match by string equality.

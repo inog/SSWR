@@ -2,11 +2,14 @@
 <resources>
 	<string name="releasenotes">\n
 
-		<li>Version 4.3.0</li>\n
-		Individual illustrations for each pregnancy week (weeks 1–42) matching fetal development\n
+		<li>Version 4.3.1</li>\n
 		Modernized home screen widget with support for pinning directly from the app\n
 		Fixed DatePicker initial month selection bug\n
-		Simplified app architecture and technical optimizations\n
+		Technical improvements and compatibility updates\n
+
+		<li>Version 4.3.0</li>\n
+		Individual illustrations for each pregnancy week (weeks 1–42) matching fetal development\n
+		Simplified app architecture (unified build configuration)\n
 
 		<li>Version 4.2.3</li>\n
 		Improvements and corrections to the week information texts (German and English)\n
