@@ -65,11 +65,11 @@
         
     <string name="about_contact">\
         If you encounter any bugs or issues, we would appreciate an email:\n
-        coffee2code@sswr.ingo-reschke.de \n
+        sswr@ingoreschke.de \n
         Ingo Reschke 
     </string>
     <string name="about_contact_email_Intent">Send Email</string>
-    <string name="about_contact_email">coffee2code@sswr.ingo-reschke.de</string>
+    <string name="about_contact_email">sswr@ingoreschke.de</string>
     <string name="about_contact_email_sub">SSWR: Feedback</string>
     <string name="about_contact_email_text">\
         Hello,\n

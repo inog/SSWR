@@ -102,8 +102,9 @@ What's new in version 4.3.1:
 
 ## 🔒 Datenschutz & Gesundheitsdaten (Play Console Erklärung)
 
-* **Datenschutzerklärung URL (DE):** `https://sswr.ingo-reschke.de/privacy-de.html`
-* **Datenschutzerklärung URL (EN):** `https://sswr.ingo-reschke.de/privacy-en.html`
+* **Datenschutzerklärung URL (DE):** `https://apps.ingoreschke.de/sswr/privacy-de.html`
+* **Datenschutzerklärung URL (EN):** `https://apps.ingoreschke.de/sswr/privacy-en.html`
+* **Entwickler-Support / Kontakt:** `sswr@ingoreschke.de`
 * **Data Safety Deklaration:**
   - Gespeicherte Daten: Entbindungstermin (lokal in `SharedPreferences`).
   - Keine Weitergabe von Gesundheitsdaten an Dritte oder Server.

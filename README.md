@@ -89,7 +89,7 @@ The project includes:
 ## Contact
 
 For bugs, feature requests, or feedback:
-- Email: coffee2code@sswr.ingo-reschke.de
+- Email: sswr@ingoreschke.de
 - Developer: Ingo Reschke
 
 ## Credits
